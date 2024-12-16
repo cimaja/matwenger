@@ -1,0 +1,32 @@
+---
+title: Microsoft Books
+description: Redesigned the Microsoft Books experience across Windows devices, improving content discovery and reading experience.
+image: https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c
+tags:
+  - UX Design
+  - Windows
+  - Cross-platform
+year: 2018
+role: Senior Designer
+company: Microsoft
+---
+
+## Overview
+
+As Senior Designer at Microsoft, I led the redesign of Microsoft Books, creating a seamless reading experience across Windows devices. The project focused on improving content discovery and enhancing the reading experience for millions of users.
+
+## Key Responsibilities
+
+- Led the end-to-end redesign of the reading experience
+- Created an adaptive design system for multiple screen sizes
+- Implemented new content discovery algorithms
+- Conducted usability studies with readers
+- Developed accessibility guidelines for reading
+
+## Impact
+
+The Microsoft Books redesign resulted in:
+- 45% increase in user engagement
+- 30% improvement in content discovery
+- Enhanced accessibility features
+- Positive user feedback on the new reading experience
