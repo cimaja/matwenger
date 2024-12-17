@@ -7,7 +7,7 @@ tags:
   - ML
   - Personalization
 year: 2016
-role: UX Designer
+role: Product Designer
 company: Microsoft
 ---
 

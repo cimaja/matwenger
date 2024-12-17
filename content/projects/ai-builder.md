@@ -4,7 +4,7 @@ description: "Empowering business users to create and use AI models without code
 image: "/images/projects/ai-builder/main/cover.jpg"
 tags: ["AI", "No-code"]
 year: "2022"
-role: "Senior Design Manager"
+role: "Product Designer"
 company: "Microsoft"
 gallery:
   - src: "/images/projects/ai-builder/gallery/img_1.jpg"

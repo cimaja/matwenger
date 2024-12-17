@@ -7,7 +7,7 @@ tags:
   - Windows
   - Cross-platform
 year: 2018
-role: Senior Designer
+role: Product Designer
 company: Microsoft
 ---
 

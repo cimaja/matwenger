@@ -7,13 +7,13 @@ tags:
   - Enterprise
   - E-commerce
 year: 2015
-role: UX Designer
+role: Product Designer
 company: Microsoft
 ---
 
 ## Overview
 
-As UX Designer at Microsoft, I designed fraud detection and prevention tools for e-commerce platforms. This project focused on creating intuitive interfaces for complex security systems while ensuring robust protection against fraudulent activities.
+As Product Designer at Microsoft, I designed fraud detection and prevention tools for e-commerce platforms. This project focused on creating intuitive interfaces for complex security systems while ensuring robust protection against fraudulent activities.
 
 ## Key responsibilities
 

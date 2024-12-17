@@ -3,17 +3,16 @@ title: Xbox Music
 description: Redesigned the Xbox Music experience, focusing on seamless playback and content discovery.
 image: "/images/projects/xbox-music/main/cover.jpg"
 tags:
-  - Xbox
   - Music
-  - Entertainment
-year: 2014
-role: UX Designer
+  - Gaming
+year: 2013
+role: Product Designer
 company: Microsoft
 ---
 
 ## Overview
 
-As UX Designer at Microsoft, I led the redesign of the Xbox Music experience. The project focused on creating a seamless music playback experience while improving content discovery across the Xbox platform.
+As Product Designer at Microsoft, I led the redesign of the Xbox Music experience. The project focused on creating a seamless music playback experience while improving content discovery across the Xbox platform.
 
 ## Key responsibilities
 
