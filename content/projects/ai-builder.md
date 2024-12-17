@@ -1,10 +1,10 @@
 ---
 title: "AI Builder"
-description: "Designing the next generation of AI-powered automation tools for business users"
+description: "Empowering business users to create and use AI models without code"
 image: "/images/projects/ai-builder/main/cover.jpg"
-tags: ["Product Design", "UX", "AI", "Power Platform"]
-year: "2023"
-role: "Senior Product Designer"
+tags: ["AI", "No-code"]
+year: "2022"
+role: "Senior Design Manager"
 company: "Microsoft"
 gallery:
   - src: "/images/projects/ai-builder/gallery/img_1.jpg"
@@ -20,9 +20,6 @@ videos:
   - id: "WSWmn7WM3i4"
     title: "AI Builder Overview"
     description: "Learn about the key features and capabilities of AI Builder"
-  - id: "P7jZkxz_qYY"
-    title: "Building AI Models"
-    description: "Step-by-step guide to creating custom AI models"
 ---
 
 ## Overview

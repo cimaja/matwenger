@@ -46,7 +46,7 @@ async function ProjectDetails({ id }: { id: string }) {
 
 export default function ProjectPage({ params }: Props) {
   return (
-    <article className="container py-8">
+    <article className="pb-8">
       <Suspense fallback={
         <div className="space-y-8 animate-pulse">
           <div className="space-y-4">

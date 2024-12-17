@@ -12,7 +12,7 @@ interface ProjectHeaderProps {
 export function ProjectHeader({ project }: ProjectHeaderProps) {
   return (
     <div className="relative">
-      <div className="h-[40vh] relative overflow-hidden">
+      <div className="h-[60vh] relative">
         <ImageContainer
           src={project.image}
           alt={project.title}
@@ -24,7 +24,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-10"
+        className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-10"
       >
         <div className="bg-card p-8 rounded-lg shadow-lg border">
           <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
