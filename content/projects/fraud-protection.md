@@ -1,19 +1,43 @@
 ---
-title: Microsoft Fraud Protection
-description: Designed fraud detection and prevention tools for e-commerce platforms.
+title: "Fraud Protection"
+description: "Designed the Fraud Protection experience for Dynamics 365"
 image: "/images/projects/fraud-protection/main/cover.jpg"
 tags:
   - Security
+  - ML
   - Enterprise
   - E-commerce
-year: 2015
+year: 2019
 role: Product Designer
 company: Microsoft
+videos:
+  - id: "DlkQ_7M9yeI"
+    title: "Microsoft Fraud Protection Overview"
+    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud"
+gallery:
+  - src: "/images/projects/fraud-protection/gallery/img_1.jpg"
+    alt: "Fraud Protection Dashboard"
+  - src: "/images/projects/fraud-protection/gallery/img_2.jpg"
+    alt: "Risk Assessment Interface"
+  - src: "/images/projects/fraud-protection/gallery/img_3.jpg"
+    alt: "Transaction Monitoring"
+  - src: "/images/projects/fraud-protection/gallery/img_4.jpg"
+    alt: "Analytics Overview"
+  - src: "/images/projects/fraud-protection/gallery/img_5.jpg"
+    alt: "Rule Configuration"
+  - src: "/images/projects/fraud-protection/gallery/img_6.jpg"
+    alt: "Alert Management"
+  - src: "/images/projects/fraud-protection/gallery/img_7.jpg"
+    alt: "Investigation Tools"
+  - src: "/images/projects/fraud-protection/gallery/img_8.jpg"
+    alt: "Reporting Dashboard"
 ---
 
 ## Overview
 
-As Product Designer at Microsoft, I designed fraud detection and prevention tools for e-commerce platforms. This project focused on creating intuitive interfaces for complex security systems while ensuring robust protection against fraudulent activities.
+In today’s digitally transformed world, enterprises operate largely online and in real time, with minimal human intervention. While this reduces costs and enhances customer experience, it also exposes businesses to significant risks. In e-commerce, for example, malicious activities such as account takeovers, stolen payment instruments, fake product reviews, and various types of fraud (warranty, refund, reseller, and program discount abuse) can harm profitability and reputation.
+
+The main challenge was quickly onboarding this project and making tactical decisions to shape the product direction. I established the foundational framework with a focus on the acquisition funnel. My goal was to design an experience that allowed potential customers to use their historical data to test our fraud engine and uncover insights into fraud issues within their environment.
 
 ## Key responsibilities
 
@@ -26,8 +50,7 @@ As Product Designer at Microsoft, I designed fraud detection and prevention tool
 ## Impact
 
 The Fraud Protection system delivered significant results:
-- 70% faster fraud detection
-- 45% reduction in false positives
+- 24% faster fraud detection
 - Improved investigation efficiency
 - Enhanced reporting capabilities
 - Positive feedback from security teams
