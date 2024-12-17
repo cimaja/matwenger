@@ -2,20 +2,26 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import type { Renderer, Tokens } from 'marked';
 
 const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
 // Configure marked to add target="_blank" to links
 marked.use({
   renderer: {
-    link(this: marked.Renderer, { href, title, text }: marked.Tokens.Link) {
+    link(this: Renderer, token: Tokens.Link) {
+      const href = token.href || '';
+      const title = token.title || null;
+      const text = token.text || '';
       return `<a href="${href}" target="_blank" rel="noopener noreferrer"${title ? ` title="${title}"` : ''}>${text}</a>`;
     }
   }
 });
 
 export interface Video {
-  id: string;
+  id?: string;
+  type?: 'youtube' | 'local';
+  src?: string;
   title?: string;
   description?: string;
 }

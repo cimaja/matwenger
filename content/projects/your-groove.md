@@ -55,6 +55,19 @@ gallery:
   - src: "/images/projects/your-groove/gallery/img_15.jpg"
     alt: "System architecture overview"
     caption: "Visual overview of Your Groove's system architecture"
+videos:
+  - type: "local"
+    src: "/images/projects/your-groove/videos/video_1.mp4"
+    title: "Your Groove Feature Overview"
+    description: "A comprehensive overview of the Your Groove music discovery feature"
+  - type: "local"
+    src: "/images/projects/your-groove/videos/video_2.mov"
+    title: "Playlist Generation Demo"
+    description: "Demonstration of the intelligent playlist generation system"
+  - type: "local"
+    src: "/images/projects/your-groove/videos/video_3.mov"
+    title: "Cross-Platform Experience"
+    description: "Showcasing Your Groove across Windows, Mobile, and Xbox platforms"
 ---
 
 ## Overview

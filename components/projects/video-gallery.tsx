@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Video } from '@/lib/get-project-content';
 import { YouTube } from '@/components/ui/youtube';
+import { VideoPlayer } from '@/components/ui/video-player';
 import { Button } from '@/components/ui/button';
 
 interface VideoGalleryProps {
@@ -28,18 +29,25 @@ export function VideoGallery({ videos, className }: VideoGalleryProps) {
     setCurrentIndex((prev) => (prev - 1 + videos.length) % videos.length);
   };
 
+  const renderVideo = (video: Video) => {
+    if (video.type === 'local') {
+      return <VideoPlayer src={video.src!} />;
+    }
+    return <YouTube videoId={video.id!} />;
+  };
+
   return (
     <div className={`space-y-4 ${className}`}>
       <div className="relative">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentVideo.id}
+            key={currentVideo.id || currentVideo.src}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
           >
-            <YouTube videoId={currentVideo.id} />
+            {renderVideo(currentVideo)}
             {(currentVideo.title || currentVideo.description) && (
               <div className="mt-4 space-y-1">
                 {currentVideo.title && (
