@@ -17,6 +17,66 @@ project/
 └── types/             # TypeScript type definitions
 ```
 
+## Version Control
+
+This project uses Git for version control and is hosted on GitHub. The repository can be found at: https://github.com/cimaja/matwenger
+
+### Getting Started with Git
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/cimaja/matwenger.git
+   cd matwenger
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Git Workflow
+
+Follow these best practices for contributing to the project:
+
+1. Create a new branch for each feature or fix:
+   ```bash
+   git checkout -b feature/feature-name
+   # or
+   git checkout -b fix/bug-name
+   ```
+
+2. Make your changes and commit them with meaningful messages:
+   ```bash
+   git add .
+   git commit -m "feat: add new feature description"
+   ```
+   
+   Commit message prefixes:
+   - `feat:` for new features
+   - `fix:` for bug fixes
+   - `docs:` for documentation changes
+   - `style:` for formatting changes
+   - `refactor:` for code refactoring
+   - `test:` for adding tests
+   - `chore:` for maintenance tasks
+
+3. Push your changes:
+   ```bash
+   git push origin feature/feature-name
+   ```
+
+4. Create a Pull Request on GitHub for review
+
+### Keeping Your Branch Updated
+
+Stay in sync with the main branch:
+```bash
+git checkout main
+git pull origin main
+git checkout your-branch
+git merge main
+```
+
 ## Adding Projects
 
 Projects are stored as markdown files in the `content/projects` directory. Each project should have its own `.md` file with the following structure:
