@@ -1,7 +1,7 @@
 ---
 title: Xbox Music
 description: Redesigned the Xbox Music experience, focusing on seamless playback and content discovery.
-image: https://images.unsplash.com/photo-1609921212029-bb5a28e60960
+image: "/images/projects/xbox-music/main/cover.jpg"
 tags:
   - Xbox
   - Music

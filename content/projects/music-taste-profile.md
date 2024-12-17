@@ -1,7 +1,7 @@
 ---
 title: Music Taste Profile
 description: Created personalized music recommendation system based on user listening habits and preferences.
-image: https://images.unsplash.com/photo-1511379938547-c1f69419868d
+image: "/images/projects/music-taste-profile/main/cover.jpg"
 tags:
   - Music
   - ML

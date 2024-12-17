@@ -1,7 +1,7 @@
 ---
 title: Microsoft Books
 description: Redesigned the Microsoft Books experience across Windows devices, improving content discovery and reading experience.
-image: https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c
+image: "/images/projects/microsoft-books/main/cover.jpg"
 tags:
   - UX Design
   - Windows

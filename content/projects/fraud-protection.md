@@ -1,7 +1,7 @@
 ---
 title: Microsoft Fraud Protection
 description: Designed fraud detection and prevention tools for e-commerce platforms.
-image: https://images.unsplash.com/photo-1563013544-824ae1b704d3
+image: "/images/projects/fraud-protection/main/cover.jpg"
 tags:
   - Security
   - Enterprise
