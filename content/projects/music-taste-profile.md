@@ -4,8 +4,8 @@ description: "Enhancing the onboarding experience for Groove Music to make it mo
 image: "/images/projects/music-taste-profile/main/cover.jpg"
 tags:
   - Music
-  - ML
   - Personalization
+  - AI
 year: 2014
 role: Product Designer
 company: Microsoft
