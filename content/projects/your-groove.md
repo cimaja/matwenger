@@ -1,7 +1,7 @@
 ---
 title: Your Groove
 description: Developed personalized music discovery feature using machine learning algorithms.
-image: https://images.unsplash.com/photo-1514525253161-7a46d19cd819
+image: /images/projects/your-groove/main/cover.jpg
 tags:
   - Music
   - ML
@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I developed Your Groove, a personalized music discovery feature powered by machine learning. This project revolutionized how users discover new music by creating custom playlists based on their listening patterns.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Designed the discovery algorithm interface
 - Created playlist generation system

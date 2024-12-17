@@ -10,7 +10,7 @@ export function AboutHero() {
     <Section className="relative h-[60vh] mb-16">
       <HaloGradient />
       <ImageContainer
-        src="/hero-image.jpg"
+        src="/images/about/about-cover.jpg"
         alt="Scenic coastal view"
         priority
         effect="grayscale"

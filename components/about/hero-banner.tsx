@@ -7,7 +7,7 @@ export function HeroBanner() {
   return (
     <Section className="h-[60vh] mb-16">
       <ImageContainer
-        src="/hero-image.jpg"
+        src="/images/about/about-cover.jpg"
         alt="Scenic coastal view"
         priority
         effect="grayscale"
