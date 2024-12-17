@@ -50,7 +50,7 @@ The main challenge was quickly onboarding this project and making tactical decis
 ## Impact
 
 The Fraud Protection system delivered significant results:
-- 24% faster fraud detection
+- Faster fraud detection
 - Improved investigation efficiency
 - Enhanced reporting capabilities
 - Positive feedback from security teams
