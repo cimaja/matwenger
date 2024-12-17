@@ -140,7 +140,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             </div>
 
             <div 
-              className="relative w-full max-w-5xl mx-auto overflow-hidden h-[80vh] flex items-center"
+              className="relative w-full max-w-5xl mx-auto overflow-hidden h-[80vh] flex items-center rounded"
               onClick={(e) => e.stopPropagation()}
             >
               <AnimatePresence custom={direction} initial={false}>
@@ -167,24 +167,26 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                       previous();
                     }
                   }}
-                  className="absolute inset-0 flex items-center justify-center"
+                  className="absolute inset-0 flex items-center justify-center rounded"
                 >
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <Image
-                      src={images[selectedIndex].src}
-                      alt={images[selectedIndex].alt}
-                      className="object-contain max-h-full w-auto rounded-lg"
-                      fill
-                      sizes="90vw"
-                      priority
-                    />
-                    {images[selectedIndex].caption && (
-                      <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg">
-                        <p className="text-white text-center">
-                          {images[selectedIndex].caption}
-                        </p>
-                      </div>
-                    )}
+                    <div className="relative max-w-[90%] max-h-[90vh]">
+                      <Image
+                        src={images[selectedIndex].src}
+                        alt={images[selectedIndex].alt}
+                        width={1920}
+                        height={1080}
+                        className="rounded object-contain w-auto h-auto max-h-[90vh]"
+                        priority
+                      />
+                      {images[selectedIndex].caption && (
+                        <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                          <p className="text-white text-center">
+                            {images[selectedIndex].caption}
+                          </p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
