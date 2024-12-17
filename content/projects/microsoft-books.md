@@ -7,8 +7,19 @@ tags:
   - Windows
   - Cross-platform
 year: 2018
-role: Product Designer
+role: Senior Designer
 company: Microsoft
+gallery:
+  - src: "/images/projects/microsoft-books/gallery/img_1.jpg"
+    alt: "Microsoft Books Store"
+  - src: "/images/projects/microsoft-books/gallery/img_2.jpg"
+    alt: "Book Reader Interface"
+  - src: "/images/projects/microsoft-books/gallery/img_3.jpg"
+    alt: "Library Management"
+  - src: "/images/projects/microsoft-books/gallery/img_4.jpg"
+    alt: "Reading Settings"
+  - src: "/images/projects/microsoft-books/gallery/img_5.jpg"
+    alt: "Book Discovery"
 ---
 
 ## Overview

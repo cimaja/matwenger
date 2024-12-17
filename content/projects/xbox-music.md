@@ -8,6 +8,17 @@ tags:
 year: 2013
 role: Product Designer
 company: Microsoft
+gallery:
+  - src: "/images/projects/xbox-music/gallery/img_1.jpg"
+    alt: "Xbox Music Home"
+  - src: "/images/projects/xbox-music/gallery/img_2.jpg"
+    alt: "Now Playing Screen"
+  - src: "/images/projects/xbox-music/gallery/img_3.jpg"
+    alt: "Music Library"
+  - src: "/images/projects/xbox-music/gallery/img_4.jpg"
+    alt: "Artist Profile"
+  - src: "/images/projects/xbox-music/gallery/img_5.jpg"
+    alt: "Playlist Management"
 ---
 
 ## Overview
