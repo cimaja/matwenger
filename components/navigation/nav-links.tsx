@@ -21,8 +21,13 @@ export function NavLinks() {
           key={href}
           href={href}
           className={cn(
-            'transition-colors hover:text-foreground/80',
-            pathname === href ? 'text-foreground' : 'text-foreground/60'
+            'transition-colors relative',
+            'hover:text-pink-500/90 hover:after:scale-x-100',
+            'after:absolute after:bottom-[-1px] after:left-0 after:h-[2px] after:w-full after:origin-left',
+            'after:scale-x-0 after:bg-pink-500 after:transition-transform after:duration-200',
+            pathname === href 
+              ? 'text-white after:scale-x-100' 
+              : 'text-foreground/70'
           )}
         >
           {label}
