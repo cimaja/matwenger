@@ -15,7 +15,7 @@ company: Microsoft
 
 As Senior Designer at Microsoft, I led the redesign of Microsoft Books, creating a seamless reading experience across Windows devices. The project focused on improving content discovery and enhancing the reading experience for millions of users.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Led the end-to-end redesign of the reading experience
 - Created an adaptive design system for multiple screen sizes

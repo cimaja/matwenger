@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I created a personalized music recommendation system that analyzes user listening habits and preferences. This project revolutionized how users discover new music by providing highly tailored suggestions based on their unique taste profile.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Designed the music taste analysis algorithm
 - Created interactive preference collection interfaces

@@ -5,6 +5,15 @@ import { marked } from 'marked';
 
 const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
+// Configure marked to add target="_blank" to links
+marked.use({
+  renderer: {
+    link(this: marked.Renderer, { href, title, text }: marked.Tokens.Link) {
+      return `<a href="${href}" target="_blank" rel="noopener noreferrer"${title ? ` title="${title}"` : ''}>${text}</a>`;
+    }
+  }
+});
+
 export interface Video {
   id: string;
   title?: string;

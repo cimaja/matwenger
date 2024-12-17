@@ -18,7 +18,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
       className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
     >
       <div 
-        className="prose prose-lg dark:prose-invert max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>p]:leading-relaxed [&>ul]:space-y-2 [&>ul]:my-6 [&>ul>li]:text-muted-foreground [&>p]:text-muted-foreground [&>ul]:list-disc [&>ul]:pl-6"
+        className="prose prose-lg dark:prose-invert max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>p]:leading-relaxed [&>ul]:space-y-2 [&>ul]:my-6 [&>ul>li]:text-muted-foreground [&>p]:text-muted-foreground [&>ul]:list-disc [&>ul]:pl-6 [&>p>a]:text-purple-500 [&>p>a]:underline hover:[&>p>a]:text-purple-600 [&>ul>li>a]:text-purple-500 [&>ul>li>a]:underline hover:[&>ul>li>a]:text-purple-600 [&_a]:target-[_blank]"
         dangerouslySetInnerHTML={{ __html: project.content }}
       />
       

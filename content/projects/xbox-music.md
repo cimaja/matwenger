@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I led the redesign of the Xbox Music experience. The project focused on creating a seamless music playback experience while improving content discovery across the Xbox platform.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Redesigned the music player interface
 - Created new content discovery features

@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I revamped the Xbox support experience to improve user satisfaction and reduce support costs. The project focused on creating an intuitive self-service system while maintaining high-quality support interactions.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Redesigned the support portal interface
 - Created intelligent troubleshooting flows

@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I developed a comprehensive analytics dashboard for tracking file engagement and user activity patterns. This project aimed to provide organizations with deep insights into how their files are being used and accessed across the enterprise.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Designed intuitive data visualization components
 - Created real-time activity monitoring interfaces

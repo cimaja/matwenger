@@ -15,7 +15,7 @@ company: Microsoft
 
 As UX Designer at Microsoft, I designed fraud detection and prevention tools for e-commerce platforms. This project focused on creating intuitive interfaces for complex security systems while ensuring robust protection against fraudulent activities.
 
-## Key Responsibilities
+## Key responsibilities
 
 - Designed fraud detection dashboards
 - Created risk assessment visualizations
