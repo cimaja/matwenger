@@ -27,7 +27,7 @@ export function AboutHero() {
             Crafting Digital Experiences
           </h1>
           <p className="text-lg md:text-xl text-slate-200">
-            Senior Design Manager at Microsoft, focused on creating impactful user experiences
+            Principal Design Manager at Microsoft, focused on creating impactful user experiences
           </p>
         </div>
       </motion.div>
