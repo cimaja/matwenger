@@ -4,11 +4,57 @@ description: Developed personalized music discovery feature using machine learni
 image: /images/projects/your-groove/main/cover.jpg
 tags:
   - Music
-  - ML
+  - AI
   - Discovery
-year: 2012
+year: 2014
 role: UX Designer
 company: Microsoft
+gallery:
+  - src: "/images/projects/your-groove/gallery/img_1.jpg"
+    alt: "Your Groove interface showing personalized music recommendations"
+    caption: "Main interface displaying personalized music recommendations based on user preferences"
+  - src: "/images/projects/your-groove/gallery/img_2.jpg"
+    alt: "Playlist generation view"
+    caption: "Smart playlist generation system analyzing user listening patterns"
+  - src: "/images/projects/your-groove/gallery/img_3.jpg"
+    alt: "Music discovery interface"
+    caption: "Interactive music discovery interface for exploring new artists and genres"
+  - src: "/images/projects/your-groove/gallery/img_4.jpg"
+    alt: "Genre classification system"
+    caption: "Advanced genre classification system for accurate music categorization"
+  - src: "/images/projects/your-groove/gallery/img_5.jpg"
+    alt: "Mood-based playlist interface"
+    caption: "Mood-based playlist creation interface for emotional music matching"
+  - src: "/images/projects/your-groove/gallery/img_6.jpg"
+    alt: "User listening history analysis"
+    caption: "Detailed analysis of user listening history for better recommendations"
+  - src: "/images/projects/your-groove/gallery/img_7.jpg"
+    alt: "Artist recommendation view"
+    caption: "Artist recommendation engine showing similar artists"
+  - src: "/images/projects/your-groove/gallery/img_8.jpg"
+    alt: "Playlist customization options"
+    caption: "Advanced playlist customization options for users"
+  - src: "/images/projects/your-groove/gallery/img_9.png"
+    alt: "Music metadata analysis"
+    caption: "Music metadata analysis for improved song matching"
+  - src: "/images/projects/your-groove/gallery/img_10.png"
+    alt: "Genre distribution visualization"
+    caption: "Visual representation of user's genre preferences"
+  - src: "/images/projects/your-groove/gallery/img_11.png"
+    alt: "Recommendation settings"
+    caption: "Detailed settings for fine-tuning music recommendations"
+  - src: "/images/projects/your-groove/gallery/img_12.png"
+    alt: "Machine learning model insights"
+    caption: "Insights into the machine learning model's decision making"
+  - src: "/images/projects/your-groove/gallery/img_13.png"
+    alt: "User feedback interface"
+    caption: "Interface for collecting and analyzing user feedback"
+  - src: "/images/projects/your-groove/gallery/img_14.jpg"
+    alt: "Performance metrics dashboard"
+    caption: "Dashboard showing key performance metrics of the system"
+  - src: "/images/projects/your-groove/gallery/img_15.jpg"
+    alt: "System architecture overview"
+    caption: "Visual overview of Your Groove's system architecture"
 ---
 
 ## Overview
@@ -17,17 +63,15 @@ As UX Designer at Microsoft, I developed Your Groove, a personalized music disco
 
 ## Key responsibilities
 
-- Designed the discovery algorithm interface
-- Created playlist generation system
-- Developed mood-based music matching
-- Implemented genre classification
-- Designed the recommendation engine
+- Lead the design direction for the end to end experience
+- Shaped the discovery algorithm interface
+- Worked with engineering teams to implement the design across Windows 10, Mobile (iOS & Android), and Xbox consoles.
+- Conducted user research, competitive analysis, and created user flows, wireframes, and prototypes.
 
 ## Impact
 
 Your Groove achieved significant success:
-- 65% increase in playlist creation
-- 45% higher music discovery rates
+- 35% increase in playlist creation
 - Improved user engagement metrics
 - Enhanced personalization accuracy
 - Positive user feedback on discoveries
