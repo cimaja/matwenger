@@ -7,7 +7,7 @@ tags:
   - AI
   - Discovery
 year: 2014
-role: UX Designer
+role: Product Designer
 company: Microsoft
 gallery:
   - src: "/images/projects/your-groove/gallery/img_1.jpg"
@@ -72,14 +72,14 @@ videos:
 
 ## Overview
 
-As UX Designer at Microsoft, I developed Your Groove, a personalized music discovery feature powered by machine learning. This project revolutionized how users discover new music by creating custom playlists based on their listening patterns.
+As product Designer at Microsoft, I developed Your Groove, a personalized music discovery feature powered by machine learning. This project revolutionized how users discover new music by creating custom playlists based on their listening patterns.
 
 ## Key responsibilities
 
 - Lead the design direction for the end to end experience
 - Shaped the discovery algorithm interface
 - Worked with engineering teams to implement the design across Windows 10, Mobile (iOS & Android), and Xbox consoles.
-- Conducted user research, competitive analysis, and created user flows, wireframes, and prototypes.
+- Conducted user research, competitive analysis, prototypes and final deliverables.
 
 ## Impact
 
