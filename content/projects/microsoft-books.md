@@ -1,14 +1,19 @@
 ---
-title: Microsoft Books
-description: Redesigned the Microsoft Books experience across Windows devices, improving content discovery and reading experience.
+title: "Microsoft Books"
+description: "Redesigned the Microsoft Books experience across Windows devices, improving content discovery and reading experience."
 image: "/images/projects/microsoft-books/main/cover.jpg"
 tags:
-  - UX Design
-  - Windows
+  - Reading
+  - Edge
   - Cross-platform
-year: 2018
-role: Senior Designer
+year: 2016
+role: Design lead
 company: Microsoft
+videos:
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/video_1.mp4"
+    title: "Microsoft Books Overview"
+    description: "A walkthrough of the Microsoft Books experience and key features"
 gallery:
   - src: "/images/projects/microsoft-books/gallery/img_1.jpg"
     alt: "Microsoft Books Store"
@@ -20,24 +25,37 @@ gallery:
     alt: "Reading Settings"
   - src: "/images/projects/microsoft-books/gallery/img_5.jpg"
     alt: "Book Discovery"
+  - src: "/images/projects/microsoft-books/gallery/img_6.jpg"
+    alt: "Reading Settings"
+  - src: "/images/projects/microsoft-books/gallery/img_7.jpg"
+    alt: "Cross-platform Experience"
+  - src: "/images/projects/microsoft-books/gallery/img_8.png"
+    alt: "Search and Navigation"
+  - src: "/images/projects/microsoft-books/gallery/img_9.jpg"
+    alt: "Personalization Features"
+
 ---
 
 ## Overview
 
-As Senior Designer at Microsoft, I led the redesign of Microsoft Books, creating a seamless reading experience across Windows devices. The project focused on improving content discovery and enhancing the reading experience for millions of users.
+Browsers have been a cornerstone of the internet since its early days, with innovation over the years focusing on speed, compatibility, and safety. However, the web today is about so much more than just browsing.
+
+Our goal was to redefine what users could experience within their browser by expanding the types of content they could read and ensuring it was accessible to everyone. We aimed to provide the best possible reading experience—one that mirrors the familiarity of interacting with a physical book while offering enhanced opportunities for learning and engagement. With tools like notes, highlights, doodles, Cortana, and other features, users could deepen their understanding and connection with the content.
+
+I led a team of five designers to create the Windows Books App across five platforms: Windows 10, Xbox, Windows Phone 10, iOS, and Android (mobile and tablet). My responsibilities included defining the product scope and vision, designing user flows, wireframes, visuals, and prototypes, as well as conducting user tests, creating animations, and delivering redlines. I also supervised development quality from conception through production release.
+
+This effort involved close collaboration with three scrum teams in Paris and two design teams in Redmond (GMT-7) and Hyderabad (GMT+5:30), who were focused on other components of Edge.
 
 ## Key responsibilities
 
-- Led the end-to-end redesign of the reading experience
+- Led the visual and user experience design for the Books feature in Microsoft Edge.
 - Created an adaptive design system for multiple screen sizes
-- Implemented new content discovery algorithms
 - Conducted usability studies with readers
 - Developed accessibility guidelines for reading
 
 ## Impact
 
 The Microsoft Books redesign resulted in:
-- 45% increase in user engagement
-- 30% improvement in content discovery
 - Enhanced accessibility features
+- Experience was leveraged for Edge PDF reader
 - Positive user feedback on the new reading experience
