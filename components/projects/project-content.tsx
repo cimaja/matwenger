@@ -24,14 +24,14 @@ export function ProjectContent({ project }: ProjectContentProps) {
       
       {project.gallery && project.gallery.length > 0 && (
         <div className="mt-16 pt-16 border-t">
-          <h2 className="text-2xl font-bold mb-8">Project Gallery</h2>
+          <h2 className="text-2xl font-bold mb-8">Project Gallery ({project.gallery.length})</h2>
           <ImageGallery images={project.gallery} />
         </div>
       )}
       
       {project.videos && project.videos.length > 0 && (
         <div className="mt-16 pt-16 border-t">
-          <h2 className="text-2xl font-bold mb-8">Project Videos</h2>
+          <h2 className="text-2xl font-bold mb-8">Project Videos ({project.videos.length})</h2>
           <VideoGallery videos={project.videos} />
         </div>
       )}

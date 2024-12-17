@@ -64,31 +64,33 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
 
   return (
     <div className={className}>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {images.map((image, index) => (
-          <motion.div
-            key={image.src}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: loadedImages.has(index) ? 1 : 0,
-              y: loadedImages.has(index) ? 0 : 20
-            }}
-            className="relative aspect-[4/3] group cursor-pointer"
-            onClick={() => openLightbox(index)}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
-              onLoad={() => handleImageLoad(index)}
-              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-              <span className="text-white text-sm font-medium">View Image</span>
-            </div>
-          </motion.div>
-        ))}
+      <div className="space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {images.map((image, index) => (
+            <motion.div
+              key={image.src}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: loadedImages.has(index) ? 1 : 0,
+                y: loadedImages.has(index) ? 0 : 20
+              }}
+              className="relative aspect-[4/3] group cursor-pointer"
+              onClick={() => openLightbox(index)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                onLoad={() => handleImageLoad(index)}
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <span className="text-white text-sm font-medium">View Image</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       <AnimatePresence initial={false} custom={direction}>
