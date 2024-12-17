@@ -173,13 +173,13 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                     <Image
                       src={images[selectedIndex].src}
                       alt={images[selectedIndex].alt}
-                      className="object-contain max-h-full w-auto"
+                      className="object-contain max-h-full w-auto rounded-lg"
                       fill
                       sizes="90vw"
                       priority
                     />
                     {images[selectedIndex].caption && (
-                      <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                      <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg">
                         <p className="text-white text-center">
                           {images[selectedIndex].caption}
                         </p>
