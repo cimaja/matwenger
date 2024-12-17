@@ -48,9 +48,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <Navigation />
         <Providers>
           <div className="relative min-h-screen flex flex-col">
-            <Navigation />
             <main className="flex-1">
               {children}
             </main>
