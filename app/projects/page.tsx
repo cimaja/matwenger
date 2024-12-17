@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { getAllProjects } from '@/lib/get-project-content';
 import { ProjectCard } from '@/components/projects/project-card';
 import { ProjectCardSkeleton } from '@/components/projects/project-card-skeleton';
+import styles from './projects.module.css';
 
 export const metadata = {
   title: 'Projects',
@@ -13,8 +14,15 @@ async function ProjectsList() {
 
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+      {projects.map((project, index) => (
+        <div
+          key={project.id}
+          className={styles.projectCard}
+          data-loaded="true"
+          style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
+        >
+          <ProjectCard project={project} />
+        </div>
       ))}
     </div>
   );
@@ -22,16 +30,18 @@ async function ProjectsList() {
 
 export default function ProjectsPage() {
   return (
-    <main className="container py-24">
-      <Suspense fallback={
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <ProjectCardSkeleton key={i} />
-          ))}
-        </div>
-      }>
+    <div className="container py-8">
+      <Suspense
+        fallback={
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <ProjectCardSkeleton key={i} />
+            ))}
+          </div>
+        }
+      >
         <ProjectsList />
       </Suspense>
-    </main>
+    </div>
   );
 }

@@ -62,8 +62,8 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
 }
 
 export async function getAllProjects(): Promise<ProjectContent[]> {
-  // Get all .md files from the projects directory
-  const fileNames = fs.readdirSync(projectsDirectory);
+  // Get all .md files from the projects directory asynchronously
+  const fileNames = await fs.promises.readdir(projectsDirectory);
   const projects = await Promise.all(
     fileNames
       .filter(fileName => fileName.endsWith('.md'))
