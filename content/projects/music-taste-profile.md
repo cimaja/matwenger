@@ -4,8 +4,8 @@ description: "Enhancing the onboarding experience for Groove Music to make it mo
 image: "/images/projects/music-taste-profile/main/cover.jpg"
 tags:
   - Music
-  - Personalization
   - AI
+  - Cross-platform
 year: 2014
 role: Product Designer
 company: Microsoft
@@ -47,7 +47,9 @@ I joined the Groove Universal App team as a Product Designer under the supervisi
 
 ## Impact
 
-The Music Taste Profile system achieved remarkable results:
-- 16% higher user engagement
-- Improved accuracy in recommendations
-- Positive user feedback on personalization
+The Music Taste Profile transformed the Groove Music experience:
+- Increased new user engagement by 16% through personalized onboarding
+- Delivered personalized music recommendations across Windows 10, iOS, Android, and Xbox
+- Enhanced user retention through AI-powered music discovery
+- Established the foundation for Groove's personalization engine
+- Significantly improved cold-start recommendations for new users

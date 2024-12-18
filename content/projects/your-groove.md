@@ -5,7 +5,7 @@ image: /images/projects/your-groove/main/cover.jpg
 tags:
   - Music
   - AI
-  - Discovery
+  - Cross-platform
 year: 2014
 role: Product Designer
 company: Microsoft
@@ -68,8 +68,8 @@ As product Designer at Microsoft, I developed Your Groove, a personalized music 
 
 ## Impact
 
-Your Groove achieved significant success:
-- 35% increase in playlist creation
-- Improved user engagement metrics
-- Enhanced personalization accuracy
-- Positive user feedback on discoveries
+Your Groove revolutionized music discovery on Microsoft platforms:
+- Drove 35% increase in playlist creation through AI-powered recommendations
+- Successfully launched across Windows 10, iOS, Android, and Xbox platforms
+- Set new standards for cross-platform music discovery experiences
+- Enhanced user retention through intelligent content recommendations
