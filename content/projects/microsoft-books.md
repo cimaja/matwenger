@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Books"
-description: "Redesigned the Microsoft Books experience across Windows devices, improving content discovery and reading experience."
+description: "Transforming Microsoft Edge into a powerful digital reading platform"
 image: "/images/projects/microsoft-books/main/cover.jpg"
 tags:
   - Reading
@@ -14,25 +14,47 @@ videos:
     src: "/images/projects/microsoft-books/video/video_1.mp4"
     title: "Microsoft Books Overview"
     description: "A walkthrough of the Microsoft Books experience and key features"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/Desktop_Font.mov"
+    title: "Font Customization"
+    description: "Customize your reading experience with advanced font controls"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/Desktop_Open_Book.mov"
+    title: "Book Opening Experience"
+    description: "Seamless book opening and page navigation"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/Desktop_Themes.mov"
+    title: "Theme Settings"
+    description: "Switch between different reading themes for comfort"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/NotesPanel.mov"
+    title: "Notes and Highlights"
+    description: "Take notes and highlight important passages"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/Share.mov"
+    title: "Sharing Features"
+    description: "Share book excerpts and notes with others"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/TableofContent.mov"
+    title: "Table of Contents"
+    description: "Easy navigation through book chapters and sections"
+  - type: "local"
+    src: "/images/projects/microsoft-books/video/Theme_Mobile.mp4"
+    title: "Mobile Themes"
+    description: "Theme customization on mobile devices"
 gallery:
   - src: "/images/projects/microsoft-books/gallery/img_1.jpg"
-    alt: "Microsoft Books Store"
+    alt: "Books Store Homepage"
   - src: "/images/projects/microsoft-books/gallery/img_2.jpg"
-    alt: "Book Reader Interface"
+    alt: "Reading Experience"
   - src: "/images/projects/microsoft-books/gallery/img_3.jpg"
-    alt: "Library Management"
+    alt: "Book Details View"
   - src: "/images/projects/microsoft-books/gallery/img_4.jpg"
+    alt: "Library Management"
+  - src: "/images/projects/microsoft-books/gallery/img_5.png"
     alt: "Reading Settings"
-  - src: "/images/projects/microsoft-books/gallery/img_5.jpg"
-    alt: "Book Discovery"
   - src: "/images/projects/microsoft-books/gallery/img_6.jpg"
-    alt: "Reading Settings"
-  - src: "/images/projects/microsoft-books/gallery/img_7.jpg"
-    alt: "Cross-platform Experience"
-  - src: "/images/projects/microsoft-books/gallery/img_8.png"
-    alt: "Search and Navigation"
-  - src: "/images/projects/microsoft-books/gallery/img_9.jpg"
-    alt: "Personalization Features"
+    alt: "Notes and Annotations"
 
 ---
 
@@ -55,7 +77,8 @@ This effort involved close collaboration with three scrum teams in Paris and two
 
 ## Impact
 
-The Microsoft Books redesign resulted in:
-- Enhanced accessibility features
-- Experience was leveraged for Edge PDF reader
-- Positive user feedback on the new reading experience
+The Microsoft Books feature delivered:
+- Unified reading experience across five platforms (Windows 10, Xbox, Windows Phone 10, iOS, and Android)
+- Design patterns became the blueprint for Edge's PDF reader, now used by millions of users daily
+- Advanced accessibility features for diverse reading needs
+- Innovative learning tools including notes, highlights, and Cortana integration
