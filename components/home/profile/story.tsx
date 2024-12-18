@@ -38,10 +38,10 @@ export function Story() {
       <div className="prose prose-lg dark:prose-invert">
         <p className="text-muted-foreground">
           Born in south of France, I've grown up in Africa and Asia. This multi-cultural 
-          environment has filled my creativity and passion for simple and intuitive designs. 
-          With more than a decade of experience, I'm an expert at crafting beautiful 
-          experiences that delight users. My strengths encompass defining product vision, 
-          understanding the business goals and building design teams that thrive.
+          environment has shaped my unique perspective on creating inclusive and impactful digital experiences. 
+          At Microsoft, I lead design initiatives for AI-powered enterprise solutions, from fraud protection 
+          to low-code AI builders. My expertise lies in translating complex technologies into intuitive 
+          interfaces that empower users while maintaining enterprise-grade security and scalability.
         </p>
       </div>
 

@@ -26,11 +26,11 @@ export function HeroSection() {
         className="text-center max-w-3xl mx-auto space-y-6 z-10"
       >
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-          Crafting Digital Experiences with Purpose
+          Where Design Meets Intelligence
         </h1>
         <p className="text-lg sm:text-xl text-muted-foreground">
-          Creative developer focused on building beautiful, performant, and
-          accessible web applications
+          Principal Design Manager specializing in AI-driven experiences, enterprise solutions,
+          and innovative digital products at Microsoft
         </p>
         <div className="flex items-center justify-center gap-4">
           <Button

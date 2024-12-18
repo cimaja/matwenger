@@ -8,13 +8,13 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'User Experience Design', level: 98 },
-  { name: 'Design Systems', level: 95 },
-  { name: 'Team Management', level: 95 },
-  { name: 'Cross-Team Collaboration', level: 92 },
-  { name: 'User Research', level: 90 },
-  { name: 'Design Sprint Facilitation', level: 88 },
-  { name: 'Agile Methodologies', level: 85 },
+  { name: 'Enterprise UX Design', level: 98 },
+  { name: 'AI Experience Design', level: 95 },
+  { name: 'Design Leadership', level: 95 },
+  { name: 'Product Strategy', level: 92 },
+  { name: 'Security & Privacy Design', level: 90 },
+  { name: 'Design Systems', level: 88 },
+  { name: 'Cross-Platform Design', level: 85 },
 ].sort((a, b) => b.level - a.level);
 
 export function Skills() {
