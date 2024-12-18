@@ -3,10 +3,8 @@ title: "Fraud Protection"
 description: "Designed the Fraud Protection experience for Dynamics 365"
 image: "/images/projects/fraud-protection/main/cover.jpg"
 tags:
+  - AI
   - Security
-  - ML
-  - Enterprise
-  - E-commerce
 year: 2019
 role: Product Designer
 company: Microsoft

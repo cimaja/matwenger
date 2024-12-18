@@ -12,11 +12,16 @@ export function GitHubRepoCard({ repo }: { repo: GitHubRepo }) {
   });
 
   return (
-    <Link href={repo.html_url} target="_blank" rel="noopener noreferrer">
-      <Card className="h-full hover:border-pink-500/20 transition-colors">
+    <Link 
+      href={repo.html_url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="block transition-transform hover:-translate-y-1"
+    >
+      <Card className="h-full transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold">{repo.name}</h3>
+            <h3 className="text-lg font-semibold group-hover:text-pink-500 transition-colors">{repo.name}</h3>
             <div className="flex items-center gap-4 text-muted-foreground">
               <div className="flex items-center gap-1">
                 <StarIcon className="w-4 h-4" />

@@ -27,15 +27,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Link href={`/projects/${project.id}`}>
-        <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
+      <Link href={`/projects/${project.id}`} className="block transition-transform hover:-translate-y-1">
+        <Card className="group overflow-hidden transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
           <CardHeader className="p-0">
             <div className="relative aspect-[16/9] overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority={index < 3} // Prioritize loading for first 3 images
               />
