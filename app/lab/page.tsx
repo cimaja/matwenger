@@ -79,7 +79,7 @@ export default function LabPage() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*]:h-full">
           {loading ? (
             Array(6).fill(0).map((_, i) => (
               <RepoSkeleton key={i} />
@@ -91,6 +91,7 @@ export default function LabPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                className="h-full"
               >
                 <GitHubRepoCard repo={repo} />
               </motion.div>

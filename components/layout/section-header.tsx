@@ -18,9 +18,9 @@ export function SectionHeader({ title, description, className }: SectionHeaderPr
       viewport={{ once: true }}
       className={cn('text-center', className)}
     >
-      <h2 className="text-3xl font-bold mb-4">{title}</h2>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 font-serif tracking-tight">{title}</h2>
       {description && (
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
           {description}
         </p>
       )}

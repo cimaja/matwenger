@@ -36,7 +36,7 @@ export function AboutTimeline() {
                 </div>
               </div>
 
-              <div className="relative bg-card p-6 rounded-lg shadow-sm border border-border hover:border-pink-500/20 transition-colors">
+              <div className="relative bg-card p-6 rounded-lg shadow-sm border border-border hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <div className="font-bold mb-1">{item.title}</div>

@@ -3,4 +3,5 @@ export interface Testimonial {
   role: string;
   image: string;
   text: string;
+  linkedIn?: string;
 }

@@ -41,7 +41,7 @@ export function TestimonialsSection() {
         />
 
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <AnimatePresence mode="wait">
               {currentTestimonials.map((testimonial, index) => (
                 <motion.div
@@ -50,8 +50,12 @@ export function TestimonialsSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="h-full"
                 >
-                  <TestimonialCard testimonial={testimonial} />
+                  <TestimonialCard 
+                    testimonial={testimonial} 
+                    index={currentIndex + index} 
+                  />
                 </motion.div>
               ))}
             </AnimatePresence>

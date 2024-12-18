@@ -12,14 +12,14 @@ export function GitHubRepoCard({ repo }: { repo: GitHubRepo }) {
   });
 
   return (
-    <Link 
-      href={repo.html_url} 
-      target="_blank" 
+    <Link
+      href={repo.html_url}
+      target="_blank"
       rel="noopener noreferrer"
-      className="block transition-transform hover:-translate-y-1"
+      className="block h-full"
     >
-      <Card className="h-full transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
-        <CardHeader>
+      <Card className="h-full transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10 flex flex-col">
+        <CardHeader className="flex-none">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold group-hover:text-pink-500 transition-colors">{repo.name}</h3>
             <div className="flex items-center gap-4 text-muted-foreground">
@@ -34,7 +34,7 @@ export function GitHubRepoCard({ repo }: { repo: GitHubRepo }) {
             </div>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-1">
           <p className="text-muted-foreground mb-4">{repo.description || 'No description available'}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {repo.language && (
