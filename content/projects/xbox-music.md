@@ -56,4 +56,3 @@ The Xbox Music web player redefined the Microsoft Music experience:
 - Design patterns were adopted by the Windows Music Application
 - Created intuitive web-first interaction model for music playback
 - Streamlined content discovery and playlist management
-- Received positive press coverage for innovative web experience
