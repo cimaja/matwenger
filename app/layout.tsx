@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     default: 'Mathias Wendlinger',
     template: '%s | Mathias Wendlinger',
   },
-  description: 'Software Engineer & UI/UX Designer',
+  description: 'Principal Design Manager specializing in AI-driven experiences, enterprise solutions, and innovative digital products at Microsoft',
   openGraph: {
     title: 'Mathias Wendlinger',
-    description: 'Software Engineer & UI/UX Designer',
+    description: 'Principal Design Manager specializing in AI-driven experiences, enterprise solutions, and innovative digital products at Microsoft',
     url: 'https://matwenger.at',
     siteName: 'Mathias Wendlinger',
     locale: 'en_US',
@@ -39,7 +39,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
   icons: {
-    shortcut: '/favicon.ico',
+    shortcut: '/Shared/Logo.png',
+    icon: '/Shared/Logo.png',
   },
 };
 
