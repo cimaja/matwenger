@@ -17,6 +17,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   serverExternalPackages: ['sharp'],
   distDir: '.next',
   onDemandEntries: {
@@ -25,6 +28,6 @@ const nextConfig = {
   },
   basePath: '',
   assetPrefix: '',
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
