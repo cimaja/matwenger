@@ -37,7 +37,7 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          npm run build
+          npx next build
           touch out/.nojekyll
 
       - name: Upload artifact
