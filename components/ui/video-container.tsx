@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import { ImageContainer } from '@/components/ui/image-container';
 import { cn } from '@/lib/utils';
 import { Pause, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,17 +9,27 @@ import { Button } from '@/components/ui/button';
 interface VideoContainerProps {
   src: string;
   mobileSrc?: string;
+  fallbackImage?: string;
+  mobileFallbackImage?: string;
+  useVideoFallback?: boolean;
+  alt?: string;
   className?: string;
   brightness?: number;
   effect?: 'grayscale' | 'none';
+  priority?: boolean;
 }
 
 export function VideoContainer({
   src,
   mobileSrc,
+  fallbackImage,
+  mobileFallbackImage,
+  useVideoFallback = true,
+  alt = "Background",
   className,
   brightness = 100,
   effect = 'none',
+  priority = false,
 }: VideoContainerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
@@ -45,6 +56,37 @@ export function VideoContainer({
       if (desktopVideoRef.current) desktopVideoRef.current.pause();
     }
   };
+
+  if (!useVideoFallback) {
+    return (
+      <div className={cn('relative w-full h-full overflow-hidden', className)}>
+        <div className={cn(
+          'relative w-full h-full',
+          mobileFallbackImage ? 'sm:hidden' : ''
+        )}>
+          <ImageContainer
+            src={mobileFallbackImage || fallbackImage || src}
+            alt={alt}
+            priority={priority}
+            effect={effect}
+            brightness={brightness}
+          />
+        </div>
+
+        {mobileFallbackImage && (
+          <div className="relative w-full h-full hidden sm:block">
+            <ImageContainer
+              src={fallbackImage || src}
+              alt={alt}
+              priority={priority}
+              effect={effect}
+              brightness={brightness}
+            />
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className={cn('relative w-full h-full overflow-hidden', className)}>

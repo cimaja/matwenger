@@ -6,14 +6,20 @@ import { VideoContainer } from '@/components/ui/video-container';
 import { HaloGradient } from '@/components/ui/halo-gradient';
 
 export function AboutHero() {
+  const useVideo = true; // Toggle this to switch between video and image
+
   return (
     <Section className="relative h-[60vh] mb-16">
-      <HaloGradient opacity={0.3} /> 
+      <HaloGradient opacity={0.3} />
       <VideoContainer
         src="/images/about/about-video-cover-large.mp4"
         mobileSrc="/images/about/about-video-cover-small.mp4"
-        effect="none" 
-        brightness={100} 
+        fallbackImage="/images/about/about-cover.jpg"
+        alt="Scenic coastal view"
+        priority
+        useVideoFallback={useVideo}
+        effect={!useVideo ? "grayscale" : "none"}
+        brightness={!useVideo ? 90 : 100}
       />
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
