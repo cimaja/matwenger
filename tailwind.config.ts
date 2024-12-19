@@ -17,9 +17,10 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: 'var(--font-sans)',
+        sans: ['var(--font-sans)'],
         serif: 'var(--font-serif)',
-        lora: 'var(--font-lora)',
+        lora: ['var(--font-lora)'],
+        outfit: ['var(--font-outfit)'],
       },
       colors: {
         border: 'hsl(var(--border))',

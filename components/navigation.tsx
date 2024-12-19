@@ -12,7 +12,7 @@ export function Navigation() {
       <nav className="container flex h-14 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center space-x-3 font-bold"
+          className="flex items-center space-x-3"
         >
           <Image
             src="/Shared/Logo.png"
@@ -21,7 +21,7 @@ export function Navigation() {
             height={24}
             className="h-6 w-auto"
           />
-          <span>Mathias Wendlinger</span>
+          <span className="font-outfit text-lg font-light tracking-wide">Mathias Wendlinger</span>
         </Link>
         
         <div className="flex items-center space-x-6">
