@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, useAnimationFrame } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -17,10 +17,26 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [direction, setDirection] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const dragX = useMotionValue(0);
-  const x = useSpring(dragX, { damping: 20, stiffness: 100 });
-  const baseVelocity = -1;
+  const x = useMotionValue(0);
+  const baseVelocity = -0.02;
+
+  useAnimationFrame((t, delta) => {
+    if (!isPaused && carouselRef.current) {
+      const xPos = x.get();
+      let newX = xPos + baseVelocity * delta;
+
+      // Reset position when we've scrolled the width of the carousel
+      const carouselWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+      if (-newX >= carouselWidth) {
+        newX = 0;
+      }
+
+      x.set(newX);
+      carouselRef.current.scrollLeft = -newX;
+    }
+  });
 
   const handleImageLoad = (index: number) => {
     setLoadedImages(prev => new Set(prev).add(index));
@@ -66,7 +82,11 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   };
 
   return (
-    <div className={cn("relative w-screen -ml-[50vw] left-1/2 right-1/2", className)}>
+    <div 
+      className={cn("relative w-screen -ml-[50vw] left-1/2 right-1/2", className)}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="relative overflow-hidden py-8">
         <div className="absolute left-4 sm:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-10">
           <Button
@@ -107,17 +127,17 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             WebkitOverflowScrolling: 'touch',
           }}
         >
-          {images.map((image, index) => (
+          {[...images, ...images].map((image, index) => (
             <motion.div
-              key={image.src}
+              key={`${image.src}-${index}`}
               className="relative flex-none w-[85vw] sm:w-[45vw] lg:w-[35vw] aspect-[16/9] group cursor-pointer first:ml-[2.5vw] last:mr-[2.5vw]"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ 
-                opacity: loadedImages.has(index) ? 1 : 0,
-                scale: loadedImages.has(index) ? 1 : 0.9
+                opacity: loadedImages.has(index % images.length) ? 1 : 0,
+                scale: loadedImages.has(index % images.length) ? 1 : 0.9
               }}
               transition={{ duration: 0.3 }}
-              onClick={() => openLightbox(index)}
+              onClick={() => openLightbox(index % images.length)}
             >
               <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
@@ -125,7 +145,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                   alt={image.alt}
                   fill
                   className="object-cover rounded-xl"
-                  onLoad={() => handleImageLoad(index)}
+                  onLoad={() => handleImageLoad(index % images.length)}
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 35vw"
                   priority={index === 0}
                 />
