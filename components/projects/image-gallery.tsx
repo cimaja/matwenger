@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, useAnimationFrame } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { GalleryImage } from '@/lib/get-project-content';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface ImageGalleryProps {
   images: GalleryImage[];
@@ -16,8 +17,10 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [direction, setDirection] = useState(0);
-
-  if (!images || images.length === 0) return null;
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const dragX = useMotionValue(0);
+  const x = useSpring(dragX, { damping: 20, stiffness: 100 });
+  const baseVelocity = -1;
 
   const handleImageLoad = (index: number) => {
     setLoadedImages(prev => new Set(prev).add(index));
@@ -63,30 +66,87 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   };
 
   return (
-    <div className={className}>
-      <div className="space-y-4">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className={cn("relative w-screen -ml-[50vw] left-1/2 right-1/2", className)}>
+      <div className="relative overflow-hidden py-8">
+        <div className="absolute left-4 sm:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-10">
+          <Button
+            variant="outline"
+            size="icon"
+            className="bg-background/80 backdrop-blur-sm hover:bg-background/90"
+            onClick={() => {
+              if (carouselRef.current) {
+                carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+              }
+            }}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+        </div>
+        
+        <div className="absolute right-4 sm:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-10">
+          <Button
+            variant="outline"
+            size="icon"
+            className="bg-background/80 backdrop-blur-sm hover:bg-background/90"
+            onClick={() => {
+              if (carouselRef.current) {
+                carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+              }
+            }}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
+
+        <div 
+          ref={carouselRef}
+          className="flex space-x-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          }}
+        >
           {images.map((image, index) => (
             <motion.div
               key={image.src}
-              initial={{ opacity: 0, y: 20 }}
+              className="relative flex-none w-[85vw] sm:w-[45vw] lg:w-[35vw] aspect-[16/9] group cursor-pointer first:ml-[2.5vw] last:mr-[2.5vw]"
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ 
                 opacity: loadedImages.has(index) ? 1 : 0,
-                y: loadedImages.has(index) ? 0 : 20
+                scale: loadedImages.has(index) ? 1 : 0.9
               }}
-              className="relative aspect-[4/3] group cursor-pointer"
+              transition={{ duration: 0.3 }}
               onClick={() => openLightbox(index)}
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
-                onLoad={() => handleImageLoad(index)}
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                <span className="text-white text-sm font-medium">View Image</span>
+              <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-[1.02]">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover rounded-xl"
+                  onLoad={() => handleImageLoad(index)}
+                  sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 35vw"
+                  priority={index === 0}
+                />
+                <motion.div 
+                  className="absolute inset-0 rounded-xl overflow-hidden"
+                  initial={false}
+                  whileHover={{ opacity: 1 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white text-sm font-medium px-4 py-2 bg-black/40 rounded-full backdrop-blur-sm">
+                      View Image
+                    </span>
+                    {image.caption && (
+                      <div className="absolute bottom-0 inset-x-0 p-4">
+                        <p className="text-white text-sm text-center">
+                          {image.caption}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -99,7 +159,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
             <div className="absolute top-4 right-4 z-10">
@@ -142,7 +202,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             </div>
 
             <div 
-              className="relative w-full max-w-5xl mx-auto overflow-hidden h-[80vh] flex items-center rounded"
+              className="relative w-full max-w-7xl mx-auto overflow-hidden h-[90vh] flex items-center"
               onClick={(e) => e.stopPropagation()}
             >
               <AnimatePresence custom={direction} initial={false}>
@@ -162,28 +222,27 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                   dragElastic={1}
                   onDragEnd={(e, { offset, velocity }) => {
                     const swipe = swipePower(offset.x, velocity.x);
-
                     if (swipe < -swipeConfidenceThreshold) {
                       next();
                     } else if (swipe > swipeConfidenceThreshold) {
                       previous();
                     }
                   }}
-                  className="absolute inset-0 flex items-center justify-center rounded"
+                  className="absolute inset-0 flex items-center justify-center"
                 >
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <div className="relative max-w-[90%] max-h-[90vh]">
+                    <div className="relative max-w-[95%] max-h-[90vh]">
                       <Image
                         src={images[selectedIndex].src}
                         alt={images[selectedIndex].alt}
-                        width={1920}
-                        height={1080}
-                        className="rounded object-contain w-auto h-auto max-h-[90vh]"
+                        width={2400}
+                        height={1600}
+                        className="rounded-lg object-contain w-auto h-auto max-h-[90vh]"
                         priority
                       />
                       {images[selectedIndex].caption && (
-                        <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                          <p className="text-white text-center">
+                        <div className="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                          <p className="text-white text-center text-sm sm:text-base">
                             {images[selectedIndex].caption}
                           </p>
                         </div>
