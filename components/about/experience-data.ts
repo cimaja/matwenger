@@ -2,10 +2,16 @@ import { TimelineItemProps } from '@/components/timeline/types';
 
 export const experienceData: TimelineItemProps[] = [
   {
-    date: "2018-Present",
+    date: "2022-Present",
     title: "Principal Design Manager",
     company: "Microsoft",
-    description: "Leading and managing a team of 4 designers, responsible for creative direction and product innovation. Hired, onboarded, and mentored a multi-disciplinary design team spread across Europe and US, focusing on AI-powered business process automation."
+    description: "Coaching a multidisciplinary team of product designers, content creators, and research specialists to redifine Robotic Process Automation with AI."
+  },
+  {
+    date: "2018-2022",
+    title: "Senior Design Manager",
+    company: "Microsoft",
+    description: "Hired, onboarded, and mentored a multidisciplinary team of product designers, content creators, and research specialists in Seattle and Paris to develop and deliver the first no-code AI platform."
   },
   {
     date: "2017-2018",
