@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: { 
     unoptimized: true,
     remotePatterns: [
@@ -20,8 +21,10 @@ const nextConfig = {
   distDir: '.next',
   onDemandEntries: {
     maxInactiveAge: 60 * 60 * 1000,
-    pagesBufferLength: 5,
-  }
+    pagesBufferLength: 2,
+  },
+  basePath: '',
+  assetPrefix: '',
 };
 
 module.exports = nextConfig;
