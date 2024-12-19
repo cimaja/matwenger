@@ -26,7 +26,7 @@ export function NavLinks() {
             'after:absolute after:bottom-[-1px] after:left-0 after:h-[2px] after:w-full after:origin-left',
             'after:scale-x-0 after:bg-pink-500 after:transition-transform after:duration-200',
             pathname === href 
-              ? 'text-white after:scale-x-100' 
+              ? 'text-foreground after:scale-x-100' 
               : 'text-foreground/70'
           )}
         >

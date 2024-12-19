@@ -56,8 +56,8 @@ export default function RootLayout({
           lora.variable
         )}
       >
-        <Navigation />
         <Providers>
+          <Navigation />
           <div className="relative min-h-screen flex flex-col">
             <main className="flex-1">
               {children}
