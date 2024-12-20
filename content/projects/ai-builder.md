@@ -36,7 +36,9 @@ gallery:
   - src: "/images/projects/ai-builder/gallery/img_14.png"
     alt: "Performance Monitoring"
 videos:
-  - id: "WSWmn7WM3i4"
+  - src: /images/projects/ai-builder/video/video_1.mp4
+    thumbnail: /images/projects/ai-builder/video/thumbnail.jpg
+    type: "local"
     title: "AI Builder Overview"
     description: "Learn about the key features and capabilities of AI Builder"
 
