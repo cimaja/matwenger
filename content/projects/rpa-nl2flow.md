@@ -26,7 +26,9 @@ gallery:
   - src: "/images/projects/rpa-nl2flow/gallery/img_9.jpg"
     alt: "Flow updated in Designer"
 videos:
-  - id: "FMz0C6cY1qU"
+  - src: "/images/projects/rpa-nl2flow/video/video_1.mp4"
+    type: "local"
+    thumbnail: "/images/projects/rpa-nl2flow/video/thumbnail.jpg"
     title: "How to create a flow in Power Automate using natural language"
     description: "Learn how to use the Describe it to design it feature to create a flow in Power Automate using natural language"
 

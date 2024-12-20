@@ -2,13 +2,15 @@
 
 import { useState } from 'react';
 import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 interface VideoPlayerProps {
   src: string;
+  thumbnail?: string;
   className?: string;
 }
 
-export function VideoPlayer({ src, className }: VideoPlayerProps) {
+export function VideoPlayer({ src, thumbnail, className }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -19,6 +21,7 @@ export function VideoPlayer({ src, className }: VideoPlayerProps) {
         controls={isPlaying}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
+        poster={thumbnail}
       >
         Your browser does not support the video tag.
       </video>

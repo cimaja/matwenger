@@ -31,7 +31,7 @@ export function VideoGallery({ videos, className }: VideoGalleryProps) {
 
   const renderVideo = (video: Video) => {
     if (video.type === 'local') {
-      return <VideoPlayer src={video.src!} />;
+      return <VideoPlayer src={video.src!} thumbnail={video.thumbnail} />;
     }
     return <YouTube videoId={video.id!} />;
   };
