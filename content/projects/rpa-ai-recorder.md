@@ -1,15 +1,21 @@
 ---
 title: "RPA AI Recorder"
-description: "Designed an AI-powered RPA recorder for Power Automate Desktop"
+description: "Re-imagined the Power Automate Desktop recorder using GPT-V to combine UI automation with voice instructions, creating a more intuitive and accessible desktop flow creation experience"
 cover: "/images/projects/rpa-ai-recorder/main/cover.jpg"
 tags:
   - AI
   - RPA
-  - Power Platform
+  - Multi-modal
 year: 2023
 role: Product Designer
 company: Microsoft
+location: Paris, Athens, Seattle
 videos:
+  - src: "/images/projects/rpa-ai-recorder/video/video_0_with_audio.mp4"
+    thumbnail: "/images/projects/rpa-ai-recorder/video/video_0_with_audio.png"
+    type: "local"
+    title: "Power Automate Desktop AI Recorder"
+    description: "Introducing the AI-powered recorder for desktop automation"
   - src: "/images/projects/rpa-ai-recorder/video/video_1_with_audio.mp4"
     thumbnail: "/images/projects/rpa-ai-recorder/video/thumbnail_1.png"
     type: "local"
@@ -63,22 +69,23 @@ gallery:
 
 ## Overview
 
-As Product Designer at Microsoft, I led the design of the AI Recorder feature for Power Automate Desktop, revolutionizing how users create automated workflows. This innovative tool combines RPA (Robotic Process Automation) with AI to automatically record user actions and convert them into editable flows, making automation accessible to users of all technical levels.
+Back in September 2023, OpenAI announce a new AI model (GPT-V) that is multi-modal. In other words, this new model can take various data such as an image, text, sound as an input and generate either an image or text or code as an output. I collaborated closely with a cross-disciplinary team across Paris, Athens and Seattle to explore how we could re-imagine UI automation and disrupt the RPA market.
 
 ## Key responsibilities
 
-- Designed an intuitive recording interface that captures user actions while maintaining context
-- Created a seamless experience for converting recorded actions into Power Automate Desktop flows
-- Developed AI-powered features for action recognition and flow optimization
-- Implemented natural language processing to improve flow readability
-- Designed the flow editing and validation experience
-- Ensured seamless integration with the Power Automate Desktop ecosystem
+- Re-imagined the PAD recorder to leverage user interface and cursor movement with voice instructions
+- Reconciled different recording experiences (classic recorder, UI element picker, task coach)
+- Ensured consistency across interaction and visual design
+- Created end-to-end video demonstration for Ignite conference
+- Collaborated with cross-disciplinary (Data science, PM, DEV) team across multiple locations
+- Designed innovative UI automation approach using GPT-V multi-modal capabilities
 
 ## Impact
 
-The RPA AI Recorder significantly improved the automation development experience:
-- 60% reduction in time spent creating desktop flows
-- Increased accessibility of RPA to non-technical users
-- Improved flow reliability through AI-powered action recognition
-- Enhanced user productivity with smart action suggestions
-- Seamless integration with existing Power Automate Desktop workflows
+The RPA AI Recorder represents a significant advancement in automation technology:
+- Lowered barrier of entry for desktop flow creation
+- Combined multiple input modalities (UI, cursor movement, voice) for enhanced user experience
+- Positioned Power Automate as a leader in AI-first automation
+- Selected as a key feature for Microsoft Build conference
+- Demonstrated innovative use of GPT-V technology in enterprise software
+- Created seamless integration between voice instructions and UI automation
