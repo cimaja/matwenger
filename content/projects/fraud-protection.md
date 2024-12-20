@@ -9,7 +9,9 @@ year: 2019
 role: Product Designer
 company: Microsoft
 videos:
-  - id: "DlkQ_7M9yeI"
+  - src: "/images/projects/fraud-protection/video/video_1.mp4"
+    thumbnail: "/images/projects/fraud-protection/video/thumbnail.jpg"
+    type: "local"
     title: "Microsoft Fraud Protection Overview"
     description: "Learn how Microsoft Fraud Protection helps protect your business from fraud"
 gallery:
