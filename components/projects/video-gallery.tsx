@@ -13,27 +13,38 @@ interface VideoGalleryProps {
   className?: string;
 }
 
-export function VideoGallery({ videos, className }: VideoGalleryProps) {
+export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!videos || videos.length === 0) return null;
 
-  const currentVideo = videos[currentIndex];
-  const hasMultipleVideos = videos.length > 1;
+  // Filter out invalid videos
+  const validVideos = videos.filter(video => 
+    (video.type === 'local' && video.src) || 
+    (video.type === 'youtube' && video.id)
+  );
+
+  if (validVideos.length === 0) return null;
+
+  const currentVideo = validVideos[currentIndex];
+  const hasMultipleVideos = validVideos.length > 1;
 
   const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % videos.length);
+    setCurrentIndex((prev) => (prev + 1) % validVideos.length);
   };
 
   const previous = () => {
-    setCurrentIndex((prev) => (prev - 1 + videos.length) % videos.length);
+    setCurrentIndex((prev) => (prev - 1 + validVideos.length) % validVideos.length);
   };
 
   const renderVideo = (video: Video) => {
-    if (video.type === 'local') {
-      return <VideoPlayer src={video.src!} thumbnail={video.thumbnail} />;
+    if (video.type === 'local' && video.src) {
+      return <VideoPlayer src={video.src} thumbnail={video.thumbnail || null} />;
     }
-    return <YouTube videoId={video.id!} />;
+    if (video.type === 'youtube' && video.id) {
+      return <YouTube videoId={video.id} />;
+    }
+    return null;
   };
 
   return (
@@ -49,12 +60,12 @@ export function VideoGallery({ videos, className }: VideoGalleryProps) {
           >
             {renderVideo(currentVideo)}
             {(currentVideo.title || currentVideo.description) && (
-              <div className="mt-4 space-y-1">
+              <div className="mt-4">
                 {currentVideo.title && (
                   <h3 className="text-lg font-semibold">{currentVideo.title}</h3>
                 )}
                 {currentVideo.description && (
-                  <p className="text-muted-foreground">{currentVideo.description}</p>
+                  <p className="mt-1 text-muted-foreground">{currentVideo.description}</p>
                 )}
               </div>
             )}
@@ -62,19 +73,19 @@ export function VideoGallery({ videos, className }: VideoGalleryProps) {
         </AnimatePresence>
 
         {hasMultipleVideos && (
-          <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 pointer-events-none">
+          <div className="absolute top-1/2 -translate-y-1/2 flex justify-between w-full px-4">
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
-              className="pointer-events-auto bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+              className="bg-background/80 backdrop-blur-sm hover:bg-background/90 -translate-x-1/2"
               onClick={previous}
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
-              className="pointer-events-auto bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+              className="bg-background/80 backdrop-blur-sm hover:bg-background/90 translate-x-1/2"
               onClick={next}
             >
               <ChevronRight className="h-4 w-4" />
@@ -85,7 +96,7 @@ export function VideoGallery({ videos, className }: VideoGalleryProps) {
 
       {hasMultipleVideos && (
         <div className="flex justify-center gap-2">
-          {videos.map((_, index) => (
+          {validVideos.map((_, index) => (
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-colors ${

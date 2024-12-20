@@ -1,7 +1,7 @@
 ---
 title: Xbox Music
 description: Build the Xbox Music web experience, focusing on seamless playback and content discovery.
-image: "/images/projects/xbox-music/main/cover.jpg"
+cover: "/images/projects/xbox-music/main/cover.jpg"
 tags:
   - Music
   - Web player

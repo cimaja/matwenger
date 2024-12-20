@@ -1,7 +1,7 @@
 ---
 title: Xbox Support
 description: Revamped the Xbox support experience, improving user satisfaction and reducing support costs.
-image: "/images/projects/xbox-support/main/cover.jpg"
+cover: "/images/projects/xbox-support/main/cover.jpg"
 tags:
   - Xbox
   - Support

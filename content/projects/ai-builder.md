@@ -1,7 +1,7 @@
 ---
 title: "AI Builder"
 description: "Empowering business users to create and use AI models without code"
-image: "/images/projects/ai-builder/main/cover.jpg"
+cover: "/images/projects/ai-builder/main/cover.jpg"
 tags: ["AI", "No-code"]
 year: "2021"
 role: "Senior Design Manager"
@@ -21,7 +21,7 @@ gallery:
     alt: "Custom Model Configuration"
   - src: "/images/projects/ai-builder/gallery/img_7.jpg"
     alt: "Model Integration View"
-  - src: "/images/projects/ai-builder/gallery/img_8.png"
+  - src: "/images/projects/ai-builder/gallery/img_8.jpg"
     alt: "Data Connection Interface"
   - src: "/images/projects/ai-builder/gallery/img_9.jpg"
     alt: "Model Deployment Screen"
@@ -29,11 +29,11 @@ gallery:
     alt: "Model Management Dashboard"
   - src: "/images/projects/ai-builder/gallery/img_11.jpg"
     alt: "Model Insights View"
-  - src: "/images/projects/ai-builder/gallery/img_12.png"
+  - src: "/images/projects/ai-builder/gallery/img_12.jpg"
     alt: "Model Settings Panel"
-  - src: "/images/projects/ai-builder/gallery/img_13.png"
+  - src: "/images/projects/ai-builder/gallery/img_13.jpg"
     alt: "Integration Options"
-  - src: "/images/projects/ai-builder/gallery/img_14.png"
+  - src: "/images/projects/ai-builder/gallery/img_14.jpg"
     alt: "Performance Monitoring"
 videos:
   - src: /images/projects/ai-builder/video/video_1.mp4

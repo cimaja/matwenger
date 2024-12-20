@@ -1,7 +1,7 @@
 ---
 title: Your Groove
 description: Developed personalized music discovery feature using machine learning algorithms.
-image: /images/projects/your-groove/main/cover.jpg
+cover: /images/projects/your-groove/main/cover.jpg
 tags:
   - Music
   - AI
@@ -26,15 +26,15 @@ gallery:
     alt: "Artist recommendation view"
   - src: "/images/projects/your-groove/gallery/img_8.jpg"
     alt: "Playlist customization options"
-  - src: "/images/projects/your-groove/gallery/img_9.png"
+  - src: "/images/projects/your-groove/gallery/img_9.jpg"
     alt: "Music metadata analysis"
-  - src: "/images/projects/your-groove/gallery/img_10.png"
+  - src: "/images/projects/your-groove/gallery/img_10.jpg"
     alt: "Genre distribution visualization"
-  - src: "/images/projects/your-groove/gallery/img_11.png"
+  - src: "/images/projects/your-groove/gallery/img_11.jpg"
     alt: "Recommendation settings"
-  - src: "/images/projects/your-groove/gallery/img_12.png"
+  - src: "/images/projects/your-groove/gallery/img_12.jpg"
     alt: "Machine learning model insights"
-  - src: "/images/projects/your-groove/gallery/img_13.png"
+  - src: "/images/projects/your-groove/gallery/img_13.jpg"
     alt: "User feedback interface"
   - src: "/images/projects/your-groove/gallery/img_14.jpg"
     alt: "Performance metrics dashboard"
@@ -46,11 +46,11 @@ videos:
     title: "Your Groove Feature Overview"
     description: "A comprehensive overview of the Your Groove music discovery feature"
   - type: "local"
-    src: "/images/projects/your-groove/videos/video_2.mov"
+    src: "/images/projects/your-groove/videos/video_2.mp4"
     title: "Playlist Generation Demo"
     description: "Demonstration of the intelligent playlist generation system"
   - type: "local"
-    src: "/images/projects/your-groove/videos/video_3.mov"
+    src: "/images/projects/your-groove/videos/video_3.mp4"
     title: "Cross-Platform Experience"
     description: "Showcasing Your Groove across Windows, Mobile, and Xbox platforms"
 ---

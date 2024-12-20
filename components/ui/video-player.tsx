@@ -6,12 +6,14 @@ import Image from 'next/image';
 
 interface VideoPlayerProps {
   src: string;
-  thumbnail?: string;
+  thumbnail?: string | null;
   className?: string;
 }
 
-export function VideoPlayer({ src, thumbnail, className }: VideoPlayerProps) {
+export function VideoPlayer({ src, thumbnail = null, className = '' }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  if (!src) return null;
 
   return (
     <div className="relative group">
@@ -21,7 +23,7 @@ export function VideoPlayer({ src, thumbnail, className }: VideoPlayerProps) {
         controls={isPlaying}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
-        poster={thumbnail}
+        poster={thumbnail || undefined}
       >
         Your browser does not support the video tag.
       </video>

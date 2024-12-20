@@ -20,6 +20,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const imageUrl = project.cover || project.image;
+  if (!imageUrl) return null;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +35,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <CardHeader className="p-0">
             <div className="relative aspect-[16/9] overflow-hidden">
               <Image
-                src={project.image}
+                src={imageUrl}
                 alt={project.title}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"

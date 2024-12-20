@@ -8,10 +8,13 @@ interface ProjectHeroProps {
 }
 
 export function ProjectHero({ project }: ProjectHeroProps) {
+  const imageUrl = project.cover || project.image;
+  if (!imageUrl) return null;
+
   return (
     <div className="relative w-full h-[60vh] min-h-[400px] bg-background">
       <Image
-        src={project.image}
+        src={imageUrl}
         alt={project.title}
         fill
         className="object-cover"

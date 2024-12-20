@@ -1,7 +1,7 @@
 ---
 title: "Power Automate NL2Flow"
 description: "Turn natural language into flows for Power Automate"
-image: "/images/projects/rpa-nl2flow/main/cover.jpg"
+cover: "/images/projects/rpa-nl2flow/main/cover.jpg"
 tags: ["AI", "Workflow", "No-code"]
 year: "2023"
 role: "Senior Design Manager"

@@ -1,7 +1,7 @@
 ---
 title: "Music Taste Profile"
 description: "Enhancing the onboarding experience for Groove Music to make it more personal and engaging"
-image: "/images/projects/music-taste-profile/main/cover.jpg"
+cover: "/images/projects/music-taste-profile/main/cover.jpg"
 tags:
   - Music
   - AI
@@ -12,22 +12,25 @@ company: Microsoft
 videos:
   - type: "local"
     src: "/images/projects/music-taste-profile/video/video_1.mp4"
+    thumbnail: "/images/projects/music-taste-profile/video/thumbnail_1.jpg"
     title: "Music Taste Profile Overview"
     description: "An overview of how the Music Taste Profile works and helps users discover new music"
   - type: "local"
     src: "/images/projects/music-taste-profile/video/video_2.mp4"
+    thumbnail: "/images/projects/music-taste-profile/video/thumbnail_2.jpg"
     title: "Personalized Recommendations"
     description: "Demonstration of how the system generates personalized music recommendations"
   - type: "local"
     src: "/images/projects/music-taste-profile/video/video_3.mp4"
+    thumbnail: "/images/projects/music-taste-profile/video/thumbnail_3.jpg"
     title: "User Experience Walkthrough"
     description: "A walkthrough of the user experience and key features"
 gallery:
-  - src: "/images/projects/music-taste-profile/gallery/img_1.png"
+  - src: "/images/projects/music-taste-profile/gallery/img_1.jpg"
     alt: "Music Taste Profile Dashboard"
-  - src: "/images/projects/music-taste-profile/gallery/img_2.png"
+  - src: "/images/projects/music-taste-profile/gallery/img_2.jpg"
     alt: "Genre Distribution"
-  - src: "/images/projects/music-taste-profile/gallery/img_3.png"
+  - src: "/images/projects/music-taste-profile/gallery/img_3.jpg"
     alt: "Recommendation Interface"
   - src: "/images/projects/music-taste-profile/gallery/img_4.jpg"
     alt: "Artist Analysis"

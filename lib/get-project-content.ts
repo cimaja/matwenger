@@ -36,7 +36,8 @@ export interface ProjectContent {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  cover?: string;
   tags: string[];
   year: string;
   role: string;
@@ -62,6 +63,7 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
       title: data.title,
       description: data.description,
       image: data.image,
+      cover: data.cover,
       tags: data.tags,
       year: data.year,
       role: data.role,
