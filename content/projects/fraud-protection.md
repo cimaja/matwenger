@@ -9,11 +9,16 @@ year: 2019
 role: Product Designer
 company: Microsoft
 videos:
-  - src: "/images/projects/fraud-protection/video/video_1.mp4"
+  - src: "/images/projects/fraud-protection/video/video_1_part1.mp4"
     thumbnail: "/images/projects/fraud-protection/video/thumbnail.jpg"
     type: "local"
-    title: "Microsoft Fraud Protection Overview"
-    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud"
+    title: "Microsoft Fraud Protection Overview (Part 1)"
+    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud (Part 1/2)"
+  - src: "/images/projects/fraud-protection/video/video_1_part2.mp4"
+    thumbnail: "/images/projects/fraud-protection/video/thumbnail.jpg"
+    type: "local"
+    title: "Microsoft Fraud Protection Overview (Part 2)"
+    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud (Part 2/2)"
 gallery:
   - src: "/images/projects/fraud-protection/gallery/img_1.jpg"
     alt: "Fraud Protection Dashboard"
