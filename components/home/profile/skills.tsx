@@ -42,7 +42,7 @@ export function Skills() {
               <div className="font-medium">{skill.name}</div>
               <div className="text-sm text-muted-foreground">{skill.level}%</div>
             </div>
-            <div className="h-2 bg-secondary rounded-full overflow-hidden">
+            <div className="h-2 bg-secondary rounded-full overflow-hidden relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/30 before:via-transparent before:to-transparent before:blur-lg">
               <motion.div
                 className="h-full rounded-full relative overflow-hidden"
                 initial={{ scaleX: 0 }}
@@ -50,9 +50,9 @@ export function Skills() {
                 transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                 viewport={{ once: true }}
                 style={{
-                  background: 'linear-gradient(90deg, rgba(255, 20, 147, 0.4), rgba(75, 0, 130, 0.4))',
+                  background: 'linear-gradient(90deg, rgb(255, 20, 147), rgb(147, 51, 234))',
                   transformOrigin: 'left',
-                  boxShadow: '0 0 15px rgba(75, 0, 130, 0.3)',
+                  filter: 'drop-shadow(0 0 8px rgba(147, 51, 234, 0.6))',
                 }}
               >
                 <motion.div
