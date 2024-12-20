@@ -10,7 +10,7 @@ role: Product Designer
 company: Microsoft
 videos:
   - src: "/images/projects/fraud-protection/video/video_1_part1.mp4"
-    thumbnail: "/images/projects/fraud-protection/video/thumbnail.jpg"
+    thumbnail: "/images/projects/fraud-protection/video/thumbnail_part1.jpg"
     type: "local"
     title: "Microsoft Fraud Protection Overview (Part 1)"
     description: "Learn how Microsoft Fraud Protection helps protect your business from fraud (Part 1/2)"
