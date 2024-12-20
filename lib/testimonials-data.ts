@@ -8,16 +8,10 @@ export const testimonials: Testimonial[] = [
     text: 'Mathias\'s dedication and leadership have been outstanding. His creative ideas and hard work, especially on the AI Copilot features, have significantly shaped the product. His ability to deliver on time and openness to feedback have kept projects on track and fostered continuous improvement. Mathias\'s technical depth and collaborative spirit have created a positive team environment and a smooth user experience. It\'s a privilege to work with him.'
   },
   {
-    author: 'Costas Chamosfakides',
-    role: 'Principal PM at Microsoft',
-    image: '/images/people/Costas_Chamosfakides.jpg',
-    text: 'Working with Mathias over the past few months has been an absolute pleasure. He excels in taking ownership of features, delivering quality work and exceptional UI/UX experiences. Mathias is proactive, always thinking ahead and identifying potential issues early. His strong sense of the product\'s vision and strategy allows him to make valuable contributions. Additionally, he respects the diversity of the team, fostering a collaborative environment. I couldn\'t have asked for a better collaborator and look forward to more successful projects together!'
-  },
-  {
     author: 'Joe Fernandez',
     role: 'Principal PM at Microsoft',
     image: '/images/people/Joe_Fernandez.jpg',
-    text: 'Working with Mathias has been a pleasure. He excels as a design leader and is an incredible colleague. Mathias has a strong design and product sense, caring deeply about our customers\' success and pushing the product team towards redefining RPA in the Age of AI™. His structured approach ensures every artifact he produces is well-organized and clear, setting the bar for excellence. Additionally, Mathias is a role model and coach, helping his team grow and improve in their craft. They are fortunate to have him as their manager.'
+    text: 'Working with Mathias has been a pleasure. He excels as a design leader and is an incredible colleague. Mathias has a strong design and product sense, caring deeply about our customers\' success and pushing the product team towards redefining RPA in the Age of AI. His structured approach ensures every artifact he produces is well-organized and clear, setting the bar for excellence. Additionally, Mathias is a role model and coach, helping his team grow and improve in their craft. They are fortunate to have him as their manager.'
   },
   {
     author: 'Apostolis Papaioannou',
@@ -30,6 +24,12 @@ export const testimonials: Testimonial[] = [
     role: 'Principal Content Designer at Microsoft',
     image: '/images/people/Matt_Shelton.jpg',
     text: 'The team stands out for its ability to deliver important work that resonates with customers, despite geographical and time zone challenges. Mathias deserves full credit for this. He has a unique ability to hold people accountable without damaging their self-confidence or desire to improve. The team dynamic and the designers are fantastic, and being part of this team has been a joy. Full credit goes to Mathias for fostering such a positive and productive environment.'
+  },
+  {
+    author: 'Costas Chamosfakides',
+    role: 'Principal PM at Microsoft',
+    image: '/images/people/Costas_Chamosfakides.jpg',
+    text: 'Working with Mathias over the past few months has been an absolute pleasure. He excels in taking ownership of features, delivering quality work and exceptional UI/UX experiences. Mathias is proactive, always thinking ahead and identifying potential issues early. His strong sense of the product\'s vision and strategy allows him to make valuable contributions. Additionally, he respects the diversity of the team, fostering a collaborative environment. I couldn\'t have asked for a better collaborator and look forward to more successful projects together!'
   },
   {
     author: 'Matthew LeHew',
