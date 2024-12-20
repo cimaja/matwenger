@@ -52,6 +52,7 @@ export function Skills() {
                 style={{
                   background: 'linear-gradient(90deg, rgba(255, 20, 147, 0.4), rgba(75, 0, 130, 0.4))',
                   transformOrigin: 'left',
+                  boxShadow: '0 0 15px rgba(75, 0, 130, 0.3)',
                 }}
               >
                 <motion.div
