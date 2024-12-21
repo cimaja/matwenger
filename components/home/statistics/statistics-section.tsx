@@ -4,13 +4,22 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/section';
 import { Counter } from './counter';
 
+// Start dates for experience calculation
+const EXPERIENCE_START_YEAR = 2007; // Started working in 2007
+const MANAGEMENT_START_YEAR = 2014; // Started managing in 2014
+
+function calculateYears(startYear: number): string {
+  const currentYear = new Date().getFullYear();
+  return (currentYear - startYear).toString();
+}
+
 const statistics = [
   {
-    number: '17',
+    number: calculateYears(EXPERIENCE_START_YEAR),
     text: 'years of\nexperience',
   },
   {
-    number: '10',
+    number: calculateYears(MANAGEMENT_START_YEAR),
     text: 'years managing\ndesign teams',
   },
   {
