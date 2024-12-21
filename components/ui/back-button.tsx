@@ -14,7 +14,7 @@ export function BackButton({ href, label = 'Back' }: BackButtonProps) {
     <Button
       variant="secondary"
       size="sm"
-      className="gap-2 pl-2 absolute top-6 left-4 z-10 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-colors"
+      className="gap-2 pl-2 fixed top-24 left-4 z-50 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-colors shadow-sm"
       asChild
     >
       <Link href={href}>
