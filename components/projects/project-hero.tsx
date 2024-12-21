@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { ProjectContent } from '@/lib/get-project-content';
+import { ParallaxImage } from '../ui/parallax-image';
 
 interface ProjectHeroProps {
   project: ProjectContent;
@@ -13,12 +13,11 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
   return (
     <div className="relative w-full h-[60vh] min-h-[400px] bg-background">
-      <Image
+      <ParallaxImage
         src={imageUrl}
         alt={project.title}
-        fill
-        className="object-cover"
         priority
+        className="h-full"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
     </div>

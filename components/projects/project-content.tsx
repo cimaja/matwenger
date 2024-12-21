@@ -7,6 +7,7 @@ import { ImageGallery } from './image-gallery';
 import { ProjectHero } from './project-hero';
 import { ProjectDetails } from './project-details';
 import { AnimateIn } from '../ui/animate-in';
+import { BackButton } from '../ui/back-button';
 
 interface ProjectContentProps {
   project: Project;
@@ -14,7 +15,8 @@ interface ProjectContentProps {
 
 export function ProjectContent({ project }: ProjectContentProps) {
   return (
-    <div>
+    <div className="relative">
+      <BackButton href="/projects" label="All Projects" />
       <ProjectHero project={project} />
       <AnimateIn>
         <ProjectDetails project={project} />
