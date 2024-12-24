@@ -21,7 +21,7 @@ export function Navigation() {
             height={24}
             className="h-6 w-auto"
           />
-          <span className="font-outfit text-lg font-light tracking-wide">Mathias Wendlinger</span>
+          <span className="font-outfit text-lg font-light tracking-wide hidden sm:inline">Mathias Wendlinger</span>
         </Link>
         
         <div className="flex items-center space-x-6">
