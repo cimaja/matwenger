@@ -1,6 +1,6 @@
 ---
-title: "Power Automate NL2Flow"
-description: "Turn natural language into flows for Power Automate"
+title: "RPA Natural Language to Workflow"
+description: "Designed a natural language interface that generates flows for Power Automate, empowering users to automate tasks without needing technical skills"
 cover: "/images/projects/rpa-nl2flow/main/cover.jpg"
 tags: ["AI", "Workflow", "No-code"]
 year: "2023"

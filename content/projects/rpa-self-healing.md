@@ -1,5 +1,5 @@
 ---
-title: "Self-healing with Copilot"
+title: "RPA Self-healing with Copilot"
 description: "Designed a self-healing system for Power Automate Desktop that automatically repairs broken UI selectors during runtime using Copilot, enabling reliable automation even when application interfaces change"
 cover: "/images/projects/rpa-self-healing/main/cover.jpg"
 tags: ["AI", "RPA", "Vision"]
