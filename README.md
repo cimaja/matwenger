@@ -226,7 +226,3 @@ npm install
 # Start development server
 npm run dev
 ```
-
-The website will be available at http://localhost:3000
-
-Let me know if you'd like to make any changes to the content or design, or if you need help with anything specific!
