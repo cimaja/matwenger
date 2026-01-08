@@ -46,7 +46,17 @@ export function AboutTimeline() {
                     {item.date}
                   </div>
                 </div>
-                <div className="text-muted-foreground">{item.description}</div>
+                <div className="text-muted-foreground">
+                  {Array.isArray(item.description) ? (
+                    <ul className="list-disc list-outside ml-4 space-y-2">
+                      {item.description.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    item.description
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

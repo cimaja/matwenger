@@ -2,39 +2,42 @@ import { TimelineItemProps } from '@/components/timeline/types';
 
 export const experienceData: TimelineItemProps[] = [
   {
-    date: "2025-Present",
+    date: "2022–present",
     title: "Principal Design Manager",
     company: "Microsoft",
-    description: "Coaching and leading a multidisciplinary, globally distributed team of product designers, content designers, and research partners across India, Greece, France, and the US. Together, we design the foundational experiences behind Power Apps, Power Pages, and Power Automate, accelerating AI adoption and enabling makers and enterprises to build, automate, and scale with confidence."
+    description: [
+      "Lead a globally distributed, multidisciplinary team of product designers, content creators, and research partners across India, Greece, France, and the US.",
+      "Design foundational experiences for Power Apps, Power Pages, and Power Automate, accelerating AI adoption and enabling users to build, automate, and scale with confidence.",
+      "Redefined robotic process automation (RPA) with AI, coaching teams to create intuitive, next-generation solutions.",
+      "Recognized for delivering creative ideas, structured approaches, and fostering a culture of continuous improvement and user-centered design."
+    ]
   },
   {
-    date: "2022-2025",
-    title: "Principal Design Manager",
-    company: "Microsoft",
-    description: "Coaching a multidisciplinary team of product designers, content creators, and research specialists to redifine Robotic Process Automation with AI."
-  },
-  {
-    date: "2018-2022",
+    date: "2018–2022",
     title: "Senior Design Manager",
     company: "Microsoft",
-    description: "Hired, onboarded, and mentored a multidisciplinary team of product designers, content creators, and research specialists in Seattle and Paris to develop and deliver the first no-code AI platform."
+    description: [
+      "Built and mentored a diverse team in Seattle and Paris to develop Microsoft's first no-code AI platform.",
+      "Focused on hiring top talent, defining product vision, and establishing scalable design systems.",
+      "Bridged design, content, and research to deliver cohesive user experiences and set best practices for collaboration and innovation."
+    ]
   },
   {
-    date: "2017-2018",
+    date: "2017–2018",
     title: "Senior User Experience Designer",
     company: "Microsoft",
-    description: "Led a team of 5 designers for Windows Video and Books Apps across five platforms. Defined product vision, created wireframes, user flows, visuals, prototypes, and supervised development quality."
+    description: [
+      "Led a team of five designers for Windows Video and Books Apps, defining product vision, user flows, and prototypes across multiple platforms.",
+      "Ensured high development quality through rigorous oversight and user-centered design principles."
+    ]
   },
   {
-    date: "2011-2017",
-    title: "User Experience Designer 2",
-    company: "Microsoft",
-    description: "Designed a responsive web music player for Microsoft Groove, established design foundations, and led a team of 2 designers. Managed Microsoft Music, Videos and TV web-stores design."
-  },
-  {
-    date: "2008-2011",
+    date: "2011–2017",
     title: "User Experience Designer",
     company: "Microsoft",
-    description: "Collaborated with Frog design agency to create the Xbox support website and redesigned the console repair experience, significantly improving customer support efficiency."
+    description: [
+      "Designed a responsive web music player for Microsoft Groove and managed web stores for Microsoft Music, Videos, and TV.",
+      "Established design foundations and collaborated with senior designers to ensure consistency across digital experiences."
+    ]
   }
 ];
