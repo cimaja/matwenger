@@ -1,12 +1,21 @@
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { getAllProjects } from '@/lib/get-project-content';
 import { ProjectCard } from '@/components/projects/project-card';
 import { ProjectCardSkeleton } from '@/components/projects/project-card-skeleton';
 import styles from './projects.module.css';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Projects',
-  description: 'A collection of my design projects and case studies.',
+  description: 'Explore a curated collection of design projects and case studies showcasing AI-driven experiences, enterprise solutions, and innovative digital products by Mathias Wendlinger.',
+  openGraph: {
+    title: 'Projects - Mathias Wendlinger',
+    description: 'Design projects and case studies featuring AI-driven experiences, enterprise solutions, and innovative digital products.',
+    url: 'https://matwenger.at/projects',
+  },
+  alternates: {
+    canonical: 'https://matwenger.at/projects',
+  },
 };
 
 async function ProjectsList() {
@@ -21,7 +30,7 @@ async function ProjectsList() {
           data-loaded="true"
           style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
         >
-          <ProjectCard project={project} />
+          <ProjectCard project={project} index={index} />
         </div>
       ))}
     </div>

@@ -21,9 +21,26 @@ export async function generateMetadata(
     };
   }
 
+  const projectUrl = `https://matwenger.at/projects/${params.id}`;
+
   return {
     title: project.title,
     description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      url: projectUrl,
+      type: 'article',
+      images: project.image ? [
+        {
+          url: `https://matwenger.at${project.image}`,
+          alt: project.title,
+        },
+      ] : undefined,
+    },
+    alternates: {
+      canonical: projectUrl,
+    },
   };
 }
 

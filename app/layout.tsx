@@ -3,6 +3,7 @@ import { Inter, Lora, Outfit } from 'next/font/google';
 import { Providers } from '@/components/providers';
 import { Navigation } from '@/components/navigation';
 import { GoogleAnalytics } from '@/components/google-analytics';
+import { StructuredData } from '@/components/structured-data';
 import { cn } from '@/lib/utils';
 import './globals.css';
 
@@ -11,14 +12,28 @@ const lora = Lora({ subsets: ['latin'], variable: '--font-lora' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://matwenger.at'),
   title: {
-    default: 'Mathias Wendlinger',
+    default: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
     template: '%s | Mathias Wendlinger',
   },
-  description: 'Principal Design Manager specializing in AI-driven experiences, enterprise solutions, and innovative digital products at Microsoft',
+  description: 'Principal Design Manager at Microsoft with 18+ years of experience in AI-driven design, enterprise solutions, and innovative digital products. Specializing in user experience, design systems, and product innovation.',
+  keywords: [
+    'Mathias Wendlinger',
+    'UX Design',
+    'Product Design',
+    'AI Design',
+    'Microsoft',
+    'Design Manager',
+    'Enterprise Design',
+    'Design Systems',
+    'User Experience',
+  ],
+  authors: [{ name: 'Mathias Wendlinger' }],
+  creator: 'Mathias Wendlinger',
   openGraph: {
-    title: 'Mathias Wendlinger',
-    description: 'Principal Design Manager specializing in AI-driven experiences, enterprise solutions, and innovative digital products at Microsoft',
+    title: 'Mathias Wendlinger - Principal Design Manager',
+    description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences, enterprise solutions, and innovative digital products.',
     url: 'https://matwenger.at',
     siteName: 'Mathias Wendlinger',
     locale: 'en_US',
@@ -28,7 +43,7 @@ export const metadata: Metadata = {
         url: 'https://matwenger.at/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mathias Wendlinger - Principal Design Manager',
+        alt: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
       },
     ],
   },
@@ -44,9 +59,14 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Mathias Wendlinger',
     card: 'summary_large_image',
+    title: 'Mathias Wendlinger - Principal Design Manager',
+    description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences and enterprise solutions.',
     images: ['https://matwenger.at/og-image.jpg'],
+    creator: '@matwenger',
+  },
+  alternates: {
+    canonical: 'https://matwenger.at',
   },
 };
 
@@ -57,6 +77,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
