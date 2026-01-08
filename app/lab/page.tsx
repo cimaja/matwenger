@@ -1,20 +1,8 @@
-import type { Metadata } from 'next';
+'use client';
+
 import { motion } from 'framer-motion';
 import { LabProjectCard } from '@/components/lab/lab-project-card';
 import { labProjects } from '@/components/lab/lab-projects-data';
-
-export const metadata: Metadata = {
-  title: 'Lab',
-  description: 'Interactive prototypes and experiments showcasing design explorations, innovative concepts, and technical demonstrations by Mathias Wendlinger.',
-  openGraph: {
-    title: 'Lab - Mathias Wendlinger',
-    description: 'Interactive prototypes and experiments showcasing design explorations and innovative concepts.',
-    url: 'https://matwenger.at/lab',
-  },
-  alternates: {
-    canonical: 'https://matwenger.at/lab',
-  },
-};
 
 export default function LabPage() {
 
