@@ -18,13 +18,11 @@ export function AboutContent() {
           transition={{ duration: 0.6 }}
         >
           <div className="prose prose-lg dark:prose-invert mx-auto">
+            <p className="text-muted-foreground mb-6">
+              I'm a Principal Design Manager at Microsoft, leading design across the Power Platform Core team. We build the foundational, end-to-end experiences behind Power Apps, Power Pages, and Power Automate, powering Microsoft's low-code and AI-first strategy.
+            </p>
             <p className="text-muted-foreground">
-              Today I serve as a Product Design Lead for Power Automate at Microsoft. In this role, 
-              I have the privilege to hire, lead, and mentor a multidisciplinary team that design, 
-              build, and launch inclusive products across the globe. With more than a decade of 
-              experience, I'm an expert at solving complex problems. My strengths encompass 
-              defining product vision, understanding the business goals and crafting beautiful 
-              experiences that delight users.
+              I drive product vision, business growth, and AI adoption through scalable design systems and platform-level thinking. My work spans model-driven and canvas apps, mobile, pages, RPA, and process mining, enabling millions of makers and enterprise users to build, automate, and innovate with confidence. I partner closely with product, engineering, and research to turn complex systems into intuitive, high-impact experiences.
             </p>
           </div>
         </motion.div>

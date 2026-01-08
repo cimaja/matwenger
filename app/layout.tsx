@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     siteName: 'Mathias Wendlinger',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://matwenger.at/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mathias Wendlinger - Principal Design Manager',
+      },
+    ],
   },
   robots: {
     index: true,
@@ -37,6 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Mathias Wendlinger',
     card: 'summary_large_image',
+    images: ['https://matwenger.at/og-image.jpg'],
   },
   icons: {
     shortcut: '/Shared/Logo.png',
