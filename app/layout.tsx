@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Lora, Outfit } from 'next/font/google';
 import { Providers } from '@/components/providers';
 import { Navigation } from '@/components/navigation';
+import { GoogleAnalytics } from '@/components/google-analytics';
 import { cn } from '@/lib/utils';
 import './globals.css';
 
@@ -47,10 +48,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['https://matwenger.at/og-image.jpg'],
   },
-  icons: {
-    shortcut: '/Shared/Logo.png',
-    icon: '/Shared/Logo.png',
-  },
 };
 
 export default function RootLayout({
@@ -68,6 +65,7 @@ export default function RootLayout({
           outfit.variable
         )}
       >
+        <GoogleAnalytics />
         <Providers>
           <Navigation />
           <div className="relative min-h-screen flex flex-col">
