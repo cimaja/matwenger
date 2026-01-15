@@ -31,6 +31,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mathias Wendlinger' }],
   creator: 'Mathias Wendlinger',
+  icons: {
+    icon: '/images/Applogo/logo.png',
+    shortcut: '/images/Applogo/logo.png',
+    apple: '/images/Applogo/logo.png',
+  },
   openGraph: {
     title: 'Mathias Wendlinger - Principal Design Manager',
     description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences, enterprise solutions, and innovative digital products.',
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://matwenger.at/og-image.jpg',
+        url: 'https://matwenger.at/images/Applogo/profil.jpeg',
         width: 1200,
         height: 630,
         alt: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
@@ -62,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mathias Wendlinger - Principal Design Manager',
     description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences and enterprise solutions.',
-    images: ['https://matwenger.at/og-image.jpg'],
+    images: ['https://matwenger.at/images/Applogo/profil.jpeg'],
     creator: '@matwenger',
   },
   alternates: {
