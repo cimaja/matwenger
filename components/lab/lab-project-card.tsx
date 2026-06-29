@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { ProjectTags } from '@/components/projects/project-tags';
 import { CalendarIcon, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -12,26 +11,26 @@ export function LabProjectCard({ project }: { project: LabProject }) {
       rel="noopener noreferrer"
       className="block h-full group"
     >
-      <Card className="h-full transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10 flex flex-col">
-        <CardHeader className="flex-none">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-lg font-semibold group-hover:text-pink-500 transition-colors">
+      <div className="h-full rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#111116] transition-all duration-300 hover:border-[rgba(147,51,234,0.3)] hover:-translate-y-1 flex flex-col">
+        <div className="p-6 flex-none">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-semibold text-white group-hover:text-accent-purple transition-colors font-sans">
               {project.title}
             </h3>
-            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-pink-500 transition-colors" />
+            <ExternalLink className="w-4 h-4 text-[#555] group-hover:text-accent-purple transition-colors" />
           </div>
           {project.tags && project.tags.length > 0 && (
             <ProjectTags tags={project.tags} />
           )}
-        </CardHeader>
-        <CardContent className="flex-1 flex flex-col justify-between">
-          <p className="text-muted-foreground mb-4">{project.description}</p>
-          <div className="flex items-center text-sm text-muted-foreground">
-            <CalendarIcon className="w-4 h-4 mr-1" />
+        </div>
+        <div className="px-6 pb-6 flex-1 flex flex-col justify-between">
+          <p className="text-[13px] text-[#777] mb-4 leading-[1.6]">{project.description}</p>
+          <div className="flex items-center text-sm text-[#555] font-mono text-[12px]">
+            <CalendarIcon className="w-3.5 h-3.5 mr-1.5" />
             <span>{project.date}</span>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   );
 }

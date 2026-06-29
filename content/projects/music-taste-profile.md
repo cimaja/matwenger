@@ -6,8 +6,8 @@ tags:
   - Music
   - AI
   - Cross-platform
-year: 2014
-role: Product Designer
+year: 2016
+role: Senior Lead Designer
 company: Microsoft
 videos:
   - type: "local"

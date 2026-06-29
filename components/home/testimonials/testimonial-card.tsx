@@ -37,12 +37,18 @@ export function TestimonialCard({ testimonial, index = 0 }: TestimonialCardProps
         </svg>
         <div className="flex items-start gap-4 mb-6 flex-shrink-0">
           <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-            <Image
-              src={testimonial.image}
-              alt={testimonial.author}
-              fill
-              className="object-cover"
-            />
+            {testimonial.image ? (
+              <Image
+                src={testimonial.image}
+                alt={testimonial.author}
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-pink-500/20 flex items-center justify-center text-sm font-semibold text-pink-500">
+                {testimonial.author.split(' ').map(n => n[0]).join('')}
+              </div>
+            )}
           </div>
           <div>
             <div className="font-semibold">{testimonial.author}</div>

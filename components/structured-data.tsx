@@ -10,7 +10,7 @@ export function StructuredData() {
     },
     url: 'https://matwenger.at',
     sameAs: [
-      'https://www.linkedin.com/in/mathiaswendlinger',
+      'https://www.linkedin.com/in/mathias-wendlinger/',
       'https://github.com/matwenger',
     ],
     alumniOf: {

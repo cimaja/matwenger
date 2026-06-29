@@ -6,8 +6,8 @@ tags:
   - Music
   - AI
   - Cross-platform
-year: 2014
-role: Product Designer
+year: 2017
+role: Senior Lead Designer
 company: Microsoft
 gallery:
   - src: "/images/projects/your-groove/gallery/img_1.jpg"

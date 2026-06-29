@@ -6,8 +6,8 @@ tags:
   - Reading
   - Edge
   - Cross-platform
-year: 2016
-role: Design lead
+year: 2017
+role: Senior Lead Designer
 company: Microsoft
 videos:
   - type: "local"

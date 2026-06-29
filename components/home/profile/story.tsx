@@ -5,14 +5,19 @@ import { Experience } from './experience';
 
 const experiences = [
   {
-    date: 'September 2022 - Now',
+    date: 'September 2025 - Now',
     company: 'Microsoft',
     role: 'Principal Design Manager',
   },
   {
-    date: 'February 2008 - September 2022',
+    date: 'February 2018 - September 2025',
     company: 'Microsoft',
     role: 'Senior Design Manager',
+  },
+  {
+    date: 'February 2008 - February 2018',
+    company: 'Microsoft',
+    role: 'User Experience Designer',
   },
   {
     date: 'March 2007 - February 2008',
@@ -37,11 +42,13 @@ export function Story() {
       <h3 className="text-2xl font-bold mb-6">My Story</h3>
       <div className="prose prose-lg dark:prose-invert">
         <p className="text-muted-foreground">
-          Born in south of France, I've grown up in Africa and Asia. This multi-cultural 
-          environment has shaped my unique perspective on creating inclusive and impactful digital experiences. 
-          At Microsoft, I lead design initiatives for AI-powered enterprise solutions, from fraud protection 
-          to low-code AI builders. My expertise lies in translating complex technologies into intuitive 
-          interfaces that empower users while maintaining enterprise-grade security and scalability.
+          Born in the south of France, I grew up in Africa and Asia. This multicultural
+          background shaped my perspective on building inclusive and impactful digital experiences.
+          With 18 years at Microsoft, I lead a globally distributed team of 12 designers
+          building AI-powered experiences across Power Apps, Power Automate, and Power Pages
+          for over 50 million users. I build teams, grow people, and drive measurable business
+          outcomes, from A/B experiments that increased app publishing by 81% to designing the
+          first Copilot initiative in Power Platform showcased to Satya Nadella at Ignite.
         </p>
       </div>
 

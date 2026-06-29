@@ -62,7 +62,7 @@ export function BackButton({ href, label = 'Back' }: BackButtonProps) {
       <Button
         variant="outline"
         size="icon"
-        className="w-full h-8 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-colors rounded-full border-muted-foreground/20 dark:border-white/20 hover:border-muted-foreground/30 dark:hover:border-white/30"
+        className="w-full h-8 bg-[rgba(12,12,15,0.8)] backdrop-blur-sm hover:bg-[rgba(12,12,15,0.9)] transition-colors rounded-full border-[rgba(255,255,255,0.1)] hover:border-accent-purple"
         asChild
       >
         <Link href={href} className="grid grid-cols-[1fr] items-center relative">

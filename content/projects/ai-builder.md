@@ -3,7 +3,7 @@ title: "AI Builder"
 description: "Empowering business users to create and use AI models without code"
 cover: "/images/projects/ai-builder/main/cover.jpg"
 tags: ["AI", "No-code"]
-year: "2021"
+year: "2019"
 role: "Senior Design Manager"
 company: "Microsoft"
 gallery:

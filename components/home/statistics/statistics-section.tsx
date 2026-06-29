@@ -6,7 +6,7 @@ import { Counter } from './counter';
 
 // Start dates for experience calculation
 const EXPERIENCE_START_YEAR = 2007; // Started working in 2007
-const MANAGEMENT_START_YEAR = 2014; // Started managing in 2014
+const MANAGEMENT_START_YEAR = 2018; // Started managing in February 2018
 
 function calculateYears(startYear: number): string {
   const currentYear = new Date().getFullYear();

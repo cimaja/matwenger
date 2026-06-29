@@ -6,8 +6,8 @@ tags:
   - AI
   - RPA
   - Multi-modal
-year: 2023
-role: Product Designer
+year: 2024
+role: Senior Design Manager
 company: Microsoft
 location: Paris, Athens, Seattle
 videos:

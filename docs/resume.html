@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathias Wendlinger - Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page {
+  size: A4;
+  margin: 0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  font-size: 9.5pt;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 44px 44px 36px;
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  gap: 44px;
+}
+.main { }
+.sidebar { }
+
+/* Header */
+.header {
+  grid-column: 1 / -1;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 18px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header h1 {
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.header-subtitle {
+  font-size: 11pt;
+  color: #666;
+  margin-top: 5px;
+}
+.header-contact {
+  text-align: right;
+  font-size: 8.5pt;
+  color: #666;
+  line-height: 1.7;
+}
+.header-contact a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 16px;
+  margin-top: 28px;
+}
+.section-title:first-of-type { margin-top: 0; }
+
+/* Experience entries */
+.exp-entry {
+  margin-bottom: 32px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.exp-entry:last-child {
+  margin-bottom: 0;
+}
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3px;
+}
+.exp-role {
+  font-size: 10pt;
+  font-weight: 600;
+}
+.exp-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8pt;
+  color: #999;
+}
+.exp-company {
+  font-size: 8.5pt;
+  color: #999;
+  margin-bottom: 8px;
+}
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+}
+.exp-bullets li {
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 4px;
+  font-size: 9pt;
+  color: #444;
+  line-height: 1.55;
+}
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ccc;
+}
+.exp-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+  break-before: avoid;
+  page-break-before: avoid;
+}
+.exp-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7pt;
+  padding: 2px 9px;
+  border-radius: 100px;
+  background: #f5f0ff;
+  color: #7c3aed;
+  border: 1px solid #e0d4fc;
+}
+
+/* Sidebar */
+.sidebar-section {
+  margin-bottom: 36px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+.sidebar-title {
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+.sidebar-group {
+  margin-bottom: 14px;
+}
+.sidebar-group:last-child {
+  margin-bottom: 0;
+}
+.sidebar-group-label {
+  font-size: 7.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 5px;
+}
+.sidebar-items {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-items li {
+  font-size: 8.5pt;
+  color: #444;
+  padding: 2px 0;
+}
+.edu-entry {
+  margin-bottom: 10px;
+}
+.edu-entry:last-child {
+  margin-bottom: 0;
+}
+.edu-title {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.edu-detail {
+  font-size: 8pt;
+  color: #999;
+  margin-top: 1px;
+}
+
+/* Education in main column */
+.main-edu {
+  margin-top: 28px;
+}
+.main-edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.main-edu-entry {
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.main-edu-school {
+  font-size: 9pt;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+.main-edu-degree {
+  font-size: 8.5pt;
+  color: #666;
+}
+.main-edu-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7.5pt;
+  color: #999;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>Mathias Wendlinger</h1>
+      <div class="header-subtitle">Principal Design Manager</div>
+    </div>
+    <div class="header-contact">
+      <a href="mailto:m.wendlinger@gmail.com">m.wendlinger@gmail.com</a><br>
+      <a href="https://matwenger.at">matwenger.at</a><br>
+      +33 6 10 94 72 60
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <div class="section-title">Experience</div>
+
+    <!-- Principal DM -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">Principal Design Manager</div>
+        <div class="exp-date">2025 – Present</div>
+      </div>
+      <div class="exp-company">Microsoft - Power Platform</div>
+      <ul class="exp-bullets">
+        <li>Build and lead a distributed design team of 12 across India, Greece, and the US, owning the end-to-end experience for five products (Power Apps, Power Automate, Power Pages, Process Mining, Mobile)</li>
+        <li>Grew and strengthened the team, recruited and hired 1 designer, onboarded 5, and drove 3 promotions, developing senior talent across five time zones</li>
+        <li>Pioneered the org's design-to-code practice, moving designers to daily production use of AI tooling (Figma Make, GitHub Copilot, Claude Code CLI). Designers now ship PRs directly in production repos</li>
+        <li>Led design on a built-in AI assistant for Power Apps that lets people ask plain-language questions about their app's data and get instant answers</li>
+        <li>Established a rapid A/B experimentation practice that grounds design decisions in funnel data, shifting the team from opinion-led to evidence-led</li>
+      </ul>
+      <div class="exp-badges">
+        <span class="exp-badge">50M+ monthly active users</span>
+        <span class="exp-badge">81% increase in apps published</span>
+        <span class="exp-badge">30% design efficiency gain</span>
+        <span class="exp-badge">Inclusive Team +18pts in 6 months</span>
+      </div>
+    </div>
+
+    <!-- Senior DM -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">Senior Design Manager</div>
+        <div class="exp-date">2018 – 2025</div>
+      </div>
+      <div class="exp-company">Microsoft - Power Automate Desktop | AI Builder</div>
+      <ul class="exp-bullets">
+        <li>Team of 4 across Paris and Greece supporting Power Automate Desktop, AI capabilities in Power Automate Web, and AI Builder</li>
+        <li>Designed natural language to workflow automation, the first Copilot initiative in Power Platform, showcased to Satya Nadella at Ignite 2022. Shipped AI-powered recording for desktop automation, featured at Build 2024</li>
+        <li>Designed AI Builder from scratch with a small founding team, a no-code platform that lets anyone bring AI into their apps and workflows. Defined the end-to-end experience across object detection, document processing, OCR, and prediction, from zero to general availability</li>
+      </ul>
+      <div class="exp-badges">
+        <span class="exp-badge">Contributed to Microsoft's Leader position in Gartner IDP</span>
+        <span class="exp-badge">+42 NPS (highest in Power Platform)</span>
+      </div>
+    </div>
+
+    <!-- Senior Lead -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">Senior Lead Designer</div>
+        <div class="exp-date">2015 – 2018</div>
+      </div>
+      <div class="exp-company">Microsoft - Groove Music | Books in Edge</div>
+      <ul class="exp-bullets">
+        <li>Team of 5 designers in Paris. Groove Music (Windows, Xbox, Web, iOS, Android) and Books reading experience in Microsoft Edge</li>
+        <li>Shipped the EPUB and PDF reading experience in Microsoft Edge with the Windows 10 Fall Creators Update, including Fluent Design revamp and cross-platform support</li>
+        <li>Designed Groove Music Taste Profile and Your Groove personalization, evolving the Xbox Music web experience into a cross-platform music service</li>
+      </ul>
+      <div class="exp-badges">
+        <span class="exp-badge">Reading experience evolved into Edge PDF reader on 1B+ Windows devices</span>
+      </div>
+    </div>
+
+    <!-- Lead -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">Lead Designer</div>
+        <div class="exp-date">2011 – 2015</div>
+      </div>
+      <div class="exp-company">Microsoft - Xbox Music | OneStore</div>
+      <ul class="exp-bullets">
+        <li>Team of 2 designers in Paris. Xbox Music web (Boombox), Music OneStore, and Video OneStore</li>
+        <li>Shipped the full Video OneStore and designed Boombox, the Xbox Music web player, as the sole designer in Paris with daily syncs to Redmond</li>
+      </ul>
+      <div class="exp-badges">
+        <span class="exp-badge">Design blueprint adopted by Windows 8 Music</span>
+      </div>
+    </div>
+
+    <!-- Product Designer -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">Product Designer</div>
+        <div class="exp-date">2008 – 2011</div>
+      </div>
+      <div class="exp-company">Microsoft - Xbox Support | Mediaroom Mobile</div>
+      <ul class="exp-bullets">
+        <li>Led the Xbox Support website redesign in collaboration with Frog Design. Designed and developed a Windows Phone 7 companion app for Microsoft Mediaroom, self-teaching Silverlight and XAML to ship production UI</li>
+      </ul>
+      <div class="exp-badges">
+        <span class="exp-badge">14% reduction in support tickets</span>
+      </div>
+    </div>
+
+    <!-- Musiwave -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">User Experience Designer</div>
+        <div class="exp-date">2007 – 2008</div>
+      </div>
+      <div class="exp-company">Musiwave, Paris (acquired by Microsoft)</div>
+      <ul class="exp-bullets">
+        <li>Designed music portal websites on desktop and mobile for European phone network providers including Orange, SFR, Vodafone, Verizon, and T-Mobile</li>
+      </ul>
+    </div>
+
+    <!-- TF1 -->
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div class="exp-role">3D Motion Designer</div>
+        <div class="exp-date">2006 – 2007</div>
+      </div>
+      <div class="exp-company">TF1 · La booteek, Paris</div>
+      <ul class="exp-bullets">
+        <li>Created opening credits for TF1 programs and 3D animated infographics for the news</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Skills</div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Leadership</div>
+        <ul class="sidebar-items">
+          <li>Design leadership & strategy</li>
+          <li>People management (8+ years)</li>
+          <li>Team building across geographies</li>
+          <li>Career coaching & mentoring</li>
+          <li>Design operations</li>
+          <li>A/B experimentation</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Design</div>
+        <ul class="sidebar-items">
+          <li>AI/ML experience design</li>
+          <li>Enterprise product design</li>
+          <li>Design systems</li>
+          <li>Cross-platform design</li>
+          <li>Accessibility & inclusive design</li>
+          <li>Data-driven design</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Tools</div>
+        <ul class="sidebar-items">
+          <li>Figma · Figma Make</li>
+          <li>Claude Code CLI</li>
+          <li>GitHub Copilot · VS Code</li>
+          <li>GitHub · Git</li>
+          <li>React · XAML</li>
+          <li>HTML5 · CSS3</li>
+          <li>Azure DevOps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Languages</div>
+      <ul class="sidebar-items">
+        <li>French · Native</li>
+        <li>English · Fluent</li>
+        <li>Indonesian · Intermediate</li>
+        <li>Spanish · Beginner</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Education</div>
+      <div class="edu-entry">
+        <div class="edu-title">ETPA</div>
+        <div class="edu-detail">3D Artist & Motion Design, 2006</div>
+      </div>
+      <div class="edu-entry">
+        <div class="edu-title">ETPA</div>
+        <div class="edu-detail">Graphic & Web Design, 2005</div>
+      </div>
+      <div class="edu-entry">
+        <div class="edu-title">French International School of Indonesia</div>
+        <div class="edu-detail">High School, Maths & Biology, 2003</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Training</div>
+      <ul class="sidebar-items">
+        <li>Crucial Conversations</li>
+        <li>Insights Discovery</li>
+        <li>Essentials for Managers</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

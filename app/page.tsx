@@ -1,24 +1,24 @@
-import { HeroSection } from '@/components/home/hero-section';
-import { StatisticsSection } from '@/components/home/statistics/statistics-section';
-import { ProfileSection } from '@/components/home/profile/profile-section';
-import { FeaturedProjects } from '@/components/home/featured-projects';
-import { TestimonialsSection } from '@/components/home/testimonials/testimonials-section';
+import { HeroSection } from '@/components/home/hero/hero-section';
+import { StorySection } from '@/components/home/story-section';
+import { PullQuote } from '@/components/home/pull-quote';
+import { WorkflowSection } from '@/components/home/workflow-section';
+import { ProjectsCarousel } from '@/components/home/projects-carousel';
+import { TestimonialsScroll } from '@/components/home/testimonials/testimonials-scroll';
+import { ExperienceSection } from '@/components/home/experience-section';
 import { getAllProjects } from '@/lib/get-project-content';
 
 export default async function HomePage() {
-  // Get all projects and randomly select 3
   const allProjects = await getAllProjects();
-  const featuredProjects = [...allProjects]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
-  
+
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <StatisticsSection />
-      <ProfileSection />
-      <FeaturedProjects projects={featuredProjects} />
-      <TestimonialsSection />
+      <StorySection />
+      <PullQuote />
+      <WorkflowSection />
+      <ProjectsCarousel projects={allProjects} />
+      <TestimonialsScroll />
+      <ExperienceSection />
     </div>
   );
 }

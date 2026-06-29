@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter, Lora, Outfit } from 'next/font/google';
+import { Inter, JetBrains_Mono, Fraunces } from 'next/font/google';
 import { Providers } from '@/components/providers';
 import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@/components/google-analytics';
 import { StructuredData } from '@/components/structured-data';
 import { cn } from '@/lib/utils';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-const lora = Lora({ subsets: ['latin'], variable: '--font-lora' });
-const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://matwenger.at'),
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
     template: '%s | Mathias Wendlinger',
   },
-  description: 'Principal Design Manager at Microsoft with 18+ years of experience in AI-driven design, enterprise solutions, and innovative digital products. Specializing in user experience, design systems, and product innovation.',
+  description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages. Specializing in AI-driven experiences, enterprise design, and design-to-code workflows.',
   keywords: [
     'Mathias Wendlinger',
     'UX Design',
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     'Enterprise Design',
     'Design Systems',
     'User Experience',
+    'Design Engineering',
   ],
   authors: [{ name: 'Mathias Wendlinger' }],
   creator: 'Mathias Wendlinger',
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Mathias Wendlinger - Principal Design Manager',
-    description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences, enterprise solutions, and innovative digital products.',
+    description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
     url: 'https://matwenger.at',
     siteName: 'Mathias Wendlinger',
     locale: 'en_US',
@@ -66,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mathias Wendlinger - Principal Design Manager',
-    description: 'Principal Design Manager at Microsoft specializing in AI-driven experiences and enterprise solutions.',
+    description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
     images: ['https://matwenger.at/images/Applogo/profil.jpeg'],
     creator: '@matwenger',
   },
@@ -81,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <head>
         <StructuredData />
       </head>
@@ -89,8 +91,8 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           inter.variable,
-          lora.variable,
-          outfit.variable
+          jetbrainsMono.variable,
+          fraunces.variable
         )}
       >
         <GoogleAnalytics />
@@ -100,6 +102,7 @@ export default function RootLayout({
             <main className="flex-1">
               {children}
             </main>
+            <Footer />
           </div>
         </Providers>
       </body>

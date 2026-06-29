@@ -29,21 +29,21 @@ export function ProjectContent({ project }: ProjectContentProps) {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
       >
-        <div 
-          className="prose prose-lg dark:prose-invert max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>p]:leading-relaxed [&>ul]:space-y-2 [&>ul]:my-6 [&>ul>li]:text-muted-foreground [&>p]:text-muted-foreground [&>ul]:list-disc [&>ul]:pl-6 [&>p>a]:text-purple-500 [&>p>a]:underline hover:[&>p>a]:text-purple-600 [&>ul>li>a]:text-purple-500 [&>ul>li>a]:underline hover:[&>ul>li>a]:text-purple-600 [&_a]:target-[_blank]"
+        <div
+          className="prose prose-lg prose-invert max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>p]:leading-relaxed [&>ul]:space-y-2 [&>ul]:my-6 [&>ul>li]:text-[#888] [&>p]:text-[#888] [&>ul]:list-disc [&>ul]:pl-6 [&>p>a]:text-accent-purple [&>p>a]:underline hover:[&>p>a]:text-accent-purple/80 [&>ul>li>a]:text-accent-purple [&>ul>li>a]:underline hover:[&>ul>li>a]:text-accent-purple/80"
           dangerouslySetInnerHTML={{ __html: project.content }}
         />
-        
+
         {project.videos && project.videos.length > 0 && (
-          <div className="mt-16 pt-16 border-t">
-            <h2 className="text-2xl font-bold mb-8">Project Videos ({project.videos.length})</h2>
+          <div className="mt-16 pt-16 border-t border-[rgba(255,255,255,0.06)]">
+            <h2 className="text-2xl mb-8 text-white">Project Videos ({project.videos.length})</h2>
             <VideoGallery videos={project.videos} />
           </div>
         )}
 
         {project.gallery && project.gallery.length > 0 && (
-          <div className="mt-16 pt-16 border-t">
-            <h2 className="text-2xl font-bold mb-8">Project Gallery ({project.gallery.length})</h2>
+          <div className="mt-16 pt-16 border-t border-[rgba(255,255,255,0.06)]">
+            <h2 className="text-2xl mb-8 text-white">Project Gallery ({project.gallery.length})</h2>
             <ImageGallery images={project.gallery} />
           </div>
         )}
