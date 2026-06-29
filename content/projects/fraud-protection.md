@@ -6,7 +6,7 @@ tags:
   - AI
   - Security
 year: 2019
-role: Product Designer
+role: Senior Design Manager
 company: Microsoft
 videos:
   - src: "/images/projects/fraud-protection/video/video_1_part1.mp4"

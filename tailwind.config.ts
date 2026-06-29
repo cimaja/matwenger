@@ -18,9 +18,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)'],
-        serif: 'var(--font-serif)',
-        lora: ['var(--font-lora)'],
-        outfit: ['var(--font-outfit)'],
+        serif: ['var(--font-serif)'],
+        mono: ['var(--font-mono)'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -56,6 +55,19 @@ const config: Config = {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
+        'accent-purple': {
+          DEFAULT: '#c084fc',
+          dim: 'rgba(147,51,234,0.8)',
+        },
+        'accent-green': {
+          DEFAULT: '#10b981',
+          dim: 'rgba(16,185,129,0.8)',
+        },
+        'subtle-border': 'rgba(255,255,255,0.06)',
+        surface: {
+          DEFAULT: 'rgba(255,255,255,0.02)',
+          hover: 'rgba(255,255,255,0.03)',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -71,15 +83,15 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-        pulse: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
+        'scroll-testimonials': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'scroll-testimonials': 'scroll-testimonials 180s linear infinite',
       },
     },
   },

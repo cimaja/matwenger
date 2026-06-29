@@ -4,7 +4,7 @@ description: "Designed a self-healing system for Power Automate Desktop that aut
 cover: "/images/projects/rpa-self-healing/main/cover.jpg"
 tags: ["AI", "RPA", "Vision"]
 year: "2024"
-role: "Design lead"
+role: "Senior Design Manager"
 company: "Microsoft"
 videos:
   - src: "/images/projects/rpa-self-healing/video/video_0_with_audio.mp4"

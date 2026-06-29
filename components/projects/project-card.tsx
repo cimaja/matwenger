@@ -5,13 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { ProjectContent as Project } from '@/lib/get-project-content';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { ProjectTags } from './project-tags';
 
 interface ProjectCardProps {
@@ -31,37 +24,35 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
     >
       <Link href={`/projects/${project.id}`} className="block">
-        <Card className="group h-full transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
-          <CardHeader className="p-0">
-            <div className="relative aspect-[16/9] overflow-hidden">
-              <Image
-                src={imageUrl}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority={index < 3} // Prioritize loading for first 3 images
-              />
-            </div>
-          </CardHeader>
-          <CardContent className="p-6">
+        <div className="group h-full rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.06)] bg-[#111116] transition-all duration-300 hover:border-[rgba(147,51,234,0.3)] hover:-translate-y-1">
+          <div className="relative aspect-[16/9] overflow-hidden">
+            <Image
+              src={imageUrl}
+              alt={project.title}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={index < 3}
+            />
+          </div>
+          <div className="p-6">
             <div className="flex items-start justify-between mb-2">
               <div>
-                <CardTitle className="text-xl mb-1 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-1 font-sans group-hover:text-accent-purple transition-colors">
                   {project.title}
-                </CardTitle>
-                <div className="text-sm text-muted-foreground">
-                  {project.role} • {project.year}
+                </h3>
+                <div className="text-sm text-[#888]">
+                  {project.role} · {project.year}
                 </div>
               </div>
-              <ArrowUpRight className="h-5 w-5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
+              <ArrowUpRight className="h-5 w-5 text-[#555] opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
             </div>
-            <CardDescription className="line-clamp-2">
+            <p className="text-[13px] text-[#777] line-clamp-2 mb-4">
               {project.description}
-            </CardDescription>
-            <ProjectTags tags={project.tags} className="mt-4" />
-          </CardContent>
-        </Card>
+            </p>
+            <ProjectTags tags={project.tags} />
+          </div>
+        </div>
       </Link>
     </motion.div>
   );

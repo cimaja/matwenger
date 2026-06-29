@@ -1,34 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { NavLinks } from './navigation/nav-links';
-import { ThemeToggle } from './theme-toggle';
 
 export function Navigation() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-[rgba(255,255,255,0.04)] bg-[rgba(12,12,15,0.8)] backdrop-blur-[20px]">
       <nav className="container flex h-14 items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center space-x-3"
-        >
-          <Image
-            src="/Shared/Logo.png"
-            alt="Logo"
-            width={24}
-            height={24}
-            className="h-6 w-auto"
-          />
-          <span className="font-outfit text-lg font-light tracking-wide hidden sm:inline">Mathias Wendlinger</span>
+        <Link href="/" className="text-sm font-medium tracking-[0.05em]">
+          Mathias Wendlinger
         </Link>
-        
-        <div className="flex items-center space-x-6">
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+        <div className="flex items-center space-x-8">
+          <nav className="flex items-center space-x-8 text-[13px]">
             <NavLinks />
           </nav>
-          <ThemeToggle />
         </div>
       </nav>
     </header>

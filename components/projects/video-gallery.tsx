@@ -65,7 +65,7 @@ export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
                   <h3 className="text-lg font-semibold">{currentVideo.title}</h3>
                 )}
                 {currentVideo.description && (
-                  <p className="mt-1 text-muted-foreground">{currentVideo.description}</p>
+                  <p className="mt-1 text-[#888]">{currentVideo.description}</p>
                 )}
               </div>
             )}
@@ -101,8 +101,8 @@ export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
               key={index}
               className={`w-2 h-2 rounded-full transition-colors ${
                 index === currentIndex
-                  ? 'bg-primary'
-                  : 'bg-muted hover:bg-muted-foreground/50'
+                  ? 'bg-accent-purple'
+                  : 'bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.3)]'
               }`}
               onClick={() => setCurrentIndex(index)}
             />

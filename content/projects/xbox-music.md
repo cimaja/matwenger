@@ -6,7 +6,7 @@ tags:
   - Music
   - Web player
 year: 2013
-role: Product Designer
+role: Lead Designer
 company: Microsoft
 gallery:
   - src: "/images/projects/xbox-music/gallery/img_1.jpg"

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,50 +6,29 @@
   :root {
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: 'Fraunces', Georgia, serif;
-    
-    /* Light theme */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.75rem;
-  }
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    /* Dark-only palette */
+    --background: 240 7% 5%;
+    --foreground: 0 0% 88%;
+    --card: 240 7% 7%;
+    --card-foreground: 0 0% 88%;
+    --popover: 240 7% 7%;
+    --popover-foreground: 0 0% 88%;
     --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
+    --primary-foreground: 240 7% 5%;
+    --secondary: 240 4% 16%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 240 4% 16%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.06;
+    --ring: 240 5% 84%;
+    --radius: 0.75rem;
   }
 
   * {
@@ -74,37 +51,79 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .text-pretty {
     text-wrap: pretty;
   }
 
-  .gradient-skills {
-    background: linear-gradient(90deg, #FF1493, #4B0082);
-    background-size: 200% 100%;
-    animation: gradientMove 3s linear infinite;
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* ============ Terminal Animation ============ */
+
+.terminal-line {
+  opacity: 0;
+  animation: fadeInLine 0.05s forwards;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
+.terminal-line .typed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  width: 0;
+  animation: typing 0.6s steps(30) forwards;
+}
+
+.terminal-line .typed.with-cursor {
+  border-right-color: #10b981;
+  animation: typing 0.6s steps(30) forwards, blink 0.8s step-end infinite 0.6s;
+}
+
+.prompt { color: #10b981; }
+.cmd { color: #e0e0e0; }
+.comment { color: #555; }
+.string { color: #c084fc; }
+.number { color: #f59e0b; }
+.keyword { color: #60a5fa; }
+.success { color: #10b981; }
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes fadeInLine {
+  to { opacity: 1; }
+}
+
+/* ============ Testimonial Scroll ============ */
+
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============ Drop Cap ============ */
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.drop-cap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  float: left;
+  line-height: 0.8;
+  padding-right: 14px;
+  padding-top: 8px;
+  color: #fff;
 }

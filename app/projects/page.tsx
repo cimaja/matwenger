@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 import { getAllProjects } from '@/lib/get-project-content';
 import { ProjectCard } from '@/components/projects/project-card';
 import { ProjectCardSkeleton } from '@/components/projects/project-card-skeleton';
-import styles from './projects.module.css';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -24,14 +23,7 @@ async function ProjectsList() {
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
-        <div
-          key={project.id}
-          className={styles.projectCard}
-          data-loaded="true"
-          style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
-        >
-          <ProjectCard project={project} index={index} />
-        </div>
+        <ProjectCard key={project.id} project={project} index={index} />
       ))}
     </div>
   );
@@ -39,7 +31,13 @@ async function ProjectsList() {
 
 export default function ProjectsPage() {
   return (
-    <div className="container py-8">
+    <div className="max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-[60px] pt-24 pb-16">
+      <div className="text-center mb-16">
+        <h1 className="text-[44px] text-white mb-5">Projects</h1>
+        <p className="text-center text-[17px] text-[#777] max-w-[700px] mx-auto leading-[1.7]">
+          A selection of design projects and case studies from my work at Microsoft
+        </p>
+      </div>
       <Suspense
         fallback={
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

@@ -5,9 +5,8 @@ import { LabProjectCard } from '@/components/lab/lab-project-card';
 import { labProjects } from '@/components/lab/lab-projects-data';
 
 export default function LabPage() {
-
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-24 pb-16 px-6 sm:px-12 lg:px-[60px]">
       <div className="max-w-screen-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,8 +14,8 @@ export default function LabPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Lab</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="text-[44px] text-white mb-5">Lab</h1>
+          <p className="text-center text-[17px] text-[#777] max-w-[700px] mx-auto leading-[1.7]">
             Interactive prototypes and experiments showcasing design explorations and innovative concepts
           </p>
         </motion.div>
