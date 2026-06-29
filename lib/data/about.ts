@@ -29,6 +29,17 @@ export const aboutNarrative = [
   {
     text: 'I believe the future of design leadership is participatory. Not just setting direction, but being in the code, in the data, in the customer conversation. That is how I lead, and that is the kind of team I build.',
   },
+  {
+    text: 'Outside of work, I live in the south of France with my wife and daughter. I spend my free time wingfoiling when the wind picks up, playing basketball every Friday evening, cooking and exploring food, and traveling whenever I can. I speak French, English, and Indonesian.',
+  },
+];
+
+export const personalityTraits = [
+  { left: 'Shy', right: 'Outgoing', value: 35 },
+  { left: 'Clean', right: 'Messy', value: 30 },
+  { left: 'Artsy', right: 'Sporty', value: 70 },
+  { left: 'Wake up early', right: 'Stay up late', value: 75 },
+  { left: 'Creative', right: 'Analytical', value: 65 },
 ];
 
 export interface JourneyMilestone {
