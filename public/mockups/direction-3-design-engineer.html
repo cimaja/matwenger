@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction 3: The Design Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0c0c0f; color: #e0e0e0; line-height: 1.6; }
+h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.02em; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Hero - Split screen */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.hero-design {
+  background: #0c0c0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-design::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(147,51,234,0.06) 0%, transparent 70%);
+}
+.hero-code {
+  background: #111116;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.hero-code::before {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%);
+}
+
+/* Design side */
+.design-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(147,51,234,0.8);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.design-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(147,51,234,0.6);
+}
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.hero-subtitle {
+  font-size: 17px;
+  color: #888;
+  max-width: 440px;
+  line-height: 1.7;
+}
+
+/* Code side - terminal */
+.terminal {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.terminal-bar {
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+.terminal-content {
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #888;
+}
+.terminal-content .prompt { color: #10b981; }
+.terminal-content .cmd { color: #e0e0e0; }
+.terminal-content .comment { color: #555; }
+.terminal-content .string { color: #c084fc; }
+.terminal-content .number { color: #f59e0b; }
+
+/* Divider */
+.hero-divider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #0c0c0f;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #666;
+}
+
+/* Workflow section */
+.workflow-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.workflow-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.workflow-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 80px;
+}
+.workflow-pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.workflow-step {
+  flex: 1;
+  padding: 32px 28px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.workflow-step:first-child { border-radius: 16px 0 0 16px; }
+.workflow-step:last-child { border-radius: 0 16px 16px 0; }
+.workflow-step-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 16px;
+}
+.workflow-step h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.workflow-step p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+.workflow-step .tool-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(147,51,234,0.1);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #c084fc;
+  margin-top: 12px;
+  margin-right: 4px;
+}
+.workflow-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Toolkit */
+.toolkit-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.toolkit-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.toolkit-card {
+  padding: 24px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+.toolkit-card:hover {
+  border-color: rgba(147,51,234,0.3);
+}
+.toolkit-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.toolkit-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.toolkit-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Impact */
+.impact-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.impact-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.impact-card {
+  padding: 32px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.impact-metric {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 600;
+  color: #10b981;
+}
+.impact-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.impact-desc {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Evolution timeline */
+.evolution-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.evolution-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.evolution-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 80px;
+}
+.evolution-items {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.evolution-item {
+  display: grid;
+  grid-template-columns: 120px 40px 1fr;
+  gap: 0;
+  align-items: start;
+  padding: 24px 0;
+}
+.evolution-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+.evolution-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.evolution-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  position: relative;
+  z-index: 1;
+  margin-top: 6px;
+}
+.evolution-dot.design { background: #c084fc; }
+.evolution-dot.hybrid { background: linear-gradient(135deg, #c084fc 0%, #10b981 100%); }
+.evolution-connector {
+  width: 2px;
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  margin-top: 4px;
+}
+.evolution-content {
+  padding-left: 20px;
+}
+.evolution-role {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.evolution-org {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+.evolution-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.evolution-tag {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+}
+.tag-design { background: rgba(192,132,252,0.1); color: #c084fc; border: 1px solid rgba(192,132,252,0.2); }
+.tag-code { background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2); }
+.tag-lead { background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2); }
+
+/* Testimonials */
+.testimonials-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.testimonials-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.testimonial-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.test-card {
+  padding: 28px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+.test-quote {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.test-author { font-size: 13px; font-weight: 600; }
+.test-role { font-size: 12px; color: #555; }
+
+/* Footer */
+.footer {
+  padding: 40px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #444;
+}
+</style>
+</head>
+<body>
+
+<!-- Hero - Split -->
+<section class="hero">
+  <div class="hero-design">
+    <div class="design-label">Design</div>
+    <h1>Mathias<br>Wendlinger</h1>
+    <p class="hero-subtitle">
+      Principal Design Manager at Microsoft. I lead teams, ship products for 50 million users, and build where design meets engineering.
+    </p>
+  </div>
+  <div class="hero-code">
+    <div class="design-label" style="color: rgba(16,185,129,0.8);">
+      <span style="background: rgba(16,185,129,0.6); width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+      Engineering
+    </div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+      </div>
+      <div class="terminal-content">
+        <div><span class="comment">// career.ts</span></div>
+        <div>&nbsp;</div>
+        <div><span class="cmd">const</span> mathias = {</div>
+        <div>&nbsp;&nbsp;role: <span class="string">"Principal Design Manager"</span>,</div>
+        <div>&nbsp;&nbsp;team: <span class="number">12</span>,</div>
+        <div>&nbsp;&nbsp;users: <span class="string">"50M+ MAU"</span>,</div>
+        <div>&nbsp;&nbsp;prsShipped: <span class="number">true</span>,</div>
+        <div>&nbsp;&nbsp;aiUpskilling: <span class="string">"100% team active"</span>,</div>
+        <div>&nbsp;&nbsp;impact: {</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;appPublishing: <span class="string">"+81%"</span>,</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;nps: <span class="string">"+42"</span>,</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;revenue: <span class="string">"+179%"</span>,</div>
+        <div>&nbsp;&nbsp;}</div>
+        <div>};</div>
+        <div>&nbsp;</div>
+        <div><span class="prompt">$</span> <span class="cmd">git push origin main</span></div>
+        <div style="color: #10b981;">✓ 10 PRs merged to production</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-divider">&lt;/&gt;</div>
+</section>
+
+<!-- Workflow pipeline -->
+<section class="workflow-section">
+  <h2>How I Work</h2>
+  <p class="workflow-subtitle">From insight to production, bridging the full stack</p>
+  <div class="workflow-pipeline">
+    <div class="workflow-step">
+      <div class="workflow-step-number">01</div>
+      <h3>Research & Strategy</h3>
+      <p>Partner with enterprise customers (John Deere, Chevron, Blackrock) to validate problems and co-design solutions</p>
+      <span class="tool-tag">Customer interviews</span>
+      <span class="tool-tag">A/B testing</span>
+    </div>
+    <div class="workflow-arrow">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">02</div>
+      <h3>Design & Prototype</h3>
+      <p>Rapid prototyping with AI-powered tools. From concept to interactive prototype in hours, not weeks</p>
+      <span class="tool-tag">Figma Make</span>
+      <span class="tool-tag">Claude Code</span>
+    </div>
+    <div class="workflow-arrow">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">03</div>
+      <h3>Ship to Production</h3>
+      <p>Author PRs directly into engineering repos. Fix craftsmanship bugs. Publish Storybook components. Edit content strings</p>
+      <span class="tool-tag">GitHub</span>
+      <span class="tool-tag">XAML</span>
+      <span class="tool-tag">React</span>
+    </div>
+    <div class="workflow-arrow">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">04</div>
+      <h3>Measure & Iterate</h3>
+      <p>Hypothesis-driven experimentation. Three A/B tests graduated to 100% of users. 81% increase in publishing</p>
+      <span class="tool-tag">Funnel data</span>
+      <span class="tool-tag">NPS</span>
+    </div>
+  </div>
+</section>
+
+<!-- Impact -->
+<section class="impact-section">
+  <h2>Impact</h2>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-metric">81%</div>
+      <div>
+        <div class="impact-title">Increase in Apps Published</div>
+        <div class="impact-desc">A/B experimentation on Power Apps maker funnel. Three experiments graduated to 100% of users.</div>
+      </div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">250%</div>
+      <div>
+        <div class="impact-title">NL2FLOW Usage Growth</div>
+        <div class="impact-desc">First Copilot initiative in Power Platform. Showcased to Satya Nadella at Ignite 2022.</div>
+      </div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">+42</div>
+      <div>
+        <div class="impact-title">AI Builder NPS</div>
+        <div class="impact-desc">Highest NPS across Power Automate, Power Apps, and PVA. Billed revenue up 179%.</div>
+      </div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">+18</div>
+      <div>
+        <div class="impact-title">Inclusive Team Score</div>
+        <div class="impact-desc">Built systematic action plan when scores dropped. Thriving rose 7 points in six months.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Evolution timeline -->
+<section class="evolution-section">
+  <h2>Evolution</h2>
+  <p class="evolution-subtitle">From pure design to the design-engineering bridge</p>
+  <div class="evolution-items">
+    <div class="evolution-item">
+      <div class="evolution-year">2025</div>
+      <div class="evolution-line">
+        <div class="evolution-dot hybrid"></div>
+        <div class="evolution-connector"></div>
+      </div>
+      <div class="evolution-content">
+        <div class="evolution-role">Principal Design Manager</div>
+        <div class="evolution-org">Microsoft, Copilot Studio</div>
+        <div class="evolution-tags">
+          <span class="evolution-tag tag-lead">leadership</span>
+          <span class="evolution-tag tag-design">design</span>
+          <span class="evolution-tag tag-code">PRs</span>
+          <span class="evolution-tag tag-code">vibe-coding</span>
+          <span class="evolution-tag tag-code">AI agents</span>
+        </div>
+      </div>
+    </div>
+    <div class="evolution-item">
+      <div class="evolution-year">2018</div>
+      <div class="evolution-line">
+        <div class="evolution-dot hybrid"></div>
+        <div class="evolution-connector"></div>
+      </div>
+      <div class="evolution-content">
+        <div class="evolution-role">Senior Design Manager</div>
+        <div class="evolution-org">Microsoft, Power Automate & AI Builder</div>
+        <div class="evolution-tags">
+          <span class="evolution-tag tag-lead">team building</span>
+          <span class="evolution-tag tag-design">AI/ML design</span>
+          <span class="evolution-tag tag-code">XAML PRs</span>
+          <span class="evolution-tag tag-design">design systems</span>
+        </div>
+      </div>
+    </div>
+    <div class="evolution-item">
+      <div class="evolution-year">2014</div>
+      <div class="evolution-line">
+        <div class="evolution-dot design"></div>
+        <div class="evolution-connector"></div>
+      </div>
+      <div class="evolution-content">
+        <div class="evolution-role">Senior UX Designer</div>
+        <div class="evolution-org">Microsoft, Xbox & Windows</div>
+        <div class="evolution-tags">
+          <span class="evolution-tag tag-design">cross-platform</span>
+          <span class="evolution-tag tag-design">design systems</span>
+          <span class="evolution-tag tag-lead">team lead</span>
+        </div>
+      </div>
+    </div>
+    <div class="evolution-item">
+      <div class="evolution-year">2006</div>
+      <div class="evolution-line">
+        <div class="evolution-dot design"></div>
+      </div>
+      <div class="evolution-content">
+        <div class="evolution-role">UX Designer / 3D Motion Designer</div>
+        <div class="evolution-org">Microsoft, Musiwave, TF1</div>
+        <div class="evolution-tags">
+          <span class="evolution-tag tag-design">visual design</span>
+          <span class="evolution-tag tag-design">motion</span>
+          <span class="evolution-tag tag-design">UX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <h2>What People Say</h2>
+  <div class="testimonial-row">
+    <div class="test-card">
+      <div class="test-quote">"Brings a rare level of patience, clarity, and steadiness. Was one of the very first design leaders to lean into AI and learn in public. His early demos helped our studio become the most AI-forward in the org."</div>
+      <div class="test-author">Samantha Neufeld</div>
+      <div class="test-role">Principal Research Manager, Microsoft</div>
+    </div>
+    <div class="test-card">
+      <div class="test-quote">"Hands-on with product, doesn't hesitate to roll up his sleeves and check in code himself. A true role model for the design team. It's rare to find someone who combines that level of craft with such strong collaboration."</div>
+      <div class="test-author">Shivani Chander</div>
+      <div class="test-role">Senior PM, Microsoft</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>mathias.wendlinger // 2026</span>
+  <span>linkedin &middot; resume &middot; github</span>
+</footer>
+
+</body>
+</html>

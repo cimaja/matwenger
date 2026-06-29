@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathias Wendlinger — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0c0c0f; color: #e0e0e0; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; letter-spacing: -0.02em; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(12,12,15,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.nav-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
+  color: #888;
+}
+.nav-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: #fff; }
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  padding-top: 56px;
+}
+.hero-design {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-design::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(147,51,234,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-code {
+  background: #111116;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.hero-code::before {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.side-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.side-label.design { color: rgba(147,51,234,0.8); }
+.side-label.code { color: rgba(16,185,129,0.8); }
+.side-label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.side-label.design .side-label-dot { background: rgba(147,51,234,0.6); }
+.side-label.code .side-label-dot { background: rgba(16,185,129,0.6); }
+
+.hero h1 {
+  font-size: clamp(44px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.hero-subtitle {
+  font-size: 17px;
+  color: #888;
+  max-width: 460px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.hero-meta {
+  display: flex;
+  gap: 32px;
+}
+.hero-meta-item {
+  font-size: 12px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hero-meta-item strong {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2px;
+  letter-spacing: -0.02em;
+}
+
+/* Divider circle */
+.hero-divider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #0c0c0f;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #555;
+}
+
+/* Terminal */
+.terminal {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.terminal-bar {
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.terminal-bar-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #555;
+  margin-left: 12px;
+}
+.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-dot:nth-child(1) { background: #ff5f57; }
+.terminal-dot:nth-child(2) { background: #ffbd2e; }
+.terminal-dot:nth-child(3) { background: #28c940; }
+.terminal-content {
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #888;
+  min-height: 340px;
+}
+
+/* Terminal typing animation */
+.terminal-line {
+  opacity: 0;
+  animation: fadeInLine 0.05s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.terminal-line .typed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  width: 0;
+  animation: typing 0.6s steps(30) forwards;
+}
+.terminal-line .typed.with-cursor {
+  border-right-color: #10b981;
+  animation: typing 0.6s steps(30) forwards, blink 0.8s step-end infinite 0.6s;
+}
+@keyframes typing { to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes fadeInLine { to { opacity: 1; } }
+
+/* Stagger each line */
+.terminal-line:nth-child(1) { animation-delay: 0.5s; }
+.terminal-line:nth-child(1) .typed { animation-delay: 0.5s; }
+.terminal-line:nth-child(2) { animation-delay: 0.9s; }
+.terminal-line:nth-child(2) .typed { animation-delay: 0.9s; }
+.terminal-line:nth-child(3) { animation-delay: 1.3s; }
+.terminal-line:nth-child(3) .typed { animation-delay: 1.3s; }
+.terminal-line:nth-child(4) { animation-delay: 1.7s; }
+.terminal-line:nth-child(4) .typed { animation-delay: 1.7s; }
+.terminal-line:nth-child(5) { animation-delay: 2.1s; }
+.terminal-line:nth-child(5) .typed { animation-delay: 2.1s; }
+.terminal-line:nth-child(6) { animation-delay: 2.5s; }
+.terminal-line:nth-child(6) .typed { animation-delay: 2.5s; }
+.terminal-line:nth-child(7) { animation-delay: 2.9s; }
+.terminal-line:nth-child(7) .typed { animation-delay: 2.9s; }
+.terminal-line:nth-child(8) { animation-delay: 3.3s; }
+.terminal-line:nth-child(8) .typed { animation-delay: 3.3s; }
+.terminal-line:nth-child(9) { animation-delay: 3.7s; }
+.terminal-line:nth-child(9) .typed { animation-delay: 3.7s; }
+.terminal-line:nth-child(10) { animation-delay: 4.1s; }
+.terminal-line:nth-child(10) .typed { animation-delay: 4.1s; }
+.terminal-line:nth-child(11) { animation-delay: 4.5s; }
+.terminal-line:nth-child(11) .typed { animation-delay: 4.5s; }
+.terminal-line:nth-child(12) { animation-delay: 4.9s; }
+.terminal-line:nth-child(12) .typed { animation-delay: 4.9s; }
+.terminal-line:nth-child(13) { animation-delay: 5.3s; }
+.terminal-line:nth-child(13) .typed { animation-delay: 5.3s; }
+.terminal-line:nth-child(14) { animation-delay: 5.7s; }
+.terminal-line:nth-child(14) .typed { animation-delay: 5.7s; }
+.terminal-line:nth-child(15) { animation-delay: 6.3s; }
+.terminal-line:nth-child(15) .typed { animation-delay: 6.3s; }
+.terminal-line:nth-child(16) { animation-delay: 6.7s; }
+.terminal-line:nth-child(16) .typed { animation-delay: 6.7s; }
+.terminal-line:nth-child(17) { animation-delay: 7.1s; }
+.terminal-line:nth-child(17) .typed { animation-delay: 7.1s; }
+.terminal-line:nth-child(18) { animation-delay: 7.5s; }
+.terminal-line:nth-child(18) .typed { animation-delay: 7.5s; }
+.terminal-line:nth-child(19) { animation-delay: 8.0s; }
+.terminal-line:nth-child(19) .typed { animation-delay: 8.0s; }
+.terminal-line:nth-child(20) { animation-delay: 8.5s; }
+.terminal-line:nth-child(20) .typed { animation-delay: 8.5s; }
+
+.prompt { color: #10b981; }
+.cmd { color: #e0e0e0; }
+.comment { color: #555; }
+.string { color: #c084fc; }
+.number { color: #f59e0b; }
+.keyword { color: #60a5fa; }
+.success { color: #10b981; }
+
+/* ============ STORY SECTION ============ */
+.story-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px 40px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.story-section p {
+  font-size: 19px;
+  line-height: 1.85;
+  color: #999;
+  margin-bottom: 28px;
+}
+.story-section p:first-of-type::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  float: left;
+  line-height: 0.8;
+  padding-right: 14px;
+  padding-top: 8px;
+  color: #fff;
+}
+.story-highlight {
+  font-size: 15px;
+  color: #c084fc;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  gap: 40px;
+}
+.story-highlight span {
+  color: #555;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ============ HOW I WORK ============ */
+.workflow-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.workflow-section h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.workflow-desc {
+  text-align: center;
+  font-size: 17px;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto 80px;
+  line-height: 1.7;
+}
+.workflow-pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.workflow-step {
+  padding: 36px 28px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  transition: border-color 0.3s, background 0.3s;
+}
+.workflow-step:hover {
+  border-color: rgba(147,51,234,0.2);
+  background: rgba(255,255,255,0.03);
+}
+.workflow-step:first-child { border-radius: 16px 0 0 16px; }
+.workflow-step:last-child { border-radius: 0 16px 16px 0; }
+.workflow-step-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #444;
+  margin-bottom: 20px;
+}
+.workflow-step h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.workflow-step p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.7;
+}
+.tool-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.15);
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #c084fc;
+  margin-top: 14px;
+  margin-right: 4px;
+}
+
+/* ============ IMPACT ============ */
+.impact-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.impact-section h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.impact-card {
+  padding: 32px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  transition: border-color 0.3s;
+}
+.impact-card:hover { border-color: rgba(16,185,129,0.2); }
+.impact-metric {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 36px;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 8px;
+}
+.impact-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.impact-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ============ PROJECTS CAROUSEL ============ */
+.projects-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.projects-section h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.projects-carousel {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 20px;
+}
+.projects-carousel::-webkit-scrollbar { display: none; }
+.project-card {
+  min-width: 280px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.project-card:hover {
+  border-color: rgba(147,51,234,0.3);
+  transform: translateY(-4px);
+}
+.project-card-img {
+  height: 180px;
+  background: linear-gradient(135deg, rgba(147,51,234,0.15) 0%, rgba(16,185,129,0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #555;
+}
+.project-card-content {
+  padding: 24px;
+  background: rgba(255,255,255,0.02);
+}
+.project-card-tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.project-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(147,51,234,0.1);
+  color: #c084fc;
+  border: 1px solid rgba(147,51,234,0.15);
+}
+.project-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+}
+.project-card p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+}
+/* "View all" card */
+.project-card-viewall {
+  min-width: 200px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px dashed rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  padding: 40px;
+  text-align: center;
+}
+.project-card-viewall:hover { border-color: rgba(147,51,234,0.3); }
+.project-card-viewall .arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #888;
+  margin-bottom: 16px;
+}
+.project-card-viewall span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ============ TESTIMONIALS AUTO-SCROLL ============ */
+.testimonials-section {
+  padding: 120px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+.testimonials-section h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+  padding: 0 60px;
+}
+.testimonials-track-wrapper {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  animation: scrollTestimonials 180s linear infinite;
+  width: max-content;
+}
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.test-card {
+  min-width: 380px;
+  max-width: 380px;
+  padding: 32px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+.test-card:hover { border-color: rgba(147,51,234,0.2); }
+.test-quote {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.test-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.test-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(147,51,234,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c084fc;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.test-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.test-author { font-size: 13px; font-weight: 600; color: #e0e0e0; }
+.test-role { font-size: 12px; color: #555; }
+
+/* ============ EXPERIENCE ============ */
+.experience-section {
+  padding: 120px 60px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.experience-section h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.experience-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.exp-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  padding: 36px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.exp-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #555;
+  padding-top: 4px;
+}
+.exp-role {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+}
+.exp-company {
+  font-size: 14px;
+  color: #c084fc;
+  margin-bottom: 14px;
+}
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+}
+.exp-bullets li {
+  font-size: 14px;
+  color: #888;
+  padding: 3px 0 3px 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #333;
+}
+.exp-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.15);
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #10b981;
+  margin-top: 14px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  padding: 48px 60px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #444;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: #c084fc; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-name">Mathias Wendlinger</div>
+  <div class="nav-links">
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Lab</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-design">
+    <h1>Mathias<br>Wendlinger</h1>
+    <p class="hero-subtitle">
+      18 years building AI-powered experiences, growing globally distributed design teams, and driving measurable business outcomes for products serving 50 million users.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><strong>50M</strong> <span style="color: #c084fc;">monthly active users</span></div>
+      <div class="hero-meta-item"><strong>12</strong> <span style="color: #c084fc;">designers led</span></div>
+      <div class="hero-meta-item"><strong>8</strong> <span style="color: #c084fc;">years managing teams</span></div>
+    </div>
+  </div>
+
+  <div class="hero-code">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <span class="terminal-bar-title">terminal</span>
+      </div>
+      <div class="terminal-content">
+        <div class="terminal-line"><span class="typed"><span class="prompt">$</span> <span class="cmd">git log --oneline career</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;</span></div>
+        <div class="terminal-line"><span class="typed"><span class="number">2025</span> <span class="cmd">Principal Design Manager</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designers ship PRs to production repos</span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Built-in AI assistant for Power Apps</span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="success">+81% app publishing | 30% efficiency gain</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;</span></div>
+        <div class="terminal-line"><span class="typed"><span class="number">2022</span> <span class="cmd">Natural language to workflow automation</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First Copilot in Power Platform</span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="success">Showcased to Satya Nadella at Ignite</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;</span></div>
+        <div class="terminal-line"><span class="typed"><span class="number">2018</span> <span class="cmd">AI Builder: from zero to GA</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No-code AI for every maker</span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="success">+42 NPS | Gartner Leader in IDP</span></span></div>
+        <div class="terminal-line"><span class="typed">&nbsp;</span></div>
+        <div class="terminal-line"><span class="typed"><span class="prompt">$</span> <span class="cmd">git shortlog -s --since="8 months"</span></span></div>
+        <div class="terminal-line"><span class="typed with-cursor"><span class="success">&#10003; 280 commits across design and engineering repos</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-divider">&lt;/&gt;</div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story-section">
+  <p>Born in the south of France, I grew up in Africa and Asia. This multicultural background shaped my perspective on building inclusive digital experiences and leading teams across cultures, continents, and time zones. Today I lead a team of 12 designers across India, Greece, and the United States, building the foundational experiences behind Microsoft's low-code and AI-first strategy for over 50 million users.</p>
+  <p>I build teams and grow people. Over the past eight years as a manager, I've hired and developed designers across three continents, coached ICs into leadership roles, and invested heavily in team culture. I drive measurable business outcomes and bridge design and engineering in ways that change how teams deliver.</p>
+  <div class="story-highlight">
+    <div>Microsoft<span>Current company</span></div>
+    <div>Power Platform<span>Product area</span></div>
+    <div>France &rarr; Global<span>Career arc</span></div>
+  </div>
+</section>
+
+<!-- ============ HOW I WORK ============ -->
+<section class="workflow-section">
+  <h2>How I Work</h2>
+  <p class="workflow-desc">
+    I don't just manage designers. I build systems that let teams, AI agents, and enterprise customers collaborate at scale, from the first customer conversation to the production PR.
+  </p>
+  <div class="workflow-pipeline">
+    <div class="workflow-step">
+      <div class="workflow-step-number">01</div>
+      <h3>Research & Strategy</h3>
+      <p>Partner with enterprise customers (John Deere, Chevron, Blackrock) to validate problems and co-design solutions</p>
+      <span class="tool-tag">Customer co-design</span>
+      <span class="tool-tag">Funnel analysis</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">02</div>
+      <h3>Design & Prototype</h3>
+      <p>Rapid prototyping with AI-powered tools. From concept to interactive prototype in hours, not weeks</p>
+      <span class="tool-tag">Figma Make</span>
+      <span class="tool-tag">Claude Code</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">03</div>
+      <h3>Ship to Production</h3>
+      <p>Author PRs directly into engineering repos. Fix craftsmanship bugs. Publish Storybook components. Edit content strings</p>
+      <span class="tool-tag">GitHub</span>
+      <span class="tool-tag">XAML</span>
+      <span class="tool-tag">React</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step-number">04</div>
+      <h3>Measure & Iterate</h3>
+      <p>Hypothesis-driven experimentation. Three A/B tests graduated to 100% of users. Data shapes every design decision</p>
+      <span class="tool-tag">A/B testing</span>
+      <span class="tool-tag">NPS</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section class="impact-section">
+  <h2>Impact</h2>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-metric">81%</div>
+      <div class="impact-title">Increase in Apps Published</div>
+      <div class="impact-desc">A/B experimentation on Power Apps maker funnel. Three experiments graduated to 100% of users.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">250%</div>
+      <div class="impact-title">NL2FLOW Usage Growth</div>
+      <div class="impact-desc">First Copilot initiative in Power Platform. Showcased to Satya Nadella at Ignite 2022.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">+42</div>
+      <div class="impact-title">AI Builder NPS</div>
+      <div class="impact-desc">Highest NPS across Power Automate, Power Apps, and PVA. Billed revenue up 179%.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">+18pts</div>
+      <div class="impact-title">Inclusive Team Score</div>
+      <div class="impact-desc">Built systematic action plan when scores dropped. Thriving rose 7 points in six months.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">$8.7M</div>
+      <div class="impact-title">Revenue Features Shipped</div>
+      <div class="impact-desc">Version Comparison and UI Element Triggers for enterprise customers including Nike, Rogers, StateFarm.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-metric">125</div>
+      <div class="impact-title">Ideas from Gen-AI Workshop</div>
+      <div class="impact-desc">Workshop across Paris and Athens shaped Build 2024 keynote features including AI Recorder and self-healing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects-section">
+  <h2>Featured Projects</h2>
+  <div class="projects-carousel">
+    <div class="project-card">
+      <div class="project-card-img">[Project cover]</div>
+      <div class="project-card-content">
+        <div class="project-card-tags"><span class="project-tag">AI</span><span class="project-tag">Copilot</span></div>
+        <h3>NL2FLOW</h3>
+        <p>The first Copilot initiative in Power Platform. Natural language to automation flow.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-img">[Project cover]</div>
+      <div class="project-card-content">
+        <div class="project-card-tags"><span class="project-tag">RPA</span><span class="project-tag">AI</span></div>
+        <h3>AI Recorder</h3>
+        <p>Re-imagined UI automation with multimodal AI. Called "magic" by the CVP.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-img">[Project cover]</div>
+      <div class="project-card-content">
+        <div class="project-card-tags"><span class="project-tag">Design System</span></div>
+        <h3>Dark Mode for PAD</h3>
+        <p>10 PRs submitted. 61 XAML files. 37 bugs fixed. Shipped to GA.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-img">[Project cover]</div>
+      <div class="project-card-content">
+        <div class="project-card-tags"><span class="project-tag">AI</span><span class="project-tag">No-code</span></div>
+        <h3>AI Builder</h3>
+        <p>Microsoft's first no-code AI platform. +42 NPS, +179% billed revenue.</p>
+      </div>
+    </div>
+    <div class="project-card-viewall">
+      <div class="arrow">&rarr;</div>
+      <span>View all projects</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <h2>What People Say</h2>
+  <div class="testimonials-track-wrapper">
+    <div class="testimonials-track">
+      <!-- First set -->
+      <div class="test-card">
+        <div class="test-quote">"Brings a rare level of patience, clarity, and steadiness to what is likely the most challenging design leadership role on the team. Was one of the very first design leaders to lean into AI and learn in public."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Samantha_Neufeld.jpg" alt="Samantha Neufeld"></div>
+          <div><div class="test-author">Samantha Neufeld</div><div class="test-role">Principal Research Manager, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"What stands out is how hands-on he is with the product. He doesn't hesitate to roll up his sleeves and check in code himself. It's rare to find someone who combines that level of craft with such strong collaboration."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Shivani_Chander.jpg" alt="Shivani Chander"></div>
+          <div><div class="test-author">Shivani Chander</div><div class="test-role">Senior PM, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"He excels as a design leader and is an incredible colleague. Mathias is a role model and coach, helping his team grow and improve in their craft. They are fortunate to have him as their manager."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Joe_Fernandez.jpg" alt="Joe Fernandez"></div>
+          <div><div class="test-author">Joe Fernandez</div><div class="test-role">Principal PM, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"Shows up as a true design partner across organizational boundaries. Inclusive and supportive rather than territorial. He creates psychological safety for designers to experiment and push beyond incremental improvements."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Jennifer_Bost.jpg" alt="Jennifer Bost"></div>
+          <div><div class="test-author">Jennifer Bost</div><div class="test-role">Principal Design Manager, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"The team stands out for its ability to deliver important work that resonates with customers, despite geographical and time zone challenges. Full credit goes to Mathias for fostering such a positive and productive environment."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Matt_Shelton.jpg" alt="Matt Shelton"></div>
+          <div><div class="test-author">Matt Shelton</div><div class="test-role">Principal Content Designer, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"Manages the most geo-diverse team in the studio with professionalism and inclusivity. The Power Platform studio is more successful because of the trust, clarity, and consistency he brings."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Deb_Dulin.jpg" alt="Deb Dulin"></div>
+          <div><div class="test-author">Deb Dulin</div><div class="test-role">Senior Design PM, Microsoft</div></div>
+        </div>
+      </div>
+      <!-- Duplicate set for infinite scroll -->
+      <div class="test-card">
+        <div class="test-quote">"Brings a rare level of patience, clarity, and steadiness to what is likely the most challenging design leadership role on the team. Was one of the very first design leaders to lean into AI and learn in public."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Samantha_Neufeld.jpg" alt="Samantha Neufeld"></div>
+          <div><div class="test-author">Samantha Neufeld</div><div class="test-role">Principal Research Manager, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"What stands out is how hands-on he is with the product. He doesn't hesitate to roll up his sleeves and check in code himself. It's rare to find someone who combines that level of craft with such strong collaboration."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Shivani_Chander.jpg" alt="Shivani Chander"></div>
+          <div><div class="test-author">Shivani Chander</div><div class="test-role">Senior PM, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"He excels as a design leader and is an incredible colleague. Mathias is a role model and coach, helping his team grow and improve in their craft. They are fortunate to have him as their manager."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Joe_Fernandez.jpg" alt="Joe Fernandez"></div>
+          <div><div class="test-author">Joe Fernandez</div><div class="test-role">Principal PM, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"Shows up as a true design partner across organizational boundaries. Inclusive and supportive rather than territorial. He creates psychological safety for designers to experiment and push beyond incremental improvements."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Jennifer_Bost.jpg" alt="Jennifer Bost"></div>
+          <div><div class="test-author">Jennifer Bost</div><div class="test-role">Principal Design Manager, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"The team stands out for its ability to deliver important work that resonates with customers, despite geographical and time zone challenges. Full credit goes to Mathias for fostering such a positive and productive environment."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Matt_Shelton.jpg" alt="Matt Shelton"></div>
+          <div><div class="test-author">Matt Shelton</div><div class="test-role">Principal Content Designer, Microsoft</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"Manages the most geo-diverse team in the studio with professionalism and inclusivity. The Power Platform studio is more successful because of the trust, clarity, and consistency he brings."</div>
+        <div class="test-footer">
+          <div class="test-avatar"><img src="/images/people/Deb_Dulin.jpg" alt="Deb Dulin"></div>
+          <div><div class="test-author">Deb Dulin</div><div class="test-role">Senior Design PM, Microsoft</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience-section">
+  <h2>Experience</h2>
+  <div class="experience-grid">
+    <div class="exp-item">
+      <div class="exp-date">2025 &ndash; Present</div>
+      <div>
+        <div class="exp-role">Principal Design Manager</div>
+        <div class="exp-company">Microsoft - Power Platform</div>
+        <ul class="exp-bullets">
+          <li>Build and lead a distributed design team of 12 across India, Greece, and the US, owning the end-to-end experience for five products (Power Apps, Power Automate, Power Pages, Process Mining, Mobile) against a deliberately lean headcount</li>
+          <li>Grew and strengthened the team, recruited and hired 1 designer, onboarded 5, and drove 3 promotions, developing senior talent across five time zones</li>
+          <li>Pioneered the org's design-to-code practice, moving designers to daily production use of AI tooling (Figma Make, GitHub Copilot, Claude Code CLI). Designers now ship craft and content improvements as PRs directly in production repos</li>
+
+
+          <li>Led design on a built-in AI assistant for Power Apps that lets people ask plain-language questions about their app's data and get instant answers</li>
+          <li>Established a rapid A/B experimentation practice that grounds design decisions in funnel data, shifting the team from opinion-led to evidence-led</li>
+        </ul>
+        <div class="exp-badge">50M+ monthly active users</div>
+        <div class="exp-badge">81% increase in apps published</div>
+        <div class="exp-badge">30% design efficiency gain</div>
+        <div class="exp-badge">Inclusive Team score +18 points in 6 months</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2018 &ndash; 2025</div>
+      <div>
+        <div class="exp-role">Senior Design Manager</div>
+        <div class="exp-company">Microsoft - Power Automate Desktop | AI Builder</div>
+        <ul class="exp-bullets">
+          <li>Team of 4 across Paris and Greece supporting Power Automate Desktop, AI capabilities in Power Automate Web, and AI Builder</li>
+          <li>Designed natural language to workflow automation, the first Copilot initiative in Power Platform, showcased to Satya Nadella at Ignite 2022. Shipped AI-powered recording for desktop automation, featured at Build 2024 and called "magic" by the CVP</li>
+          <li>Designed AI Builder from scratch with a small founding team, a no-code platform that lets anyone bring AI into their apps and workflows. Defined the end-to-end experience across object detection, document processing, OCR, and prediction, from zero to general availability</li>
+        </ul>
+        <div class="exp-badge">Contributed to Microsoft's Leader position in Gartner IDP</div>
+        <div class="exp-badge">+42 NPS (highest in Power Platform)</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2015 &ndash; 2018</div>
+      <div>
+        <div class="exp-role">Senior Lead Designer</div>
+        <div class="exp-company">Microsoft - Groove Music | Books in Edge</div>
+        <ul class="exp-bullets">
+          <li>Team of 5 designers in Paris. Groove Music (Windows, Xbox, Web, iOS, Android) and Books reading experience in Microsoft Edge</li>
+          <li>Shipped the EPUB and PDF reading experience in Microsoft Edge with the Windows 10 Fall Creators Update, including Fluent Design revamp, annotations, and cross-platform support (desktop, iOS, Android, Andromeda foldable device)</li>
+          <li>Designed Groove Music Taste Profile and Your Groove personalization, evolving the Xbox Music web experience (Boombox) into a cross-platform music service</li>
+        </ul>
+        <div class="exp-badge">Reading experience evolved into the default Edge PDF reader on 1B+ Windows devices</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2011 &ndash; 2015</div>
+      <div>
+        <div class="exp-role">Lead Designer</div>
+        <div class="exp-company">Microsoft - Xbox Music | OneStore</div>
+        <ul class="exp-bullets">
+          <li>Team of 2 designers in Paris. Xbox Music web (Boombox), Music OneStore, and Video OneStore</li>
+          <li>Shipped the full Video OneStore (Movie/TV hub, detail pages, library, player). Design recognized as "on par with a professional agency" by stakeholders across Redmond</li>
+          <li>Designed and shipped Boombox (July 2013), the Xbox Music web player serving as the sole designer in Paris with daily syncs to Redmond</li>
+        </ul>
+        <div class="exp-badge">Design blueprint adopted by Windows 8 Music</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2008 &ndash; 2011</div>
+      <div>
+        <div class="exp-role">Product Designer</div>
+        <div class="exp-company">Microsoft - Xbox Support | Mediaroom Mobile</div>
+        <ul class="exp-bullets">
+          <li>Led the Xbox Support website redesign in collaboration with Frog Design, redesigning the console repair experience and Contact Us flows</li>
+          <li>Designed and dev'd a Windows Phone 7 companion app for Microsoft Mediaroom, the IPTV set-top box platform powering TV experiences for telecom providers worldwide. Self-taught Silverlight and XAML to ship production UI</li>
+        </ul>
+        <div class="exp-badge">14% reduction in support tickets</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2007 &ndash; 2008</div>
+      <div>
+        <div class="exp-role">User Experience Designer</div>
+        <div class="exp-company">Musiwave, Paris</div>
+        <ul class="exp-bullets">
+          <li>Designed music portal websites on desktop and mobile for European phone network providers including Orange, SFR, Vodafone, Verizon, and T-Mobile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2006 &ndash; 2007</div>
+      <div>
+        <div class="exp-role">3D Motion Designer</div>
+        <div class="exp-company">TF1 &middot; La booteek, Paris</div>
+        <ul class="exp-bullets">
+          <li>Created opening credits for several TF1 programs and 3D animated infographics for the news</li>
+          <li>Documentary for Arte "Faut il avoir peur de Google?" — motion graphics, modeling, setup, skinning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-left">mathias.wendlinger // 2026</div>
+  <div class="footer-links">
+    <a href="#">LinkedIn</a>
+    <a href="#">Resume</a>
+  </div>
+</footer>
+
+</body>
+</html>

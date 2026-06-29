@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { AboutNarrative } from '@/components/about/narrative';
 import { AboutJourney } from '@/components/about/journey';
+import { PersonalitySliders } from '@/components/about/personality';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -40,6 +41,7 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <PersonalitySliders />
       <AboutNarrative />
 
       <div className="border-t border-[rgba(255,255,255,0.04)]">

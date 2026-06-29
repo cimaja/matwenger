@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction 2: The Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #faf9f7; color: #1a1a1a; line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; letter-spacing: -0.02em; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 80px 80px 60px;
+}
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 32px;
+}
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: #c4467e;
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+  color: #999;
+}
+.hero-meta strong {
+  display: block;
+  font-size: 24px;
+  font-family: 'Fraunces', serif;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+.hero-photo {
+  background: linear-gradient(135deg, #e8d5c4 0%, #d4b8a0 50%, #c9a68c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #999;
+  position: relative;
+}
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, #faf9f7 0%, transparent 100%);
+}
+
+/* Narrative section */
+.narrative {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+.narrative p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 32px;
+}
+.narrative p:first-of-type::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  float: left;
+  line-height: 0.8;
+  padding-right: 12px;
+  padding-top: 8px;
+  color: #1a1a1a;
+}
+
+/* Pull quote */
+.pull-quote {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 60px;
+  text-align: center;
+}
+.pull-quote blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+.pull-quote cite {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Chapter cards */
+.chapters {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px 120px;
+}
+.chapters h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.chapter-card {
+  border: 1px solid #e5e0db;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.chapter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+.chapter-card-visual {
+  height: 200px;
+  background: linear-gradient(135deg, #f5f0eb 0%, #ede4db 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-family: 'Fraunces', serif;
+  color: #c4467e;
+  font-weight: 300;
+}
+.chapter-card-content {
+  padding: 28px;
+}
+.chapter-card-date {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c4467e;
+  margin-bottom: 8px;
+}
+.chapter-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.chapter-card p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timeline-section {
+  background: #1a1a1a;
+  color: #fafafa;
+  padding: 120px 60px;
+}
+.timeline-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.timeline-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+}
+.timeline-node {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+}
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c4467e;
+  margin: 22px auto 20px;
+  position: relative;
+  z-index: 1;
+}
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(196,70,126,0.2);
+}
+.timeline-year {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.timeline-title {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 4px;
+}
+.timeline-org {
+  font-size: 11px;
+  color: #666;
+}
+
+/* Inline testimonial */
+.inline-testimonial {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.inline-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8d5c4, #d4b8a0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c4467e;
+}
+.inline-testimonial blockquote {
+  font-size: 17px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.inline-testimonial cite {
+  font-style: normal;
+  font-size: 13px;
+  color: #999;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 60px 40px;
+  border-top: 1px solid #e5e0db;
+  font-size: 13px;
+  color: #999;
+}
+.footer-links {
+  margin-top: 12px;
+}
+.footer-links a {
+  color: #c4467e;
+  text-decoration: none;
+  margin: 0 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-label">Portfolio</div>
+    <h1>Mathias<br>Wendlinger</h1>
+    <p class="hero-subtitle">
+      A design leader who builds teams, ships products for 50 million users, and bridges the gap between design and engineering at Microsoft.
+    </p>
+    <div class="hero-meta">
+      <div><strong>18</strong> years of experience</div>
+      <div><strong>12</strong> designers led</div>
+      <div><strong>8</strong> years as manager</div>
+    </div>
+  </div>
+  <div class="hero-photo">[Portrait photo]</div>
+</section>
+
+<!-- Narrative -->
+<section class="narrative">
+  <p>Born in the south of France, I grew up in Africa and Asia. This multicultural background shaped my perspective on building inclusive digital experiences and leading teams across cultures and time zones. Today, I lead a team of 12 designers across India, Greece, and the United States, building the foundational experiences behind Microsoft's low-code and AI-first strategy.</p>
+  <p>What sets me apart is how I bridge design and engineering. I prototype with AI tools, merge pull requests directly into production, and built an upskilling program that moved my entire team from AI awareness to daily production use. When our team health scores dropped 15 points below company average, I didn't look away. I built a plan, executed it, and watched Thriving rise 7 points and Inclusive Team surge 18 points in six months.</p>
+</section>
+
+<!-- Pull quote -->
+<section class="pull-quote">
+  <blockquote>"Brings a rare level of patience, clarity, and steadiness to what is likely the most challenging design leadership role on the team. One of the very first design leaders to lean into AI and learn in public."</blockquote>
+  <cite>Samantha Neufeld, Principal Research Manager at Microsoft</cite>
+</section>
+
+<!-- Chapter cards (key moments) -->
+<section class="chapters">
+  <h2>Key Moments</h2>
+  <div class="chapter-grid">
+    <div class="chapter-card">
+      <div class="chapter-card-visual">NL2FLOW</div>
+      <div class="chapter-card-content">
+        <div class="chapter-card-date">Ignite 2022</div>
+        <h3>The First Copilot in Power Platform</h3>
+        <p>Designed the natural language to flow experience, the first Copilot initiative in Power Platform. Showcased to Satya Nadella and Bill Gates. Usage grew 250%.</p>
+      </div>
+    </div>
+    <div class="chapter-card">
+      <div class="chapter-card-visual">125</div>
+      <div class="chapter-card-content">
+        <div class="chapter-card-date">Build 2024</div>
+        <h3>The Gen-AI Workshop</h3>
+        <p>Facilitated an ideation workshop across Paris and Athens. 125 ideas, 5 themes. The AI Recorder, Automation Center, and self-healing flows all traced back to this room.</p>
+      </div>
+    </div>
+    <div class="chapter-card">
+      <div class="chapter-card-visual">81%</div>
+      <div class="chapter-card-content">
+        <div class="chapter-card-date">2026</div>
+        <h3>The Experimentation Engine</h3>
+        <p>Built an A/B experimentation practice on the Power Apps maker funnel. The result: 81% more users successfully publishing apps. Three experiments graduated to 100% of users.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inline testimonial -->
+<section class="inline-testimonial">
+  <div class="inline-avatar">SC</div>
+  <div>
+    <blockquote>"What stands out about Mathias is how hands-on he is with the product. He doesn't hesitate to roll up his sleeves and check in code himself. He genuinely cares about the quality of what ships but never lets perfect be the enemy of done."</blockquote>
+    <cite>Shivani Chander, Senior PM at Microsoft</cite>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="timeline-section">
+  <h2>Career Arc</h2>
+  <div class="timeline-horizontal">
+    <div class="timeline-node">
+      <div class="timeline-year">2006</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">3D Motion Designer</div>
+      <div class="timeline-org">TF1, Paris</div>
+    </div>
+    <div class="timeline-node">
+      <div class="timeline-year">2007</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">UX Designer</div>
+      <div class="timeline-org">Musiwave</div>
+    </div>
+    <div class="timeline-node">
+      <div class="timeline-year">2008</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">UX Designer</div>
+      <div class="timeline-org">Microsoft</div>
+    </div>
+    <div class="timeline-node">
+      <div class="timeline-year">2014</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">Sr. UX Designer</div>
+      <div class="timeline-org">Xbox & Windows</div>
+    </div>
+    <div class="timeline-node">
+      <div class="timeline-year">2018</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">Sr. Design Manager</div>
+      <div class="timeline-org">Power Automate</div>
+    </div>
+    <div class="timeline-node">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-title">Principal DM</div>
+      <div class="timeline-org">Copilot Studio</div>
+    </div>
+  </div>
+</section>
+
+<!-- Another inline testimonial -->
+<section class="inline-testimonial" style="padding-top: 120px;">
+  <div class="inline-avatar">JB</div>
+  <div>
+    <blockquote>"Mathias shows up as a true design partner across organizational boundaries. Inclusive and supportive rather than territorial. He creates psychological safety for designers to experiment and push beyond incremental improvements."</blockquote>
+    <cite>Jennifer Bost, Principal Design Manager at Microsoft</cite>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div>Mathias Wendlinger &copy; 2026</div>
+  <div class="footer-links">
+    <a href="#">LinkedIn</a>
+    <a href="#">Resume</a>
+  </div>
+</footer>
+
+</body>
+</html>
