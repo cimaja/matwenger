@@ -1,5 +1,5 @@
 import { ProjectTags } from '@/components/projects/project-tags';
-import { CalendarIcon, ExternalLink } from 'lucide-react';
+import { CalendarIcon, ExternalLink, Lock } from 'lucide-react';
 import Link from 'next/link';
 import type { LabProject } from './lab-projects-data';
 
@@ -14,8 +14,9 @@ export function LabProjectCard({ project }: { project: LabProject }) {
       <div className="h-full rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#111116] transition-all duration-300 hover:border-[rgba(147,51,234,0.3)] hover:-translate-y-1 flex flex-col">
         <div className="p-6 flex-none">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-semibold text-white group-hover:text-accent-purple transition-colors font-sans">
+            <h3 className="text-lg font-semibold text-white group-hover:text-accent-purple transition-colors font-sans flex items-center gap-2">
               {project.title}
+              {project.locked && <Lock className="w-3.5 h-3.5 text-[#555]" />}
             </h3>
             <ExternalLink className="w-4 h-4 text-[#555] group-hover:text-accent-purple transition-colors" />
           </div>

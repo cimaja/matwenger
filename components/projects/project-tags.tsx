@@ -27,6 +27,17 @@ const tagCategories: Record<string, { bg: string; border: string; text: string }
 
   // Technique — Cyan
   'Web player': { bg: 'rgba(34,211,238,0.1)', border: 'rgba(34,211,238,0.2)', text: '#22d3ee' },
+
+  // Lab — Prototype (Blue)
+  'Prototype': { bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)', text: '#60a5fa' },
+  'Power Automate Desktop': { bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)', text: '#60a5fa' },
+  'App Builder': { bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)', text: '#60a5fa' },
+  'Dynamics 365': { bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)', text: '#60a5fa' },
+  'Model-Driven Apps': { bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)', text: '#60a5fa' },
+
+  // Lab — Personal (Amber)
+  'Personal project': { bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.2)', text: '#f59e0b' },
+  'Figma plugin': { bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.2)', text: '#f59e0b' },
 };
 
 const defaultStyle = { bg: 'rgba(147,51,234,0.08)', border: 'rgba(147,51,234,0.15)', text: '#c084fc' };
