@@ -1,6 +1,6 @@
 ---
 title: "RPA AI Recorder"
-description: "Re-imagined the Power Automate Desktop recorder using GPT-V to combine UI automation with voice instructions, creating a more intuitive and accessible desktop flow creation experience"
+description: "Re-imagined the Power Automate Desktop recorder using GPT-4V to combine UI automation with voice instructions, creating a more intuitive and accessible desktop flow creation experience"
 cover: "/images/projects/rpa-ai-recorder/main/cover.jpg"
 tags:
   - AI
@@ -69,7 +69,7 @@ gallery:
 
 ## Overview
 
-Back in September 2023, OpenAI announce a new AI model (GPT-V) that is multi-modal. In other words, this new model can take various data such as an image, text, sound as an input and generate either an image or text or code as an output. I collaborated closely with a cross-disciplinary team across Paris, Athens and Seattle to explore how we could re-imagine UI automation and disrupt the RPA market.
+Back in September 2023, OpenAI announced a new AI model (GPT-4V) that is multi-modal. In other words, this new model can take various data such as an image, text, sound as an input and generate either an image or text or code as an output. I collaborated closely with a cross-disciplinary team across Paris, Athens and Seattle to explore how we could re-imagine UI automation and disrupt the RPA market.
 
 ## Key responsibilities
 
@@ -78,7 +78,7 @@ Back in September 2023, OpenAI announce a new AI model (GPT-V) that is multi-mod
 - Ensured consistency across interaction and visual design
 - Created end-to-end video demonstration for Ignite conference
 - Collaborated with cross-disciplinary (Data science, PM, DEV) team across multiple locations
-- Designed innovative UI automation approach using GPT-V multi-modal capabilities
+- Designed innovative UI automation approach using GPT-4V multi-modal capabilities
 
 ## Impact
 
@@ -87,5 +87,5 @@ The RPA AI Recorder represents a significant advancement in automation technolog
 - Combined multiple input modalities (UI, cursor movement, voice) for enhanced user experience
 - Positioned Power Automate as a leader in AI-first automation
 - Selected as a key feature for Microsoft Build conference
-- Demonstrated innovative use of GPT-V technology in enterprise software
+- Demonstrated innovative use of GPT-4V technology in enterprise software
 - Created seamless integration between voice instructions and UI automation
