@@ -40,6 +40,24 @@ export function HeroSection() {
               </div>
             ))}
           </div>
+          <div className="flex flex-wrap items-center gap-4 mt-12">
+            <a
+              href="/Mathias-Wendlinger-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center h-11 px-6 rounded-full border border-accent-purple/40 bg-accent-purple/10 text-sm text-white hover:bg-accent-purple/20 transition-colors duration-300"
+            >
+              View resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mathias-wendlinger/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center h-11 px-2 text-sm text-[#A3A3A3] hover:text-white transition-colors duration-300"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
         </motion.div>
       </div>
 

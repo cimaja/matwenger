@@ -13,6 +13,14 @@ export function Navigation() {
         <div className="flex items-center space-x-8">
           <nav className="flex items-center space-x-8 text-[13px]">
             <NavLinks />
+            <Link
+              href="/Mathias-Wendlinger-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-purple hover:text-white transition-colors duration-200"
+            >
+              Resume
+            </Link>
           </nav>
         </div>
       </nav>
