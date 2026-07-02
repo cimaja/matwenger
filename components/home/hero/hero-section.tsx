@@ -32,13 +32,31 @@ export function HeroSection() {
           </p>
           <div className="flex gap-8">
             {heroData.metrics.map((metric) => (
-              <div key={metric.label} className="text-[12px] uppercase tracking-[0.08em] text-[#555]">
+              <div key={metric.label} className="text-[12px] uppercase tracking-[0.08em] text-[#8A8A8A]">
                 <strong className="block font-serif text-[28px] text-white font-semibold mb-0.5 tracking-tight">
                   {metric.value}
                 </strong>
                 <span className="text-accent-purple">{metric.label}</span>
               </div>
             ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-4 mt-12">
+            <a
+              href="/Mathias-Wendlinger-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center h-11 px-6 rounded-full border border-accent-purple/40 bg-accent-purple/10 text-sm text-white hover:bg-accent-purple/20 transition-colors duration-300"
+            >
+              View resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mathias-wendlinger/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center h-11 px-2 text-sm text-[#A3A3A3] hover:text-white transition-colors duration-300"
+            >
+              Connect on LinkedIn
+            </a>
           </div>
         </motion.div>
       </div>
@@ -59,7 +77,7 @@ export function HeroSection() {
       </div>
 
       {/* Center divider circle */}
-      <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[72px] h-[72px] rounded-full bg-[#0c0c0f] border border-[rgba(255,255,255,0.1)] items-center justify-center font-mono text-[11px] text-[#555]">
+      <div aria-hidden="true" className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[72px] h-[72px] rounded-full bg-[#0c0c0f] border border-[rgba(255,255,255,0.1)] items-center justify-center font-mono text-[11px] text-[#8A8A8A] pointer-events-none select-none">
         &lt;/&gt;
       </div>
     </section>

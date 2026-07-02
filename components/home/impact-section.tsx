@@ -17,7 +17,7 @@ export function ImpactSection() {
             <div className="text-[15px] font-semibold text-white mb-2">
               {item.title}
             </div>
-            <div className="text-[13px] text-[#666] leading-[1.6]">
+            <div className="text-[13px] text-[#A3A3A3] leading-[1.6]">
               {item.description}
             </div>
           </div>

@@ -20,7 +20,7 @@ export function NavLinks() {
           key={href}
           href={href}
           className={cn(
-            'transition-colors duration-200',
+            'inline-flex items-center h-14 transition-colors duration-200',
             pathname === href
               ? 'text-white'
               : 'text-[#888] hover:text-white'

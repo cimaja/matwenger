@@ -45,9 +45,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   {project.role} · {project.year}
                 </div>
               </div>
-              <ArrowUpRight className="h-5 w-5 text-[#555] opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
+              <ArrowUpRight className="h-5 w-5 text-[#8A8A8A] opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
             </div>
-            <p className="text-[13px] text-[#777] line-clamp-2 mb-4">
+            <p className="text-[13px] text-[#A3A3A3] line-clamp-2 mb-4">
               {project.description}
             </p>
             <ProjectTags tags={project.tags} />

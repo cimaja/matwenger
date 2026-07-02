@@ -4,7 +4,7 @@ export function WorkflowSection() {
   return (
     <section className="border-t border-[rgba(255,255,255,0.04)] px-6 sm:px-12 lg:px-[60px] py-[120px]">
       <h2 className="text-[44px] text-center text-white mb-5">How I Work</h2>
-      <p className="text-center text-[17px] text-[#777] max-w-[700px] mx-auto mb-20 leading-[1.7]">
+      <p className="text-center text-[17px] text-[#A3A3A3] max-w-[700px] mx-auto mb-20 leading-[1.7]">
         {workflowDescription}
       </p>
 
@@ -20,13 +20,13 @@ export function WorkflowSection() {
                 : ''
             }`}
           >
-            <div className="font-mono text-[11px] text-[#444] mb-5">
+            <div className="font-mono text-[11px] text-[#8A8A8A] mb-5">
               {step.number}
             </div>
             <h3 className="text-[17px] font-semibold text-white mb-2.5 font-sans">
               {step.title}
             </h3>
-            <p className="text-[13px] text-[#777] leading-[1.7]">
+            <p className="text-[13px] text-[#A3A3A3] leading-[1.7]">
               {step.description}
             </p>
             <div className="mt-3.5 flex flex-wrap gap-1">
