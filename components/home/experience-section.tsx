@@ -13,7 +13,7 @@ export function ExperienceSection() {
             key={entry.dateRange}
             className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-4 sm:gap-10 py-9 border-t border-[rgba(255,255,255,0.05)]"
           >
-            <div className="font-mono text-[13px] text-[#555] pt-1">
+            <div className="font-mono text-[13px] text-[#8A8A8A] pt-1">
               {entry.dateRange}
             </div>
             <div>

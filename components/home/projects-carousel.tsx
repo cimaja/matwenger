@@ -119,7 +119,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
                 <h3 className="text-[17px] font-semibold text-white mb-1.5 font-sans">
                   {project.title}
                 </h3>
-                <p className="text-[13px] text-[#777] leading-[1.5] line-clamp-2">
+                <p className="text-[13px] text-[#A3A3A3] leading-[1.5] line-clamp-2">
                   {project.description}
                 </p>
               </div>

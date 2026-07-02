@@ -48,7 +48,7 @@ export function TestimonialsScroll() {
                   <div className="text-[13px] font-semibold text-[#e0e0e0]">
                     {t.author}
                   </div>
-                  <div className="text-[12px] text-[#555]">{t.role}</div>
+                  <div className="text-[12px] text-[#8A8A8A]">{t.role}</div>
                 </div>
               </div>
             </div>

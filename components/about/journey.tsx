@@ -37,7 +37,7 @@ export function AboutJourney() {
               <div className="text-[17px] font-semibold text-white mb-1 font-sans">
                 {milestone.title}
               </div>
-              <div className="font-mono text-[11px] text-[#555] uppercase tracking-[0.1em] mb-3">
+              <div className="font-mono text-[11px] text-[#8A8A8A] uppercase tracking-[0.1em] mb-3">
                 {milestone.location}
               </div>
               <p className="text-[14px] text-[#888] leading-[1.7]">

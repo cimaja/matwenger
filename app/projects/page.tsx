@@ -34,7 +34,7 @@ export default function ProjectsPage() {
     <div className="max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-[60px] pt-24 pb-16">
       <div className="text-center mb-16">
         <h1 className="text-[44px] text-white mb-5">Projects</h1>
-        <p className="text-center text-[17px] text-[#777] max-w-[700px] mx-auto leading-[1.7]">
+        <p className="text-center text-[17px] text-[#A3A3A3] max-w-[700px] mx-auto leading-[1.7]">
           A selection of design projects and case studies from my work at Microsoft
         </p>
       </div>

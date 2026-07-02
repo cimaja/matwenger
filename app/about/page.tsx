@@ -34,7 +34,7 @@ export default function AboutPage() {
           </div>
           <div className="pt-2">
             <h1 className="text-[44px] text-white mb-3">About</h1>
-            <p className="text-[17px] text-[#777] leading-[1.7]">
+            <p className="text-[17px] text-[#A3A3A3] leading-[1.7]">
               Principal Design Manager at Microsoft, leading design across Power Platform for 50 million users
             </p>
           </div>

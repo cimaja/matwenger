@@ -20,7 +20,7 @@ export function StorySection() {
           {storyData.highlights.map((item) => (
             <div key={item.label}>
               {item.value}
-              <span className="block text-[#555] text-[11px] uppercase tracking-[0.1em] mt-1">
+              <span className="block text-[#8A8A8A] text-[11px] uppercase tracking-[0.1em] mt-1">
                 {item.label}
               </span>
             </div>

@@ -30,7 +30,7 @@ export function GitHubRepoCard({ repo }: { repo: GitHubRepo }) {
             </div>
           </div>
         </div>
-        <p className="text-[13px] text-[#777] mb-4 leading-[1.6] flex-1">{repo.description || 'No description available'}</p>
+        <p className="text-[13px] text-[#A3A3A3] mb-4 leading-[1.6] flex-1">{repo.description || 'No description available'}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {repo.language && (
             <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-[rgba(147,51,234,0.1)] text-accent-purple border border-[rgba(147,51,234,0.15)]">
@@ -43,7 +43,7 @@ export function GitHubRepoCard({ repo }: { repo: GitHubRepo }) {
             </span>
           ))}
         </div>
-        <div className="flex items-center text-[12px] text-[#555] font-mono">
+        <div className="flex items-center text-[12px] text-[#8A8A8A] font-mono">
           <CalendarIcon className="w-3.5 h-3.5 mr-1.5" />
           <span>Updated {updatedAt}</span>
         </div>

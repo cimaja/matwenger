@@ -14,7 +14,7 @@ export function Terminal() {
         <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
         <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
         <div className="w-2.5 h-2.5 rounded-full bg-[#28c940]" />
-        <span className="font-mono text-[11px] text-[#555] ml-3">terminal</span>
+        <span className="font-mono text-[11px] text-[#8A8A8A] ml-3">terminal</span>
       </div>
 
       {/* Content */}

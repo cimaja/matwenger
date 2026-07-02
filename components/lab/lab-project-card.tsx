@@ -16,17 +16,17 @@ export function LabProjectCard({ project }: { project: LabProject }) {
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-lg font-semibold text-white group-hover:text-accent-purple transition-colors font-sans flex items-center gap-2">
               {project.title}
-              {project.locked && <Lock className="w-3.5 h-3.5 text-[#555]" />}
+              {project.locked && <Lock className="w-3.5 h-3.5 text-[#8A8A8A]" />}
             </h3>
-            <ExternalLink className="w-4 h-4 text-[#555] group-hover:text-accent-purple transition-colors" />
+            <ExternalLink className="w-4 h-4 text-[#8A8A8A] group-hover:text-accent-purple transition-colors" />
           </div>
           {project.tags && project.tags.length > 0 && (
             <ProjectTags tags={project.tags} />
           )}
         </div>
         <div className="px-6 pb-6 flex-1 flex flex-col justify-between">
-          <p className="text-[13px] text-[#777] mb-4 leading-[1.6]">{project.description}</p>
-          <div className="flex items-center text-sm text-[#555] font-mono text-[12px]">
+          <p className="text-[13px] text-[#A3A3A3] mb-4 leading-[1.6]">{project.description}</p>
+          <div className="flex items-center text-sm text-[#8A8A8A] font-mono text-[12px]">
             <CalendarIcon className="w-3.5 h-3.5 mr-1.5" />
             <span>{project.date}</span>
           </div>

@@ -15,7 +15,7 @@ export default function LabPage() {
           className="text-center mb-16"
         >
           <h1 className="text-[44px] text-white mb-5">Lab</h1>
-          <p className="text-center text-[17px] text-[#777] max-w-[700px] mx-auto leading-[1.7]">
+          <p className="text-center text-[17px] text-[#A3A3A3] max-w-[700px] mx-auto leading-[1.7]">
             Interactive prototypes and experiments showcasing design explorations and innovative concepts
           </p>
         </motion.div>
