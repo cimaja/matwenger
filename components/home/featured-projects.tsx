@@ -40,6 +40,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 src={lead.cover || lead.image || ''}
                 alt={lead.title}
                 fill
+                priority
                 className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
               />
             )}
