@@ -77,7 +77,7 @@ export function HeroSection() {
       </div>
 
       {/* Center divider circle */}
-      <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[72px] h-[72px] rounded-full bg-[#0c0c0f] border border-[rgba(255,255,255,0.1)] items-center justify-center font-mono text-[11px] text-[#8A8A8A]">
+      <div aria-hidden="true" className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[72px] h-[72px] rounded-full bg-[#0c0c0f] border border-[rgba(255,255,255,0.1)] items-center justify-center font-mono text-[11px] text-[#8A8A8A] pointer-events-none select-none">
         &lt;/&gt;
       </div>
     </section>
