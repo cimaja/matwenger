@@ -12,7 +12,7 @@ export function Footer() {
             href="https://www.linkedin.com/in/mathias-wendlinger/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[#A3A3A3] hover:text-accent-purple transition-colors duration-300"
+            className="inline-flex items-center min-h-[44px] text-sm text-[#A3A3A3] hover:text-accent-purple transition-colors duration-300"
           >
             LinkedIn
           </Link>
@@ -20,7 +20,7 @@ export function Footer() {
             href="/Mathias-Wendlinger-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[#A3A3A3] hover:text-accent-purple transition-colors duration-300"
+            className="inline-flex items-center min-h-[44px] text-sm text-[#A3A3A3] hover:text-accent-purple transition-colors duration-300"
           >
             Resume
           </Link>
