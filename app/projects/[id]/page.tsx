@@ -5,15 +5,15 @@ import { ProjectContent } from '@/components/projects/project-content';
 import { getProjectContent, getAllProjects } from '@/lib/get-project-content';
 
 type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const project = await getProjectContent(params.id);
+  const { id } = await params;
+  const project = await getProjectContent(id);
 
   if (!project) {
     return {
@@ -21,7 +21,7 @@ export async function generateMetadata(
     };
   }
 
-  const projectUrl = `https://matwenger.at/projects/${params.id}`;
+  const projectUrl = `https://matwenger.at/projects/${id}`;
 
   return {
     title: project.title,
@@ -52,7 +52,8 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const project = await getProjectContent(params.id);
+  const { id } = await params;
+  const project = await getProjectContent(id);
 
   if (!project) {
     notFound();
