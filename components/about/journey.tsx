@@ -1,10 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import { journeyMilestones } from '@/lib/data/about';
 
 export function AboutJourney() {
   return (
+    <MotionConfig reducedMotion="user">
     <div className="max-w-[900px] mx-auto px-6 sm:px-10 py-20">
       <h2 className="text-[44px] text-white mb-16">The Journey</h2>
 
@@ -17,8 +18,8 @@ export function AboutJourney() {
             key={milestone.year}
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.05 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true, amount: 0.01 }}
             className="relative grid grid-cols-[60px_1fr] sm:grid-cols-[80px_1fr] gap-8 sm:gap-12 pb-14 last:pb-0"
           >
             {/* Year + dot */}
@@ -53,5 +54,6 @@ export function AboutJourney() {
         ))}
       </div>
     </div>
+    </MotionConfig>
   );
 }

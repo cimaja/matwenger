@@ -1,10 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import { personalityTraits } from '@/lib/data/about';
 
 export function PersonalitySliders() {
   return (
+    <MotionConfig reducedMotion="user">
     <div className="max-w-[720px] mx-auto px-6 sm:px-10 py-20">
       <div className="space-y-8">
         {personalityTraits.map((trait, i) => (
@@ -13,7 +14,7 @@ export function PersonalitySliders() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.01 }}
           >
             <div className="flex justify-between text-[13px] mb-2">
               <span className="text-[#888]">{trait.left}</span>
@@ -33,5 +34,6 @@ export function PersonalitySliders() {
         ))}
       </div>
     </div>
+    </MotionConfig>
   );
 }
