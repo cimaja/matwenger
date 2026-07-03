@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Mathias Wendlinger',
     description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
-    url: 'https://matwenger.at/about',
+    url: 'https://matwenger.design/about',
   },
   alternates: {
-    canonical: 'https://matwenger.at/about',
+    canonical: 'https://matwenger.design/about',
   },
 };
 

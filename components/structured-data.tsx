@@ -8,7 +8,7 @@ export function StructuredData() {
       '@type': 'Organization',
       name: 'Microsoft',
     },
-    url: 'https://matwenger.at',
+    url: 'https://matwenger.design',
     sameAs: [
       'https://www.linkedin.com/in/mathias-wendlinger/',
       'https://github.com/matwenger',

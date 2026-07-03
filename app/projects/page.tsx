@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Projects - Mathias Wendlinger',
     description: 'Design projects and case studies featuring AI-driven experiences, enterprise solutions, and innovative digital products.',
-    url: 'https://matwenger.at/projects',
+    url: 'https://matwenger.design/projects',
   },
   alternates: {
-    canonical: 'https://matwenger.at/projects',
+    canonical: 'https://matwenger.design/projects',
   },
 };
 

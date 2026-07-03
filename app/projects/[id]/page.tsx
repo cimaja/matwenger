@@ -21,7 +21,7 @@ export async function generateMetadata(
     };
   }
 
-  const projectUrl = `https://matwenger.at/projects/${id}`;
+  const projectUrl = `https://matwenger.design/projects/${id}`;
 
   return {
     title: project.title,
@@ -33,7 +33,7 @@ export async function generateMetadata(
       type: 'article',
       images: project.image ? [
         {
-          url: `https://matwenger.at${project.image}`,
+          url: `https://matwenger.design${project.image}`,
           alt: project.title,
         },
       ] : undefined,
