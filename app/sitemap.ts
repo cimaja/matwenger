@@ -4,7 +4,7 @@ import { getAllProjects } from '@/lib/get-project-content';
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://matwenger.at';
+  const baseUrl = 'https://matwenger.design';
   
   // Get all projects
   const projects = await getAllProjects();

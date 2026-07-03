@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://matwenger.at'),
+  metadataBase: new URL('https://matwenger.design'),
   title: {
     default: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
     template: '%s | Mathias Wendlinger',
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mathias Wendlinger - Principal Design Manager',
     description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
-    url: 'https://matwenger.at',
+    url: 'https://matwenger.design',
     siteName: 'Mathias Wendlinger',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://matwenger.at/images/Applogo/profil.jpeg',
+        url: 'https://matwenger.design/images/Applogo/profil.jpeg',
         width: 1200,
         height: 630,
         alt: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
@@ -69,11 +69,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mathias Wendlinger - Principal Design Manager',
     description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
-    images: ['https://matwenger.at/images/Applogo/profil.jpeg'],
+    images: ['https://matwenger.design/images/Applogo/profil.jpeg'],
     creator: '@matwenger',
   },
   alternates: {
-    canonical: 'https://matwenger.at',
+    canonical: 'https://matwenger.design',
   },
 };
 
