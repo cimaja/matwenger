@@ -12,7 +12,7 @@ export function WorkflowSection() {
         {workflowSteps.map((step, i) => (
           <div
             key={step.number}
-            className={`p-7 sm:p-9 bg-surface border border-[rgba(255,255,255,0.05)] transition-all duration-300 hover:border-[rgba(147,51,234,0.2)] hover:bg-surface-hover ${
+            className={`flex flex-col p-7 sm:p-9 bg-surface border border-[rgba(255,255,255,0.05)] transition-all duration-300 hover:border-[rgba(147,51,234,0.2)] hover:bg-surface-hover ${
               i === 0
                 ? 'rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none'
                 : i === workflowSteps.length - 1
@@ -29,7 +29,7 @@ export function WorkflowSection() {
             <p className="text-[13px] text-[#A3A3A3] leading-[1.7]">
               {step.description}
             </p>
-            <div className="mt-3.5 flex flex-wrap gap-1">
+            <div className="mt-auto pt-3.5 flex flex-wrap gap-1">
               {step.tools.map((tool) => (
                 <span
                   key={tool}

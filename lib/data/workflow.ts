@@ -10,29 +10,29 @@ export const workflowSteps: WorkflowStep[] = [
     number: '01',
     title: 'Research & Strategy',
     description:
-      'Partner with enterprise customers (John Deere, Chevron, Blackrock) to validate problems and co-design solutions',
-    tools: ['Customer co-design', 'Funnel analysis'],
+      'Start with customers, not assumptions. Validate problems directly with the people who face them and co-design solutions around their real workflows',
+    tools: ['Customer co-design', 'User interviews', 'Journey mapping'],
   },
   {
     number: '02',
     title: 'Design & Prototype',
     description:
       'Rapid prototyping with AI-powered tools. From concept to interactive prototype in hours, not weeks',
-    tools: ['Figma Make', 'Claude Code'],
+    tools: ['Figma Make', 'Lovable', 'Claude Code', 'GitHub Copilot', 'Design systems'],
   },
   {
     number: '03',
     title: 'Ship to Production',
     description:
-      'Author PRs directly into engineering repos. Fix craftsmanship bugs. Publish Storybook components. Edit content strings',
-    tools: ['GitHub', 'XAML', 'React'],
+      'Design does not stop at handoff. My teams author PRs in the same repos as engineers, shipping polish, components, and copy directly to production',
+    tools: ['GitHub', 'Cursor', 'VS Code', 'React', 'Storybook'],
   },
   {
     number: '04',
     title: 'Measure & Iterate',
     description:
-      'Hypothesis-driven experimentation. Three A/B tests graduated to 100% of users. Data shapes every design decision',
-    tools: ['A/B testing', 'NPS'],
+      'Every design decision is a hypothesis. Ship experiments, measure real behavior, and let the evidence decide what stays',
+    tools: ['A/B testing', 'Funnel analysis', 'Product telemetry', 'NPS'],
   },
 ];
 
