@@ -1,7 +1,7 @@
 export const heroData = {
   name: 'Mathias\nWendlinger',
   subtitle:
-    '18 years building AI-powered experiences, growing globally distributed design teams, and driving measurable business outcomes for products serving 50 million users.',
+    '19 years building AI-powered experiences, growing globally distributed design teams, and driving measurable business outcomes for products serving 50 million users.',
   metrics: [
     { value: '50M', label: 'monthly active users' },
     { value: '12', label: 'designers led' },
