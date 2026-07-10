@@ -11,10 +11,12 @@ const tagCategories: Record<string, { bg: string; border: string; text: string }
   'No-code': { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.2)', text: '#10b981' },
   'Multi-modal': { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.2)', text: '#10b981' },
   'Vision': { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.2)', text: '#10b981' },
+  'Copilot': { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.2)', text: '#10b981' },
 
   // Platform — Purple
   'RPA': { bg: 'rgba(147,51,234,0.1)', border: 'rgba(147,51,234,0.2)', text: '#c084fc' },
   'Workflow': { bg: 'rgba(147,51,234,0.1)', border: 'rgba(147,51,234,0.2)', text: '#c084fc' },
+  'Power Apps': { bg: 'rgba(147,51,234,0.1)', border: 'rgba(147,51,234,0.2)', text: '#c084fc' },
   'Cross-platform': { bg: 'rgba(147,51,234,0.1)', border: 'rgba(147,51,234,0.2)', text: '#c084fc' },
   'Edge': { bg: 'rgba(147,51,234,0.1)', border: 'rgba(147,51,234,0.2)', text: '#c084fc' },
 
