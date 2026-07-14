@@ -19,6 +19,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const lightboxPress = useRef<{ onSurface: boolean; x: number; y: number } | null>(null);
   const x = useMotionValue(0);
   const baseVelocity = -0.02;
 
@@ -166,7 +167,26 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-            onClick={closeLightbox}
+            onPointerDown={(e) => {
+              const el = e.target as HTMLElement;
+              const onSurface = el === e.currentTarget || el.dataset.lightboxSurface === 'outside';
+              lightboxPress.current = { onSurface, x: e.clientX, y: e.clientY };
+            }}
+            onClick={(e) => {
+              // Close only for a true click (press started AND ended on the dark
+              // area, with no meaningful movement). A "sloppy" arrow click (down
+              // on the button, up a pixel outside) fires its click on the
+              // backdrop, and a swipe-drag release must not close either.
+              const press = lightboxPress.current;
+              lightboxPress.current = null;
+              if (!press?.onSurface) return;
+              const el = e.target as HTMLElement;
+              const onSurface = el === e.currentTarget || el.dataset.lightboxSurface === 'outside';
+              const moved = Math.hypot(e.clientX - press.x, e.clientY - press.y);
+              if (onSurface && moved < 8) {
+                closeLightbox();
+              }
+            }}
           >
             <Button
               variant="outline"
@@ -201,6 +221,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                     previous();
                   }
                 }}
+                data-lightbox-surface="outside"
                 className="absolute w-full h-full flex items-center justify-center px-4"
               >
                 <div className="relative w-full max-w-5xl aspect-[16/9]">
