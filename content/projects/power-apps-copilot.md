@@ -4,6 +4,7 @@ description: "Guided the design team bringing Power Apps directly into Microsoft
 cover: "/images/projects/power-apps-copilot/main/cover.jpg"
 tags: ["AI", "Copilot", "Power Apps"]
 year: "2026"
+order: 1
 role: "Principal Design Manager"
 company: "Microsoft"
 videos:

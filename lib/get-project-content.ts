@@ -42,6 +42,7 @@ export interface ProjectContent {
   year: string;
   role: string;
   company: string;
+  order?: number;
   content: string;
   videos?: Video[];
   gallery?: GalleryImage[];
@@ -68,6 +69,7 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
       year: data.year,
       role: data.role,
       company: data.company,
+      order: data.order,
       videos: data.videos,
       gallery: data.gallery,
       content: htmlContent,
@@ -92,5 +94,8 @@ export async function getAllProjects(): Promise<ProjectContent[]> {
 
   return projects
     .filter((project): project is ProjectContent => project !== null)
-    .sort((a, b) => (a.year > b.year ? -1 : 1));
+    .sort((a, b) => {
+      if (a.year !== b.year) return a.year > b.year ? -1 : 1;
+      return (a.order ?? 99) - (b.order ?? 99);
+    });
 }

@@ -4,10 +4,10 @@ import { ProjectTags } from '@/components/projects/project-tags';
 import type { ProjectContent } from '@/lib/get-project-content';
 
 const featuredIds = [
+  'power-apps-copilot',
   'rpa-ai-recorder',
   'rpa-self-healing',
   'rpa-nl2flow',
-  'ai-builder',
 ];
 
 interface FeaturedProjectsProps {
