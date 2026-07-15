@@ -13,6 +13,16 @@ interface ImageGalleryProps {
   className?: string;
 }
 
+// A press that travels less than this is a click; anything more is a drag.
+const CLICK_MOVE_TOLERANCE_PX = 8;
+
+// True when the event landed on the dark area around the image (backdrop or
+// the slide container marked data-lightbox-surface), not on a button or image.
+function isLightboxSurface(e: React.PointerEvent | React.MouseEvent): boolean {
+  const el = e.target as HTMLElement;
+  return el === e.currentTarget || el.dataset?.lightboxSurface === 'outside';
+}
+
 export function ImageGallery({ images, className }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
@@ -20,12 +30,12 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const lightboxPress = useRef<{ onSurface: boolean; x: number; y: number } | null>(null);
+  const didDrag = useRef(false);
   const x = useMotionValue(0);
   const baseVelocity = -0.02;
 
   // Filter out images with empty src
   const validImages = images.filter(img => img.src && img.src.trim() !== '');
-  if (!validImages.length) return null;
 
   useAnimationFrame((t, delta) => {
     if (!isPaused && carouselRef.current) {
@@ -63,6 +73,22 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
       setSelectedIndex((selectedIndex - 1 + validImages.length) % validImages.length);
     }
   };
+
+  // Keyboard support while the lightbox is open
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') previous();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedIndex, validImages.length]);
+
+  // All hooks must run before this early return
+  if (!validImages.length) return null;
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -103,6 +129,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                 carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
               }
             }}
+            aria-label="Scroll gallery left"
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -118,6 +145,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                 carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
               }
             }}
+            aria-label="Scroll gallery right"
           >
             <ChevronRight className="h-4 w-4" />
           </Button>
@@ -167,23 +195,27 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image viewer"
             onPointerDown={(e) => {
-              const el = e.target as HTMLElement;
-              const onSurface = el === e.currentTarget || el.dataset.lightboxSurface === 'outside';
-              lightboxPress.current = { onSurface, x: e.clientX, y: e.clientY };
+              didDrag.current = false;
+              lightboxPress.current = { onSurface: isLightboxSurface(e), x: e.clientX, y: e.clientY };
+            }}
+            onPointerCancel={() => {
+              lightboxPress.current = null;
             }}
             onClick={(e) => {
               // Close only for a true click (press started AND ended on the dark
-              // area, with no meaningful movement). A "sloppy" arrow click (down
-              // on the button, up a pixel outside) fires its click on the
-              // backdrop, and a swipe-drag release must not close either.
+              // area, with no meaningful movement, and no drag in between). A
+              // "sloppy" arrow click (down on the button, up a pixel outside)
+              // fires its click on the backdrop, and a swipe-drag release must
+              // not close either.
               const press = lightboxPress.current;
               lightboxPress.current = null;
-              if (!press?.onSurface) return;
-              const el = e.target as HTMLElement;
-              const onSurface = el === e.currentTarget || el.dataset.lightboxSurface === 'outside';
+              if (!press?.onSurface || didDrag.current) return;
               const moved = Math.hypot(e.clientX - press.x, e.clientY - press.y);
-              if (onSurface && moved < 8) {
+              if (isLightboxSurface(e) && moved < CLICK_MOVE_TOLERANCE_PX) {
                 closeLightbox();
               }
             }}
@@ -192,6 +224,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
               variant="outline"
               size="icon"
               className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+              aria-label="Close image viewer"
               onClick={closeLightbox}
             >
               <X className="h-4 w-4" />
@@ -212,6 +245,9 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={1}
+                onDragStart={() => {
+                  didDrag.current = true;
+                }}
                 onDragEnd={(e, { offset, velocity }) => {
                   const swipe = swipePower(offset.x, velocity.x);
 
@@ -241,6 +277,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
               variant="outline"
               size="icon"
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+              aria-label="Previous image"
               onClick={(e) => {
                 e.stopPropagation();
                 previous();
@@ -253,6 +290,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
               variant="outline"
               size="icon"
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+              aria-label="Next image"
               onClick={(e) => {
                 e.stopPropagation();
                 next();

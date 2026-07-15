@@ -16,7 +16,13 @@ interface FeaturedProjectsProps {
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const featured = featuredIds
-    .map((id) => projects.find((p) => p.id === id))
+    .map((id) => {
+      const project = projects.find((p) => p.id === id);
+      if (!project) {
+        console.warn(`FeaturedProjects: no project found for featured id "${id}"`);
+      }
+      return project;
+    })
     .filter((p): p is ProjectContent => Boolean(p));
 
   if (featured.length === 0) return null;
