@@ -56,17 +56,17 @@ const config: Config = {
           foreground: 'hsl(var(--popover-foreground))',
         },
         'accent-purple': {
-          DEFAULT: '#c084fc',
-          dim: 'rgba(147,51,234,0.8)',
+          DEFAULT: 'hsl(var(--accent-foreground) / <alpha-value>)',
+          dim: 'hsl(var(--accent-foreground) / .8)',
         },
         'accent-green': {
-          DEFAULT: '#10b981',
-          dim: 'rgba(16,185,129,0.8)',
+          DEFAULT: 'hsl(var(--success) / <alpha-value>)',
+          dim: 'hsl(var(--success) / .8)',
         },
-        'subtle-border': 'rgba(255,255,255,0.06)',
+        'subtle-border': 'hsl(var(--border))',
         surface: {
-          DEFAULT: 'rgba(255,255,255,0.02)',
-          hover: 'rgba(255,255,255,0.03)',
+          DEFAULT: 'hsl(var(--card))',
+          hover: 'hsl(var(--secondary))',
         },
       },
       borderRadius: {

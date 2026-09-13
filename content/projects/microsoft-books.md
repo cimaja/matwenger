@@ -52,18 +52,120 @@ videos:
     description: "Theme customization on mobile devices"
 gallery:
   - src: "/images/projects/microsoft-books/gallery/img_1.jpg"
-    alt: "Books Store Homepage"
+    alt: "A book open in Edge with the books library alongside it"
   - src: "/images/projects/microsoft-books/gallery/img_2.jpg"
-    alt: "Reading Experience"
+    alt: "Reading, sharing and page navigation in Edge"
   - src: "/images/projects/microsoft-books/gallery/img_3.jpg"
-    alt: "Book Details View"
+    alt: "Reading settings with font and theme controls on a tablet"
   - src: "/images/projects/microsoft-books/gallery/img_4.jpg"
-    alt: "Library Management"
+    alt: "Annotations shown alongside a passage on a tablet"
   - src: "/images/projects/microsoft-books/gallery/img_5.png"
-    alt: "Reading Settings"
+    alt: "Reading interface patterns and specifications in the design file"
   - src: "/images/projects/microsoft-books/gallery/img_6.jpg"
-    alt: "Notes and Annotations"
+    alt: "Book-cover composition and state guidelines"
 
+caseStudy:
+  headline:
+    title: More than reading.
+    emphasis: A place to learn.
+  introduction: >-
+    Bringing the familiarity of a book into a connected reading experience. I
+    led five designers across the vision, interactions, prototypes and delivery
+    of Microsoft Books.
+  leadMedia:
+    kind: video
+    index: 1
+    caption: Microsoft Books · A walkthrough of the reading experience
+  overview:
+    - label: The challenge
+      title: A browser can hold more.
+      body: >-
+        We wanted to expand the kinds of content people could read in their
+        browser while making the experience familiar and accessible.
+    - label: My contribution
+      title: Connect vision and execution.
+      body: >-
+        I led a team of five designers, defining scope and flows, testing
+        prototypes and supervising design quality through production.
+    - label: The outcome
+      title: Reading across five platforms.
+      body: >-
+        The design connected books, annotations and learning tools across
+        Windows 10, Xbox, Windows Phone, iOS and Android.
+  experience:
+    title: Open a book.
+    emphasis: Make it your own.
+    description: >-
+      A reading experience that keeps the book at the center while making useful
+      tools easy to reach.
+    steps:
+      - label: Read
+        title: Keep your library close.
+        body: >-
+          Books are accessible alongside the reading surface, creating a
+          connection between the collection and the page.
+        image: 1
+        caption: A book is open in Edge with the library available alongside it.
+      - label: Adjust
+        title: Find a comfortable setting.
+        body: >-
+          Typography and theme options let the reading surface adapt to the
+          reader and their environment.
+        image: 3
+        caption: Reading settings offer font and page-theme choices on a tablet.
+      - label: Learn
+        title: Keep the thoughts that matter.
+        body: >-
+          Notes and highlights support a deeper relationship with the text,
+          beyond moving from one page to the next.
+        image: 4
+        caption: Annotations are presented in the context of the passage they refer to.
+  decisions:
+    title: Familiar on the page.
+    emphasis: Flexible in the details.
+    description: >-
+      The work brought together accessibility, motion and a design system that
+      could adapt to multiple screens.
+    items:
+      - title: Give readers control over type.
+        body: >-
+          I led the visual and interaction design, including reading controls
+          that could adapt to different preferences and needs.
+        video: 2
+        caption: Font customization in the reading experience.
+      - title: Make annotation part of reading.
+        body: >-
+          Notes and highlights sit within the reading journey, supporting
+          learning and engagement with the content.
+        video: 5
+        caption: Creating notes and highlighting passages.
+      - title: Carry the system across platforms.
+        body: >-
+          An adaptive design system connected the experience across five
+          platforms. I coordinated with three scrum teams in Paris and design
+          partners in Redmond and Hyderabad.
+        image: 5
+        caption: Shared interface patterns documented across the reading experience.
+  outcomes:
+    title: A reading experience
+    emphasis: with a lasting influence.
+    description: >-
+      The work connected a multi-platform product with design patterns that
+      continued into other reading surfaces.
+    items:
+      - label: Platform reach
+        title: Five connected platforms.
+        body: >-
+          The reading experience was designed across Windows 10, Xbox, Windows
+          Phone 10, iOS and Android.
+      - label: Design legacy
+        title: A blueprint for PDF reading.
+        body: The design patterns informed the PDF reader in Microsoft Edge.
+      - label: Reading needs
+        title: More ways to engage.
+        body: >-
+          Accessibility features, notes, highlights and learning tools broadened
+          how people could use the content.
 ---
 
 ## Overview

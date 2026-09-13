@@ -3,6 +3,7 @@ import type { ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ProjectContent } from '@/components/projects/project-content';
 import { getProjectContent, getAllProjects } from '@/lib/get-project-content';
+import { CaseStudyTemplate } from '@/components/projects/case-study/case-study-template';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -57,6 +58,13 @@ export default async function ProjectPage({ params }: Props) {
 
   if (!project) {
     notFound();
+  }
+
+  if (project.caseStudy) {
+    const projects = await getAllProjects();
+    const index = projects.findIndex(item => item.id === project.id);
+    const nextProject = projects.length > 1 ? projects[(index + 1) % projects.length] : undefined;
+    return <CaseStudyTemplate key={project.id} project={project} study={project.caseStudy} nextProject={nextProject} />;
   }
 
   return <ProjectContent project={project} />;

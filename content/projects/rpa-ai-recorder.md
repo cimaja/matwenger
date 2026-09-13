@@ -28,43 +28,149 @@ videos:
     description: "Step-by-step guide to creating desktop flows with the AI Recorder"
 gallery:
   - src: "/images/projects/rpa-ai-recorder/gallery/img_1.jpg"
-    alt: "AI Recorder Interface - Main View"
+    alt: "Power Automate home with an entry point for recording with Copilot"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_2.jpg"
-    alt: "AI Recorder Recording Session"
+    alt: "The Copilot recording entry point selected on Power Automate home"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_3.jpg"
-    alt: "AI Recorder Action Recognition"
+    alt: "A compact desktop recorder introduces the recording session"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_4.jpg"
-    alt: "AI Recorder Flow Generation"
+    alt: "Desktop recording settings with screen and audio configuration"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_5.jpg"
-    alt: "AI Recorder Natural Language Processing"
+    alt: "A countdown before the recording begins"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_6.jpg"
-    alt: "AI Recorder Automation Steps"
+    alt: "Voice input and the recorder panel on the desktop"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_7.jpg"
-    alt: "AI Recorder Element Detection"
+    alt: "A spoken instruction while opening a desktop application"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_8.jpg"
-    alt: "AI Recorder Flow Editing"
+    alt: "Outlook open beside the recorder with voice instructions"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_9.jpg"
-    alt: "AI Recorder Desktop Analysis"
+    alt: "A spreadsheet open alongside the recorder and voice input"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_10.jpg"
-    alt: "AI Recorder Action Sequence"
+    alt: "Selecting spreadsheet content during the recorded task"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_11.jpg"
-    alt: "AI Recorder Flow Validation"
+    alt: "Opening a desktop application during the recording"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_12.jpg"
-    alt: "AI Recorder Error Handling"
+    alt: "The recorder captures instructions alongside the desktop application"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_13.jpg"
-    alt: "AI Recorder Flow Testing"
+    alt: "Opening a client-management database during the recording"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_14.jpg"
-    alt: "AI Recorder Flow Export"
+    alt: "A client list and contact form beside the recorder"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_15.jpg"
-    alt: "AI Recorder Integration Options"
+    alt: "Selecting a client record while explaining the task"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_16.jpg"
-    alt: "AI Recorder Settings Configuration"
+    alt: "Completing the recorded task in the client application"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_17.jpg"
-    alt: "AI Recorder Advanced Features"
+    alt: "The desktop task after the spoken instructions"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_18.jpg"
-    alt: "AI Recorder Performance Metrics"
+    alt: "The recorder summarizes the captured task"
   - src: "/images/projects/rpa-ai-recorder/gallery/img_19.jpg"
-    alt: "AI Recorder Documentation"
+    alt: "The generated automation in the flow designer with Copilot"
+caseStudy:
+  headline:
+    title: Show the task.
+    emphasis: Build the flow.
+  introduction: >-
+    A more natural way to create desktop automations. I worked with a team
+    across Paris, Athens and Seattle to bring screen interaction, cursor
+    movement and voice instructions into one recording experience.
+  leadMedia:
+    kind: video
+    index: 1
+    caption: AI Recorder · An introduction to recording desktop work with AI
+  overview:
+    - label: The challenge
+      title: Automation starts with expertise.
+      body: >-
+        Desktop flow creation can ask people to understand the automation tool
+        before they can describe the task they want it to perform.
+    - label: My contribution
+      title: Connect the ways people explain.
+      body: >-
+        I reimagined the recorder and reconciled the classic recorder, element
+        picker and task coach into a consistent interaction direction.
+    - label: The outcome
+      title: A task becomes a starting point.
+      body: >-
+        The experience combines actions on screen and spoken instructions to
+        make desktop flow creation more approachable.
+  experience:
+    title: Do it once.
+    emphasis: Show what matters.
+    description: >-
+      Follow the recording concept from explaining a task to reviewing the
+      generated automation.
+    steps:
+      - label: Prepare
+        title: Set up the recording.
+        body: >-
+          A focused recorder guides the person into the session before the
+          desktop task begins.
+        image: 4
+        caption: Recording settings bring the setup into a compact desktop panel.
+      - label: Demonstrate
+        title: Work through the task.
+        body: >-
+          The person moves between applications and explains what they are
+          doing. Voice and on-screen actions provide context together.
+        image: 9
+        caption: >-
+          Working in a spreadsheet while the recorder captures the task and its
+          explanation.
+      - label: Review
+        title: Return to an editable flow.
+        body: >-
+          The recording leads back into the automation designer, where the
+          resulting actions can be reviewed and refined.
+        image: 19
+        caption: 'The recorded task becomes a flow in the designer, alongside Copilot.'
+  decisions:
+    title: One recorder.
+    emphasis: Several ways to explain.
+    description: >-
+      The design work connected the interaction model, visual consistency and an
+      end-to-end demonstration.
+    items:
+      - title: Bring voice into the task.
+        body: >-
+          Voice instructions complement what is visible on screen and where the
+          cursor moves. The recorder keeps that explanation beside the
+          applications being used.
+        image: 8
+        caption: The recorder stays alongside the task as the person works in Outlook.
+      - title: Make the whole journey reviewable.
+        body: >-
+          I created an end-to-end video demonstration for Ignite, working with
+          data science, PM and development partners to make the concept
+          concrete.
+        video: 2
+        caption: A walkthrough of AI recording for desktop flows.
+      - title: Unify the recording experiences.
+        body: >-
+          The classic recorder, element picker and task coach had to feel like
+          parts of one experience. I focused on consistency across the
+          interaction and visual design.
+  outcomes:
+    title: A more approachable
+    emphasis: way into automation.
+    description: >-
+      The project explored how multiple input modes can lower the barrier to
+      creating desktop flows.
+    items:
+      - label: Accessibility of creation
+        title: Start from the task.
+        body: >-
+          People can combine a demonstration with spoken instructions instead of
+          defining every automation action upfront.
+      - label: A connected experience
+        title: Voice meets the interface.
+        body: >-
+          UI interaction, cursor movement and voice are brought together in the
+          desktop recording experience.
+      - label: Product storytelling
+        title: Make the concept tangible.
+        body: >-
+          The work included an Ignite demonstration and was selected as a key
+          feature for Microsoft Build.
 ---
 
 ## Overview

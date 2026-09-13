@@ -1,13 +1,2 @@
-import { ProjectCardSkeleton } from '@/components/projects/project-card-skeleton';
-
-export default function ProjectsLoading() {
-  return (
-    <div className="container py-8">
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <ProjectCardSkeleton key={i} />
-        ))}
-      </div>
-    </div>
-  );
-}
+import { GalleryGrid, GallerySkeleton, PageIntro, PageShell } from '@/components/design-system/studio';
+export default function ProjectsLoading() { return <PageShell><PageIntro eyebrow="PROJECTS" title={<>Ideas, <em>made real.</em></>} description="A selection of design projects and case studies from my work at Microsoft" /><GalleryGrid>{Array.from({ length: 6 }, (_, i) => <GallerySkeleton key={i} />)}</GalleryGrid></PageShell>; }

@@ -226,3 +226,7 @@ npm install
 # Start development server
 npm run dev
 ```
+
+## Charte graphique
+
+La référence actuelle est [docs/design-system.md](docs/design-system.md). Les tokens sont centralisés dans `app/design-tokens.css`, les composants dans `components/design-system/` et la page interactive est disponible à [localhost:3001/design-system](http://127.0.0.1:3001/design-system).

@@ -8,33 +8,33 @@ role: "Senior Design Manager"
 company: "Microsoft"
 gallery:
   - src: "/images/projects/ai-builder/gallery/img_1.jpg"
-    alt: "AI Builder Dashboard"
+    alt: "AI Builder home with prebuilt and custom model types"
   - src: "/images/projects/ai-builder/gallery/img_2.jpg"
-    alt: "Model Creation Flow"
+    alt: "An introduction to creating a form-processing model"
   - src: "/images/projects/ai-builder/gallery/img_3.jpg"
-    alt: "Model Training Interface"
+    alt: "A sample invoice illustrates form processing"
   - src: "/images/projects/ai-builder/gallery/img_4.jpg"
-    alt: "Model Performance Analytics"
+    alt: "An introduction to an object-detection model"
   - src: "/images/projects/ai-builder/gallery/img_5.jpg"
-    alt: "Model Testing Environment"
+    alt: "An introduction to a text-classification model"
   - src: "/images/projects/ai-builder/gallery/img_6.jpg"
-    alt: "Custom Model Configuration"
+    alt: "An introduction to a prediction model"
   - src: "/images/projects/ai-builder/gallery/img_7.jpg"
-    alt: "Model Integration View"
+    alt: "Tagging objects in training images"
   - src: "/images/projects/ai-builder/gallery/img_8.jpg"
-    alt: "Data Connection Interface"
+    alt: "A gallery of images for tagging and model training"
   - src: "/images/projects/ai-builder/gallery/img_9.jpg"
-    alt: "Model Deployment Screen"
+    alt: "Selecting fields in a sample document"
   - src: "/images/projects/ai-builder/gallery/img_10.jpg"
-    alt: "Model Management Dashboard"
+    alt: "A list of AI models in an environment"
   - src: "/images/projects/ai-builder/gallery/img_11.jpg"
-    alt: "Model Insights View"
+    alt: "A prediction model overview with performance and available actions"
   - src: "/images/projects/ai-builder/gallery/img_12.jpg"
-    alt: "Model Settings Panel"
+    alt: "Reusable form layout patterns in the design file"
   - src: "/images/projects/ai-builder/gallery/img_13.jpg"
-    alt: "Integration Options"
+    alt: "Form and navigation specifications in the design file"
   - src: "/images/projects/ai-builder/gallery/img_14.jpg"
-    alt: "Performance Monitoring"
+    alt: "Color and component foundations in the design file"
 videos:
   - src: /images/projects/ai-builder/video/video_1.mp4
     thumbnail: /images/projects/ai-builder/video/thumbnail.jpg
@@ -42,6 +42,112 @@ videos:
     title: "AI Builder Overview"
     description: "Learn about the key features and capabilities of AI Builder"
 
+caseStudy:
+  headline:
+    title: Business expertise.
+    emphasis: Meet AI.
+  introduction: >-
+    Helping makers create and use AI models without writing code. I played a
+    foundational design role in AI Builder, from the product vision to the
+    experience of configuring and using models.
+  leadMedia:
+    kind: video
+    index: 1
+    caption: AI Builder · Bringing AI models into business processes
+  overview:
+    - label: The challenge
+      title: AI beyond specialist teams.
+      body: >-
+        Business users need ways to use their own data and expertise without
+        first learning how to build a machine-learning system.
+    - label: My contribution
+      title: Shape the no-code experience.
+      body: >-
+        I partnered with PMs on the vision and led design work on model
+        creation, usability and integration with the Power Platform.
+    - label: The outcome
+      title: Models makers can put to work.
+      body: >-
+        Prebuilt and custom models support tasks such as document processing,
+        object detection and prediction in apps and flows.
+  experience:
+    title: Choose a task.
+    emphasis: Build on what you know.
+    description: >-
+      The product introduces AI through concrete business scenarios and guides
+      makers toward a usable model.
+    steps:
+      - label: Choose
+        title: Begin with a business need.
+        body: >-
+          The starting surface presents recognizable model types, so makers can
+          choose the capability that fits their process.
+        image: 1
+        caption: >-
+          AI Builder introduces model types through practical business
+          scenarios.
+      - label: Teach
+        title: Connect the model to your data.
+        body: >-
+          For object detection, makers tag objects in their own images. The
+          training task is expressed through a visual interaction.
+        image: 7
+        caption: Tagging objects directly in a sample image.
+      - label: Evaluate
+        title: Understand the model’s readiness.
+        body: >-
+          A model detail view brings performance and the next available actions
+          together before the model is used in an app or a flow.
+        image: 11
+        caption: A model overview presents its performance and available actions.
+  decisions:
+    title: Make AI
+    emphasis: a maker experience.
+    description: >-
+      The design connects familiar business tasks, understandable interactions
+      and a shared product language.
+    items:
+      - title: Explain a capability before setup.
+        body: >-
+          I designed the no-code experience around model types and business
+          examples. Form processing, for example, can be introduced through the
+          document it will understand.
+        image: 3
+        caption: A document example makes the form-processing capability concrete.
+      - title: Build consistency into the foundation.
+        body: >-
+          Working with PM, engineering and research, I aligned model experiences
+          with the broader product direction and refined features through user
+          feedback.
+        image: 12
+        caption: Reusable form layouts documented as part of the design work.
+      - title: Connect models to real workflows.
+        body: >-
+          The goal extended beyond creating a model: makers needed to use its
+          output in Power Apps and Power Automate to support their business
+          process.
+  outcomes:
+    title: AI in the hands
+    emphasis: of business makers.
+    description: >-
+      The project’s documented impact spans manual processing, workflow
+      automation and access to reusable AI capabilities.
+    items:
+      - label: Manual data entry
+        title: 60% reduction.
+        body: >-
+          Intelligent automation reduced the manual data entry required in
+          business processes.
+      - label: Workflow automation
+        title: 40% faster.
+        body: >-
+          AI Builder accelerated workflow automation across the industries
+          described in the project.
+      - label: Reusable capabilities
+        title: 15+ prebuilt models.
+        body: >-
+          The platform expanded access to capabilities including document
+          processing, image detection and image classification.
 ---
 
 ## Overview

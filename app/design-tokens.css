@@ -1,0 +1,126 @@
+/* Authoritative color and layout tokens. See docs/design-system.md. */
+:root {
+  --studio-ink: #141511;
+  --studio-paper: #f1f2eb;
+  --studio-acid: #d4fc79;
+  --studio-surface: #1b1d17;
+  --studio-elevated: #23261e;
+  --studio-secondary: #bccf98;
+  --studio-muted: #9b9f92;
+  --studio-line: #34362f;
+  --ds-gutter: 4.5%;
+  --ds-content: 1440px;
+  --ds-reading: 720px;
+  --ds-section: clamp(56px, 7vw, 104px);
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-space-12: 48px;
+  --ds-space-16: 64px;
+  --ds-radius-control: 999px;
+  --ds-radius-panel: 12px;
+  --ds-radius-tag: 4px;
+  --ds-duration-fast: 180ms;
+  --ds-duration-reveal: 360ms;
+  --ds-ease: cubic-bezier(.2,.7,.2,1);
+  --ds-text-display: clamp(3rem, 6.25vw, 6.75rem);
+  --ds-text-title: clamp(2.5rem, 5vw, 5rem);
+  --ds-text-section: clamp(2rem, 3.5vw, 3.5rem);
+  --ds-text-card: 1.375rem;
+  --ds-text-body: 1rem;
+  --ds-text-lead: clamp(1.0625rem, 1.5vw, 1.25rem);
+  --ds-text-label: .875rem;
+  --ds-text-meta: .75rem;
+  --radius: .75rem;
+}
+
+:root, [data-studio-theme="ink"] {
+  --background: 75.000 10.526% 7.451%; /* #141511 */
+  --foreground: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --card: 80.000 11.538% 10.196%; /* #1b1d17 */
+  --card-foreground: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --popover: 82.500 11.765% 13.333%; /* #23261e */
+  --popover-foreground: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --primary: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --primary-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --secondary: 82.500 11.765% 13.333%; /* #23261e */
+  --secondary-foreground: 80.727 36.424% 70.392%; /* #bccf98 */
+  --muted: 82.500 11.765% 13.333%; /* #23261e */
+  --muted-foreground: 77.143 8.642% 68.235%; /* #b1b5a7 */
+  --accent: 87.500 25.532% 18.431%; /* #303b23 */
+  --accent-foreground: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --destructive: 8.276 100.000% 82.941%; /* #ffb4a8 */
+  --destructive-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --border: 77.143 6.931% 19.804%; /* #34362f */
+  --input: 81.000 8.333% 47.059%; /* #7b826e */
+  --ring: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --link: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --link-hover: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --tertiary: 78.462 6.341% 59.804%; /* #9b9f92 */
+  --success: 80.727 36.424% 70.392%; /* #bccf98 */
+  --warning: 39.623 82.813% 74.902%; /* #f4d08a */
+  --info: 217.143 63.636% 80.588%; /* #aec6ed */
+}
+
+[data-studio-theme="paper"] {
+  --background: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --card: 75.000 20.690% 88.627%; /* #e5e8dc */
+  --card-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --popover: 0.000 0.000% 100.000%; /* #ffffff */
+  --popover-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --primary: 75.000 10.526% 7.451%; /* #141511 */
+  --primary-foreground: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --secondary: 75.000 20.690% 88.627%; /* #e5e8dc */
+  --secondary-foreground: 88.525 48.800% 24.510%; /* #405d20 */
+  --muted: 75.000 20.690% 88.627%; /* #e5e8dc */
+  --muted-foreground: 92.500 15.789% 29.804%; /* #4b5840 */
+  --accent: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --accent-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --destructive: 5.455 62.051% 38.235%; /* #9e3025 */
+  --destructive-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --border: 81.176 15.596% 78.627%; /* #cbd1c0 */
+  --input: 83.478 10.798% 41.765%; /* #6d765f */
+  --ring: 88.525 48.800% 24.510%; /* #405d20 */
+  --link: 75.000 10.526% 7.451%; /* #141511 */
+  --link-hover: 88.525 48.800% 24.510%; /* #405d20 */
+  --tertiary: 88.571 11.230% 36.667%; /* #5e6853 */
+  --success: 88.525 48.800% 24.510%; /* #405d20 */
+  --warning: 40.165 100.000% 23.725%; /* #795100 */
+  --info: 210.353 46.448% 35.882%; /* #315b86 */
+}
+
+[data-studio-theme="acid"] {
+  --background: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --card: 77.419 100.000% 81.765%; /* #e4ffa2 */
+  --card-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --popover: 68.571 21.212% 93.529%; /* #f1f2eb */
+  --popover-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --primary: 75.000 10.526% 7.451%; /* #141511 */
+  --primary-foreground: 78.321 95.620% 73.137%; /* #d4fc79 */
+  --secondary: 77.586 70.732% 67.843%; /* #c5e773 */
+  --secondary-foreground: 89.143 33.981% 20.196%; /* #344522 */
+  --muted: 77.586 70.732% 67.843%; /* #c5e773 */
+  --muted-foreground: 84.706 25.373% 26.275%; /* #465432 */
+  --accent: 77.419 100.000% 81.765%; /* #e4ffa2 */
+  --accent-foreground: 75.000 10.526% 7.451%; /* #141511 */
+  --destructive: 5.455 62.051% 38.235%; /* #9e3025 */
+  --destructive-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --border: 80.000 40.541% 56.471%; /* #9fbd63 */
+  --input: 80.426 25.683% 35.882%; /* #637344 */
+  --ring: 75.000 10.526% 7.451%; /* #141511 */
+  --link: 75.000 10.526% 7.451%; /* #141511 */
+  --link-hover: 88.525 48.800% 24.510%; /* #405d20 */
+  --tertiary: 85.333 28.302% 31.176%; /* #536639 */
+  --success: 88.525 48.800% 24.510%; /* #405d20 */
+  --warning: 40.165 100.000% 23.725%; /* #795100 */
+  --info: 210.353 46.448% 35.882%; /* #315b86 */
+}
+
+[data-studio-theme] { color: hsl(var(--foreground)); background: hsl(var(--background)); }
+@media (max-width: 760px) { :root { --ds-gutter: 6%; } }
+@media (prefers-reduced-motion: reduce) { :root { --ds-duration-fast: 0ms; --ds-duration-reveal: 0ms; } }

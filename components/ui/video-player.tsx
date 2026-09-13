@@ -20,6 +20,7 @@ export function VideoPlayer({ src, thumbnail = null, className = '' }: VideoPlay
       <video
         className={`w-full aspect-video bg-black rounded-lg ${className}`}
         src={src}
+        preload="none"
         controls={isPlaying}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}

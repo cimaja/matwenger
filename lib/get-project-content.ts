@@ -3,17 +3,29 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import type { Renderer, Tokens } from 'marked';
+import { parseCaseStudy, type CaseStudy } from './project-case-study';
 
 const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
 // Configure marked to add target="_blank" to links
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+// Only allow http(s), mailto, and relative/anchor URLs in rendered links
+const isSafeHref = (href: string) => /^(https?:|mailto:|[/#.])/i.test(href.trim());
+
 marked.use({
   renderer: {
     link(this: Renderer, token: Tokens.Link) {
       const href = token.href || '';
       const title = token.title || null;
       const text = token.text || '';
-      return `<a href="${href}" target="_blank" rel="noopener noreferrer"${title ? ` title="${title}"` : ''}>${text}</a>`;
+      if (!isSafeHref(href)) return escapeHtml(text);
+      return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(text)}</a>`;
     }
   }
 });
@@ -22,6 +34,7 @@ export interface Video {
   id?: string;
   type?: 'youtube' | 'local';
   src?: string;
+  thumbnail?: string;
   title?: string;
   description?: string;
 }
@@ -30,6 +43,7 @@ export interface GalleryImage {
   src: string;
   alt: string;
   caption?: string;
+  ratio?: 'landscape' | 'wide' | 'square' | 'portrait';
 }
 
 export interface ProjectContent {
@@ -42,9 +56,11 @@ export interface ProjectContent {
   year: string;
   role: string;
   company: string;
+  order?: number;
   content: string;
   videos?: Video[];
   gallery?: GalleryImage[];
+  caseStudy?: CaseStudy;
 }
 
 export async function getProjectContent(id: string): Promise<ProjectContent | null> {
@@ -65,11 +81,13 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
       image: data.image,
       cover: data.cover,
       tags: data.tags,
-      year: data.year,
+      year: String(data.year),
       role: data.role,
       company: data.company,
+      order: Number.isFinite(data.order) ? data.order : undefined,
       videos: data.videos,
       gallery: data.gallery,
+      caseStudy: data.caseStudy ? parseCaseStudy(data.caseStudy, data.gallery?.length ?? 0, data.videos?.length ?? 0) : undefined,
       content: htmlContent,
     };
   } catch (error) {
@@ -90,7 +108,15 @@ export async function getAllProjects(): Promise<ProjectContent[]> {
       })
   );
 
+  // Projects without an explicit order sort after ordered ones within a year.
+  const UNORDERED = Number.MAX_SAFE_INTEGER;
+
   return projects
     .filter((project): project is ProjectContent => project !== null)
-    .sort((a, b) => (a.year > b.year ? -1 : 1));
+    .sort((a, b) => {
+      if (a.year !== b.year) return a.year > b.year ? -1 : 1;
+      const orderDiff = (a.order ?? UNORDERED) - (b.order ?? UNORDERED);
+      if (orderDiff !== 0) return orderDiff;
+      return a.id.localeCompare(b.id);
+    });
 }

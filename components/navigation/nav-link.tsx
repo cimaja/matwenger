@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { AnimatedIcon } from '@/components/animated-icon';
+import { ArrowUpRight } from 'lucide-react';
 
 interface NavLinkProps {
   href: string;
@@ -12,7 +12,7 @@ interface NavLinkProps {
   activeColor: string;
 }
 
-export function NavLink({ href, label, icon, isActive, color, activeColor }: NavLinkProps) {
+export function NavLink({ href, label, isActive, color, activeColor }: NavLinkProps) {
   return (
     <Link
       href={href}
@@ -20,13 +20,9 @@ export function NavLink({ href, label, icon, isActive, color, activeColor }: Nav
         isActive ? 'text-primary' : 'text-muted-foreground'
       }`}
     >
-      <AnimatedIcon
-        src={icon}
-        trigger="morph"
-        colors={{
-          primary: isActive ? activeColor : color,
-          secondary: isActive ? activeColor : color,
-        }}
+      <ArrowUpRight
+        aria-hidden="true"
+        style={{ color: isActive ? activeColor : color }}
         size={20}
       />
       <span>{label}</span>

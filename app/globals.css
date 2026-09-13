@@ -1,3 +1,5 @@
+@import './design-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,27 +10,7 @@
     --font-serif: 'Fraunces', Georgia, serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-    /* Dark-only palette */
-    --background: 240 7% 5%;
-    --foreground: 0 0% 88%;
-    --card: 240 7% 7%;
-    --card-foreground: 0 0% 88%;
-    --popover: 240 7% 7%;
-    --popover-foreground: 0 0% 88%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 7% 5%;
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 4% 16%;
-    --muted-foreground: 0 0% 53%;
-    --accent: 240 4% 16%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 100% / 0.06;
-    --input: 0 0% 100% / 0.06;
-    --ring: 240 5% 84%;
-    --radius: 0.75rem;
+
   }
 
   * {
@@ -42,7 +24,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     @apply tracking-tight;
   }
 }
@@ -125,5 +107,5 @@
   line-height: 0.8;
   padding-right: 14px;
   padding-top: 8px;
-  color: #fff;
+  color: hsl(var(--foreground));
 }
