@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { testimonials } from '@/lib/testimonials-data';
 import styles from './landing-story.module.css';
@@ -29,13 +29,16 @@ const testimonialHighlights: Record<string, string> = {
 };
 
 export function LandingRecommendations() {
-  const [selected, setSelected] = useState(0);
+  const [{ selected, direction }, setSelection] = useState({ selected: 0, direction: 1 });
   const reduce = useReducedMotion();
   const person = testimonials[selected];
   const excerpt = testimonialHighlights[person.author] || person.text.split(/(?<=[.!?])\s+/).slice(0, 2).join(' ');
 
-  function selectPerson(index: number) {
-    setSelected((index + testimonials.length) % testimonials.length);
+  function selectPerson(direction: number) {
+    setSelection(current => ({
+      selected: (current.selected + direction + testimonials.length) % testimonials.length,
+      direction,
+    }));
   }
 
   return (
@@ -47,19 +50,32 @@ export function LandingRecommendations() {
             <h2 id="recommendations-title">What<br /><em>people say</em></h2>
             <span className={styles.recommendationCount}>{testimonials.length} perspectives.<br />Design, research, and product.</span>
             <div className={styles.quoteNavigation}>
-              <button type="button" aria-label="Previous testimonial" onClick={() => selectPerson(selected - 1)}><ArrowLeft size={20} /></button>
-              <button type="button" aria-label="Next testimonial" onClick={() => selectPerson(selected + 1)}><ArrowRight size={20} /></button>
+              <button type="button" aria-label="Previous testimonial" onClick={() => selectPerson(-1)}><ArrowLeft size={20} /></button>
+              <button type="button" aria-label="Next testimonial" onClick={() => selectPerson(1)}><ArrowRight size={20} /></button>
               <span>{twoDigits(selected + 1)} <span>/ {twoDigits(testimonials.length)}</span></span>
             </div>
           </div>
           <div className={styles.quotePanel} aria-live="polite" aria-atomic="true">
-            <motion.div key={person.author} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }}>
-              <blockquote id="selected-recommendation" className={styles.quote}><p>{excerpt}</p></blockquote>
-              <div className={styles.quoteAuthor}>
-                {person.image && <Image src={person.image} alt="" width={48} height={48} />}
-                <div><strong>{person.author}</strong><span>{person.role}</span></div>
-              </div>
-            </motion.div>
+            <AnimatePresence initial={false} mode="wait" custom={direction}>
+              <motion.div
+                key={person.author}
+                custom={direction}
+                initial="enter"
+                animate="visible"
+                exit="exit"
+                variants={{
+                  enter: (travel: number) => ({ opacity: reduce ? 1 : 0, x: reduce ? 0 : travel * 28 }),
+                  visible: { opacity: 1, x: 0, transition: { duration: reduce ? 0 : 0.36, ease: [0.2, 0.7, 0.2, 1] } },
+                  exit: (travel: number) => ({ opacity: 0, x: reduce ? 0 : travel * -20, transition: { duration: reduce ? 0 : 0.18, ease: 'easeIn' } }),
+                }}
+              >
+                <blockquote id="selected-recommendation" className={styles.quote}><p>{excerpt}</p></blockquote>
+                <div className={styles.quoteAuthor}>
+                  {person.image && <Image src={person.image} alt="" width={48} height={48} />}
+                  <div><strong>{person.author}</strong><span>{person.role}</span></div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </section>
