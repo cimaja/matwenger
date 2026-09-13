@@ -78,6 +78,7 @@ export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
               variant="outline"
               size="icon"
               className="bg-background/80 backdrop-blur-sm hover:bg-background/90 -translate-x-1/2"
+              aria-label="Previous video"
               onClick={previous}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -86,6 +87,7 @@ export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
               variant="outline"
               size="icon"
               className="bg-background/80 backdrop-blur-sm hover:bg-background/90 translate-x-1/2"
+              aria-label="Next video"
               onClick={next}
             >
               <ChevronRight className="h-4 w-4" />
@@ -104,6 +106,8 @@ export function VideoGallery({ videos, className = '' }: VideoGalleryProps) {
                   ? 'bg-accent-purple'
                   : 'bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.3)]'
               }`}
+              aria-label={`Show video ${index + 1}`}
+              aria-pressed={index === currentIndex}
               onClick={() => setCurrentIndex(index)}
             />
           ))}

@@ -1,50 +1,51 @@
-/**
- * Design System Tokens
- *
- * Single source of truth for all design tokens used across the portfolio.
- * Import these constants in components for consistency.
- * See docs/design-system.md for the human-readable reference.
- */
-
+/** Token values live in app/design-tokens.css. This module exposes semantic references. */
 export const colors = {
-  bg: '#0c0c0f',
-  bgCard: '#111116',
-  surface: 'rgba(255,255,255,0.02)',
-  surfaceHover: 'rgba(255,255,255,0.03)',
-  border: 'rgba(255,255,255,0.06)',
-  borderHover: 'rgba(255,255,255,0.1)',
-  sectionDivider: 'rgba(255,255,255,0.04)',
-  text: '#e0e0e0',
-  textMuted: '#888',
-  textDim: '#555',
-  textDimmer: '#444',
-  accentPurple: '#c084fc',
-  accentPurpleBg: 'rgba(147,51,234,0.08)',
-  accentPurpleBorder: 'rgba(147,51,234,0.15)',
-  accentPurpleHover: 'rgba(147,51,234,0.2)',
-  accentGreen: '#10b981',
-  accentGreenBg: 'rgba(16,185,129,0.08)',
-  accentGreenBorder: 'rgba(16,185,129,0.15)',
-  accentGreenHover: 'rgba(16,185,129,0.2)',
-  navBg: 'rgba(12,12,15,0.8)',
+  bg: 'hsl(var(--background))',
+  bgCard: 'hsl(var(--card))',
+  surface: 'hsl(var(--card))',
+  surfaceHover: 'hsl(var(--secondary))',
+  border: 'hsl(var(--border))',
+  borderHover: 'hsl(var(--input))',
+  sectionDivider: 'hsl(var(--border))',
+  text: 'hsl(var(--foreground))',
+  textMuted: 'hsl(var(--muted-foreground))',
+  textDim: 'hsl(var(--tertiary))',
+  textDimmer: 'hsl(var(--tertiary))',
+  accent: 'var(--studio-acid)',
+  secondary: 'var(--studio-secondary)',
+  tertiary: 'hsl(var(--tertiary))',
+  link: 'hsl(var(--link))',
+  linkHover: 'hsl(var(--link-hover))',
+  success: 'hsl(var(--success))',
+  warning: 'hsl(var(--warning))',
+  danger: 'hsl(var(--destructive))',
+  info: 'hsl(var(--info))',
+  navBg: 'hsl(var(--background))',
 } as const;
-
-export const fonts = {
-  sans: 'var(--font-sans)',
-  serif: 'var(--font-serif)',
-  mono: 'var(--font-mono)',
-} as const;
-
-export const radii = {
-  card: '16px',
-  terminal: '12px',
-  tag: '100px',
-  pill: '4px',
-} as const;
-
-export const animation = {
-  terminalLineDelay: 0.4,
-  terminalTypingDuration: 0.6,
-  testimonialScrollDuration: '180s',
-  hoverTransition: '0.3s',
-} as const;
+export const fonts = { sans: 'var(--font-sans)', serif: 'var(--font-serif)', mono: 'var(--font-mono)' } as const;
+export const radii = { card: 'var(--ds-radius-panel)', terminal: 'var(--ds-radius-panel)', tag: 'var(--ds-radius-tag)', pill: 'var(--ds-radius-control)' } as const;
+export const animation = { terminalLineDelay: 0.4, terminalTypingDuration: 0.6, testimonialScrollDuration: '180s', hoverTransition: 'var(--ds-duration-fast)' } as const;
+export const colorRoles = [
+  { name: 'Fond principal', token: 'background', usage: 'Fond de page et grands espaces.' },
+  { name: 'Surface secondaire', token: 'card', usage: 'Cartes, panneaux, terminal.' },
+  { name: 'Surface tertiaire', token: 'secondary', usage: 'État survolé et contenu imbriqué.' },
+  { name: 'Texte principal', token: 'foreground', usage: 'Titres et information prioritaire.' },
+  { name: 'Texte secondaire', token: 'muted-foreground', usage: 'Descriptions et texte courant.' },
+  { name: 'Texte tertiaire', token: 'tertiary', usage: 'Dates, légendes et métadonnées.' },
+  { name: 'Action principale', token: 'primary', usage: 'Bouton principal ; citron sur fond encre.' },
+  { name: 'Lien', token: 'link', usage: 'Texte souligné ; aucune flèche décorative.' },
+  { name: 'Lien au survol', token: 'link-hover', usage: 'Citron sur encre, olive foncé sur papier.' },
+  { name: 'Accent secondaire', token: 'secondary-foreground', usage: 'Informations de soutien et badges.' },
+  { name: 'Séparateur', token: 'border', usage: 'Structure discrète, sans rôle interactif.' },
+  { name: 'Contour interactif', token: 'input', usage: 'Limite visible des contrôles.' },
+  { name: 'Focus', token: 'ring', usage: 'Contour clavier de 2 px, décalé de 5 px.' },
+] as const;
+export const componentInventory = [
+  { page: 'Toutes les pages', components: 'Header mw, navigation, footer, titre de page, liens et boutons', implementation: 'SiteHeader, SiteFooter, PageIntro, TextLink, Button' },
+  { page: 'About', components: 'Portrait, texte éditorial, 5 échelles de personnalité, 7 étapes de parcours', implementation: 'MediaFrame, TraitScale, JourneyTimeline, narrative' },
+  { page: 'Lab', components: '8 cartes, descriptions complètes, dates, tags, accès restreint, lien externe', implementation: 'GalleryCard sans image, Tag, GalleryGrid lab' },
+  { page: 'Projects', components: '12 couvertures, titres, rôle, année, description et catégories', implementation: 'GalleryCard, GalleryGrid, GallerySkeleton, Tags' },
+  { page: '12 études de cas', components: 'Hero image ou vidéo, résumé, parcours au scroll ou au clic, décisions, résultats, projet suivant', implementation: 'CaseStudyTemplate, ExperienceWalkthrough, MediaFigure ; contenu Markdown structuré' },
+  { page: 'Médias des projets', components: 'Captures complètes, formats portrait, zoom et vidéos intégrées au récit', implementation: 'MediaFigure, Dialog, CaseStudyVideo' },
+  { page: 'Landing', components: 'Hero, terminal, sélection de projets, étapes, témoignages et expérience', implementation: 'ProductionHero, Accordion, LandingRecommendations ; socle partagé' },
+] as const;

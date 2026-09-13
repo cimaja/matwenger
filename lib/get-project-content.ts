@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import type { Renderer, Tokens } from 'marked';
+import { parseCaseStudy, type CaseStudy } from './project-case-study';
 
 const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
@@ -42,6 +43,7 @@ export interface GalleryImage {
   src: string;
   alt: string;
   caption?: string;
+  ratio?: 'landscape' | 'wide' | 'square' | 'portrait';
 }
 
 export interface ProjectContent {
@@ -58,6 +60,7 @@ export interface ProjectContent {
   content: string;
   videos?: Video[];
   gallery?: GalleryImage[];
+  caseStudy?: CaseStudy;
 }
 
 export async function getProjectContent(id: string): Promise<ProjectContent | null> {
@@ -84,6 +87,7 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
       order: Number.isFinite(data.order) ? data.order : undefined,
       videos: data.videos,
       gallery: data.gallery,
+      caseStudy: data.caseStudy ? parseCaseStudy(data.caseStudy, data.gallery?.length ?? 0, data.videos?.length ?? 0) : undefined,
       content: htmlContent,
     };
   } catch (error) {

@@ -10,14 +10,15 @@ interface ProjectHeaderProps {
 }
 
 export function ProjectHeader({ project }: ProjectHeaderProps) {
+  const imageUrl = project.cover || project.image;
   return (
     <div className="relative">
       <div className="h-[60vh] relative">
-        <ImageContainer
-          src={project.image}
+        {imageUrl && <ImageContainer
+          src={imageUrl}
           alt={project.title}
           priority
-        />
+        />}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
       </div>
       <motion.div
