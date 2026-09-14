@@ -30,13 +30,15 @@ gallery:
   - src: "/images/projects/ai-builder/gallery/img_11.jpg"
     alt: "A prediction model overview with performance and available actions"
   - src: "/images/projects/ai-builder/gallery/img_12.jpg"
-    alt: "Reusable form layout patterns in the design file"
+    alt: "Figma page from the AI Builder design system showing error pages, message bars, inline error banners, and dialog errors"
   - src: "/images/projects/ai-builder/gallery/img_13.jpg"
     alt: "Form and navigation specifications in the design file"
   - src: "/images/projects/ai-builder/gallery/img_14.jpg"
     alt: "Color and component foundations in the design file"
 videos:
-  - src: /images/projects/ai-builder/video/video_1.mp4
+  # Original: "AI Builder is now available" — Microsoft Power Apps.
+  # Source: https://www.youtube.com/watch?v=WSWmn7WM3i4
+  - src: /images/projects/ai-builder/video/video_1_with_audio.mp4
     thumbnail: /images/projects/ai-builder/video/thumbnail.jpg
     type: "local"
     title: "AI Builder Overview"
@@ -120,7 +122,7 @@ caseStudy:
           with the broader product direction and refined features through user
           feedback.
         image: 12
-        caption: Reusable form layouts documented as part of the design work.
+        caption: AI Builder design system in Figma, documenting error-message patterns across pages, message bars, and dialogs.
       - title: Connect models to real workflows
         body: >-
           The goal extended beyond creating a model: makers needed to use its
