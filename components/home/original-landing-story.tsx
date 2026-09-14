@@ -8,6 +8,7 @@ import { workflowDescription, workflowSteps } from '@/lib/data/workflow';
 import styles from './immersive-landing.module.css';
 import { LandingContact, LandingRecommendations } from './landing-story';
 import { SiteFooter } from '@/components/design-system/site-footer';
+import { ImpactMetrics } from './impact-metrics';
 
 function Approach() {
   return <section className={styles.approach} id="approach">
@@ -15,7 +16,7 @@ function Approach() {
     <div className={styles.approachGrid}><div><h2>How<br /><em>I work.</em></h2><p>{workflowDescription}</p><Link href="/lab" className={styles.textLink}>Inside the lab</Link></div>
       <Accordion type="single" collapsible className={styles.methodList}>{workflowSteps.map(s => <AccordionItem value={s.number} key={s.number} className={styles.method}><AccordionTrigger className={styles.methodTrigger}><span>{s.number}</span><strong>{s.title}</strong></AccordionTrigger><AccordionContent className={styles.methodContent}><p>{s.description}.</p><div>{s.tools.slice(0, 3).map(tool => <span key={tool}>{tool}</span>)}</div></AccordionContent></AccordionItem>)}</Accordion>
     </div>
-    <div className={styles.impactGrid}>{[{ number: '50M+', label: 'monthly active users', note: 'Across the Power Platform experiences my team supports.' }, { number: '+81%', label: 'more apps published', note: 'From A/B experiments in the Power Apps maker funnel.' }, { number: '12', label: 'designers. one team.', note: 'Across India, Greece, and the United States.' }].map(m => <div key={m.label}><strong>{m.number}</strong><span>{m.label}</span><p>{m.note}</p></div>)}</div>
+    <ImpactMetrics />
   </section>;
 }
 

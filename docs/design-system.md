@@ -192,6 +192,9 @@ Les études de cas utilisent `CaseStudyVideo`, avec le lecteur `YouTube` existan
 ## 9. Mouvement et accessibilité
 
 - Couleurs et survol : 180 ms. Apparition : 360 ms. Courbe `cubic-bezier(.2,.7,.2,1)`.
+- Témoignages : sortie de 180 ms puis entrée de 360 ms, fondu et déplacement horizontal discret dans le sens de navigation. Citation et attribution restent groupées, sans lecture automatique.
+- Chiffres d’impact : incrémentation sur 900 ms à leur première apparition, avec un décalage de 160 ms entre les colonnes de gauche à droite. Les unités restent visibles et les lecteurs d’écran reçoivent directement les valeurs finales.
+- Personnalité : chaque point part du centre vers sa valeur sur 850 ms, avec 90 ms de décalage entre les lignes d’About. `TraitScale` partage ce comportement avec le design system. Sans animation, la valeur finale reste affichée.
 - Zoom de couverture : 1,025 maximum ; aucune transformation d’une capture `contain`.
 - Respect de `prefers-reduced-motion`. La lecture d’un contenu ne doit pas dépendre d’une animation.
 - Vérifier au minimum 4,5:1 pour les textes courants et 3:1 pour les contours de contrôles et le focus. Les séparateurs décoratifs ne sont pas des contours de contrôle.
