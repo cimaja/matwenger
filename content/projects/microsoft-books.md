@@ -88,10 +88,10 @@ caseStudy:
         I led a team of five designers, defining scope and flows, testing
         prototypes and supervising design quality through production.
     - label: The outcome
-      title: Reading across five platforms
+      title: Reading across four platforms
       body: >-
         The design connected books, annotations and learning tools across
-        Windows 10, Xbox, Windows Phone, iOS and Android.
+        iOS, Android, Windows Phone and Windows.
   experience:
     title: Open a book
     emphasis: Make it your own
@@ -141,7 +141,7 @@ caseStudy:
         caption: Creating notes and highlighting passages.
       - title: Carry the system across platforms
         body: >-
-          An adaptive design system connected the experience across five
+          An adaptive design system connected the experience across four
           platforms. I coordinated with three scrum teams in Paris and design
           partners in Redmond and Hyderabad.
         image: 5
@@ -154,10 +154,10 @@ caseStudy:
       continued into other reading surfaces.
     items:
       - label: Platform reach
-        title: Five connected platforms
+        title: Four connected platforms
         body: >-
-          The reading experience was designed across Windows 10, Xbox, Windows
-          Phone 10, iOS and Android.
+          The reading experience was designed across iOS, Android, Windows Phone
+          and Windows.
       - label: Design legacy
         title: A blueprint for PDF reading
         body: The design patterns informed the PDF reader in Microsoft Edge.
@@ -174,7 +174,7 @@ Browsers have been a cornerstone of the internet since its early days, with inno
 
 Our goal was to redefine what users could experience within their browser by expanding the types of content they could read and ensuring it was accessible to everyone. We aimed to provide the best possible reading experience—one that mirrors the familiarity of interacting with a physical book while offering enhanced opportunities for learning and engagement. With tools like notes, highlights, doodles, Cortana, and other features, users could deepen their understanding and connection with the content.
 
-I led a team of five designers to create the Windows Books App across five platforms: Windows 10, Xbox, Windows Phone 10, iOS, and Android (mobile and tablet). My responsibilities included defining the product scope and vision, designing user flows, wireframes, visuals, and prototypes, as well as conducting user tests, creating animations, and delivering redlines. I also supervised development quality from conception through production release.
+I led a team of five designers to create the Windows Books App across four platforms: iOS, Android, Windows Phone, and Windows. My responsibilities included defining the product scope and vision, designing user flows, wireframes, visuals, and prototypes, as well as conducting user tests, creating animations, and delivering redlines. I also supervised development quality from conception through production release.
 
 This effort involved close collaboration with three scrum teams in Paris and two design teams in Redmond (GMT-7) and Hyderabad (GMT+5:30), who were focused on other components of Edge.
 
@@ -188,7 +188,7 @@ This effort involved close collaboration with three scrum teams in Paris and two
 ## Impact
 
 The Microsoft Books feature delivered:
-- Unified reading experience across five platforms (Windows 10, Xbox, Windows Phone 10, iOS, and Android)
+- Unified reading experience across four platforms (iOS, Android, Windows Phone, and Windows)
 - Design patterns became the blueprint for Edge's PDF reader, now used by millions of users daily
 - Advanced accessibility features for diverse reading needs
 - Innovative learning tools including notes, highlights, and Cortana integration

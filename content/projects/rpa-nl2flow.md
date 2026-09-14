@@ -26,7 +26,9 @@ gallery:
   - src: "/images/projects/rpa-nl2flow/gallery/img_9.jpg"
     alt: "The updated flow in the designer"
 videos:
-  - src: "/images/projects/rpa-nl2flow/video/video_1.mp4"
+  # Original: Copilot in Power Automate — Microsoft Power Platform.
+  # Source: https://www.youtube.com/watch?v=FMz0C6cY1qU
+  - src: "/images/projects/rpa-nl2flow/video/video_1_with_audio.mp4"
     type: "local"
     thumbnail: "/images/projects/rpa-nl2flow/video/thumbnail.jpg"
     title: "How to create a flow in Power Automate using natural language"
