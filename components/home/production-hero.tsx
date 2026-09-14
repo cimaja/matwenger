@@ -60,7 +60,7 @@ export function ProductionHero() {
         <div className={styles.copy}>
           <h1 id="hero-title" className={styles.name}><span>{firstName}</span><em>{lastName}</em></h1>
           <p className={styles.intro}>{heroData.subtitle}</p>
-          <Link href="#currently-building" className={styles.currentProject}><span>Currently building</span><strong>Tainure</strong><span>Founder &amp; builder</span></Link>
+          <Link href="#work" className={styles.currentProject}><span>Currently building</span><strong>Tainure</strong><span>Founder &amp; builder</span></Link>
           <dl className={styles.metrics}>
             {heroData.metrics.map(metric => (
               <div key={metric.label}><dt>{metric.label}</dt><dd>{metric.value}</dd></div>
