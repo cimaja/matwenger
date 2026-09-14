@@ -18,7 +18,7 @@ export const workflowSteps: WorkflowStep[] = [
     title: 'Design & Prototype',
     description:
       'Rapid prototyping with AI-powered tools. From concept to interactive prototype in hours, not weeks',
-    tools: ['Figma Make', 'Lovable', 'Claude Code', 'GitHub Copilot', 'Design systems'],
+    tools: ['Figma Make', 'Lovable', 'Claude Code', 'Codex', 'GitHub Copilot', 'Design systems'],
   },
   {
     number: '03',

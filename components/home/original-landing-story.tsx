@@ -14,7 +14,7 @@ function Approach() {
   return <section className={styles.approach} id="approach">
     <div className={styles.sectionMeta}><span>02 / HOW I WORK</span></div>
     <div className={styles.approachGrid}><div><h2>How<br /><em>I work</em></h2><p>{workflowDescription}</p><Link href="/lab" className={styles.textLink}>Inside the lab</Link></div>
-      <Accordion type="single" collapsible className={styles.methodList}>{workflowSteps.map(s => <AccordionItem value={s.number} key={s.number} className={styles.method}><AccordionTrigger className={styles.methodTrigger}><span>{s.number}</span><strong>{s.title}</strong></AccordionTrigger><AccordionContent className={styles.methodContent}><p>{s.description}.</p><div>{s.tools.slice(0, 3).map(tool => <span key={tool}>{tool}</span>)}</div></AccordionContent></AccordionItem>)}</Accordion>
+      <Accordion type="single" collapsible className={styles.methodList}>{workflowSteps.map(s => <AccordionItem value={s.number} key={s.number} className={styles.method}><AccordionTrigger className={styles.methodTrigger}><span>{s.number}</span><strong>{s.title}</strong></AccordionTrigger><AccordionContent className={styles.methodContent}><p>{s.description}.</p><div>{s.tools.slice(0, s.number === '02' ? 4 : 3).map(tool => <span key={tool}>{tool}</span>)}</div></AccordionContent></AccordionItem>)}</Accordion>
     </div>
     <ImpactMetrics />
   </section>;
