@@ -9,7 +9,9 @@ year: 2019
 role: Senior Design Manager
 company: Microsoft
 videos:
-  - src: "/images/projects/fraud-protection/video/video_1_part1.mp4"
+  # Original: Dynamics 365 Fraud Protection — Microsoft Dynamics 365.
+  # Source: https://www.youtube.com/watch?v=DlkQ_7M9yeI (first 4:27).
+  - src: "/images/projects/fraud-protection/video/video_1_part1_with_audio.mp4"
     thumbnail: "/images/projects/fraud-protection/video/thumbnail_part1.jpg"
     type: "local"
     title: "Microsoft Fraud Protection Overview (Part 1)"
