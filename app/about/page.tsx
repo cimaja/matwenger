@@ -23,7 +23,7 @@ export default function AboutPage() {
   return <PageShell reading>
     <div className={styles.aboutHero}>
       <MediaFrame src="/images/about/profile.jpeg" alt="Mathias Wendlinger" ratio="square" tone="portrait" priority sizes="180px" />
-      <PageIntro title={<>About <em>me.</em></>} description="Principal Design Manager at Microsoft, leading design across Power Platform for 50 million users" />
+      <PageIntro title={<>About <em>me</em></>} description="Principal Design Manager at Microsoft, leading design across Power Platform for 50 million users" />
     </div>
     <PersonalitySliders />
     <AboutNarrative />

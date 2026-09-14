@@ -44,8 +44,8 @@ videos:
 
 caseStudy:
   headline:
-    title: Business expertise.
-    emphasis: Meet AI.
+    title: Business expertise
+    emphasis: Meet AI
   introduction: >-
     Helping makers create and use AI models without writing code. I played a
     foundational design role in AI Builder, from the product vision to the
@@ -56,29 +56,29 @@ caseStudy:
     caption: AI Builder · Bringing AI models into business processes
   overview:
     - label: The challenge
-      title: AI beyond specialist teams.
+      title: AI beyond specialist teams
       body: >-
         Business users need ways to use their own data and expertise without
         first learning how to build a machine-learning system.
     - label: My contribution
-      title: Shape the no-code experience.
+      title: Shape the no-code experience
       body: >-
         I partnered with PMs on the vision and led design work on model
         creation, usability and integration with the Power Platform.
     - label: The outcome
-      title: Models makers can put to work.
+      title: Models makers can put to work
       body: >-
         Prebuilt and custom models support tasks such as document processing,
         object detection and prediction in apps and flows.
   experience:
-    title: Choose a task.
-    emphasis: Build on what you know.
+    title: Choose a task
+    emphasis: Build on what you know
     description: >-
       The product introduces AI through concrete business scenarios and guides
       makers toward a usable model.
     steps:
       - label: Choose
-        title: Begin with a business need.
+        title: Begin with a business need
         body: >-
           The starting surface presents recognizable model types, so makers can
           choose the capability that fits their process.
@@ -87,14 +87,14 @@ caseStudy:
           AI Builder introduces model types through practical business
           scenarios.
       - label: Teach
-        title: Connect the model to your data.
+        title: Connect the model to your data
         body: >-
           For object detection, makers tag objects in their own images. The
           training task is expressed through a visual interaction.
         image: 7
         caption: Tagging objects directly in a sample image.
       - label: Evaluate
-        title: Understand the model’s readiness.
+        title: Understand the model’s readiness
         body: >-
           A model detail view brings performance and the next available actions
           together before the model is used in an app or a flow.
@@ -102,49 +102,49 @@ caseStudy:
         caption: A model overview presents its performance and available actions.
   decisions:
     title: Make AI
-    emphasis: a maker experience.
+    emphasis: a maker experience
     description: >-
       The design connects familiar business tasks, understandable interactions
       and a shared product language.
     items:
-      - title: Explain a capability before setup.
+      - title: Explain a capability before setup
         body: >-
           I designed the no-code experience around model types and business
           examples. Form processing, for example, can be introduced through the
           document it will understand.
         image: 3
         caption: A document example makes the form-processing capability concrete.
-      - title: Build consistency into the foundation.
+      - title: Build consistency into the foundation
         body: >-
           Working with PM, engineering and research, I aligned model experiences
           with the broader product direction and refined features through user
           feedback.
         image: 12
         caption: Reusable form layouts documented as part of the design work.
-      - title: Connect models to real workflows.
+      - title: Connect models to real workflows
         body: >-
           The goal extended beyond creating a model: makers needed to use its
           output in Power Apps and Power Automate to support their business
           process.
   outcomes:
     title: AI in the hands
-    emphasis: of business makers.
+    emphasis: of business makers
     description: >-
       The project’s documented impact spans manual processing, workflow
       automation and access to reusable AI capabilities.
     items:
       - label: Manual data entry
-        title: 60% reduction.
+        title: 60% reduction
         body: >-
           Intelligent automation reduced the manual data entry required in
           business processes.
       - label: Workflow automation
-        title: 40% faster.
+        title: 40% faster
         body: >-
           AI Builder accelerated workflow automation across the industries
           described in the project.
       - label: Reusable capabilities
-        title: 15+ prebuilt models.
+        title: 15+ prebuilt models
         body: >-
           The platform expanded access to capabilities including document
           processing, image detection and image classification.

@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'Lab', description: 'Interactive prot
 
 export default function LabPage() {
   return <PageShell>
-    <PageIntro eyebrow="LAB" title={<>Always <em>exploring.</em></>} description="Interactive prototypes and experiments showcasing design explorations and innovative concepts" />
+    <PageIntro eyebrow="LAB" title={<>Always <em>exploring</em></>} description="Interactive prototypes and experiments showcasing design explorations and innovative concepts" />
     <GalleryGrid layout="lab">{labProjects.map(project => <LabProjectCard key={project.title} project={project} />)}</GalleryGrid>
   </PageShell>;
 }

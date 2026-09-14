@@ -38,8 +38,8 @@ gallery:
     alt: "Product colors and message colors documented in the design system"
 caseStudy:
   headline:
-    title: See the risk.
-    emphasis: Understand the impact.
+    title: See the risk
+    emphasis: Understand the impact
   introduction: >-
     Helping businesses evaluate fraud protection with their own data. I shaped
     the foundational experience and acquisition journey, connecting data upload
@@ -50,29 +50,29 @@ caseStudy:
     caption: 'Fraud Protection · Product overview, part one'
   overview:
     - label: The challenge
-      title: Risk is hard to evaluate in the abstract.
+      title: Risk is hard to evaluate in the abstract
       body: >-
         Businesses needed to understand what a fraud engine could reveal about
         their own transactions and historical data.
     - label: My contribution
-      title: Define the first useful journey.
+      title: Define the first useful journey
       body: >-
         I joined the project quickly, established its design foundation and
         focused the acquisition experience on evaluating historical data.
     - label: The outcome
-      title: Turn a trial into insight.
+      title: Turn a trial into insight
       body: >-
         The experience guides prospective customers from uploading their data to
         understanding risk through reports and visualizations.
   experience:
-    title: Your data.
-    emphasis: A clearer picture.
+    title: Your data
+    emphasis: A clearer picture
     description: >-
       Follow the evaluation journey from a guided start to a risk diagnostic
       report.
     steps:
       - label: Start
-        title: Make the next step clear.
+        title: Make the next step clear
         body: >-
           The initial dashboard introduces the evaluation tasks and gives the
           customer a visible path through setup.
@@ -81,14 +81,14 @@ caseStudy:
           A guided dashboard organizes the steps needed to evaluate Fraud
           Protection.
       - label: Upload
-        title: Work with real business data.
+        title: Work with real business data
         body: >-
           Customers upload their historical data to test the fraud engine
           against the transactions that matter to them.
         image: 4
         caption: The upload step gathers the data used for the evaluation.
       - label: Understand
-        title: Make the risk readable.
+        title: Make the risk readable
         body: >-
           The diagnostic report translates the analysis into summaries and
           visualizations that customers can inspect.
@@ -98,24 +98,24 @@ caseStudy:
           together.
   decisions:
     title: Earn understanding
-    emphasis: through the experience.
+    emphasis: through the experience
     description: >-
       The work covered onboarding, dashboards, risk visualizations and the
       foundations needed for a coherent product.
     items:
-      - title: Help people resolve data issues.
+      - title: Help people resolve data issues
         body: >-
           The evaluation depends on usable input. The upload experience makes
           problems in a file visible so customers can address them.
         image: 3
         caption: Data issues are surfaced within the upload experience.
-      - title: Connect the overview to the detail.
+      - title: Connect the overview to the detail
         body: >-
           I designed risk visualizations and monitoring interfaces to help
           people investigate beyond a summary number.
         image: 7
         caption: 'The detailed report combines categories, counts and comparisons.'
-      - title: Establish a design foundation early.
+      - title: Establish a design foundation early
         body: >-
           I made tactical decisions about the product direction while building a
           shared visual foundation for the expanding experience.
@@ -123,23 +123,23 @@ caseStudy:
         caption: Product and message colors documented in the design foundation.
   outcomes:
     title: From an evaluation
-    emphasis: to informed decisions.
+    emphasis: to informed decisions
     description: >-
       The work established the product framework for understanding and
       investigating fraud risk.
     items:
       - label: Acquisition
-        title: Evaluate with historical data.
+        title: Evaluate with historical data
         body: >-
           Prospective customers can explore the fraud engine in the context of
           their own business.
       - label: Investigation
-        title: Make patterns visible.
+        title: Make patterns visible
         body: >-
           Reports and visualizations support risk assessment and investigation
           workflows.
       - label: Foundation
-        title: Connect the product surfaces.
+        title: Connect the product surfaces
         body: >-
           Dashboards, monitoring, alerts and case-management work formed a
           broader framework for fraud prevention.

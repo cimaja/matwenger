@@ -40,8 +40,8 @@ gallery:
     ratio: portrait
 caseStudy:
   headline:
-    title: The music you love.
-    emphasis: Built for the web.
+    title: The music you love
+    emphasis: Built for the web
   introduction: >-
     Taking Microsoft Music beyond Windows with a responsive web player. I
     established the design foundation and became design lead after the MVP,
@@ -54,54 +54,54 @@ caseStudy:
       place
   overview:
     - label: The challenge
-      title: A new environment for the music.
+      title: A new environment for the music
       body: >-
         The Windows app’s interaction patterns did not translate naturally to a
         browser. The web player needed its own approach.
     - label: My contribution
-      title: Define a web design foundation.
+      title: Define a web design foundation
       body: >-
         I created end-to-end wireframes, contributed to visual design and used
         research to advocate for familiar web interactions.
     - label: The outcome
-      title: A direction that traveled back.
+      title: A direction that traveled back
       body: >-
         The responsive player reached non-Windows listeners, and its design
         patterns were later adopted by the Windows Music application.
   experience:
-    title: Find a favorite.
-    emphasis: Follow the music.
+    title: Find a favorite
+    emphasis: Follow the music
     description: 'Move through discovery, an album and the collection within the web player.'
     steps:
       - label: Discover
-        title: Start with an artist.
+        title: Start with an artist
         body: >-
           Artist discovery gives listeners a visual way into the catalogue while
           navigation and playback stay close.
         image: 5
         caption: The Top Music view brings artists into a browsable grid.
       - label: Listen
-        title: Open the album.
+        title: Open the album
         body: >-
           The album page gives the music a clear identity and keeps the track
           list connected to playback.
         image: 8
         caption: An album detail view with its tracks and persistent playback controls.
       - label: Collect
-        title: Make room for your own mix.
+        title: Make room for your own mix
         body: >-
           Playlist management connects listening to a personal collection, with
           the selected tracks available in a familiar list.
         image: 9
         caption: A playlist brings its tracks and related content together.
   decisions:
-    title: Familiar to listeners.
-    emphasis: Natural in a browser.
+    title: Familiar to listeners
+    emphasis: Natural in a browser
     description: >-
       Research helped establish an interaction direction suited to the web,
       which then informed the wider product.
     items:
-      - title: Design for the environment.
+      - title: Design for the environment
         body: >-
           I proposed alternatives to the Windows-specific patterns and advocated
           for intuitive web interactions. Leadership approved the direction
@@ -110,35 +110,35 @@ caseStudy:
         caption: >-
           Search results organize artists, albums and songs within the same web
           shell.
-      - title: Give empty states a purpose.
+      - title: Give empty states a purpose
         body: >-
           Playlist creation needed a useful beginning. The empty state points
           listeners toward ways to start adding music.
         image: 10
         caption: An empty playlist introduces ways to find and add songs.
-      - title: Keep learning after launch.
+      - title: Keep learning after launch
         body: >-
           After the MVP, I took on design leadership and used product data and
           research insights to guide improvements.
   outcomes:
-    title: Designed for the web.
-    emphasis: Adopted beyond it.
+    title: Designed for the web
+    emphasis: Adopted beyond it
     description: >-
       The project established an interaction direction that influenced more than
       the browser experience.
     items:
       - label: Reach
-        title: Music beyond Windows.
+        title: Music beyond Windows
         body: >-
           The responsive web player brought the service to millions of
           non-Windows users.
       - label: Product influence
-        title: Patterns adopted by Windows.
+        title: Patterns adopted by Windows
         body: >-
           The web design received positive user and press feedback and informed
           the Windows Music application.
       - label: Everyday listening
-        title: Discovery through to playback.
+        title: Discovery through to playback
         body: >-
           The experience connected content discovery, search and playlist
           management in a coherent web player.

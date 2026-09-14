@@ -16,7 +16,7 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
   return (
     <section id="work" className={styles.work}>
       <div className={styles.sectionMeta}><span>01 / SELECTED WORK</span></div>
-      <div className={styles.sectionTitle}><h2>Less friction.<br /><em>More possibility.</em></h2></div>
+      <div className={styles.sectionTitle}><h2>Less friction<br /><em>More possibility</em></h2></div>
       <div className={styles.projectGrid}>
         {selection.map((project, index) => (
           <Link href={`/projects/${project.id}`} key={project.id} className={`${styles.projectCard} ${index === 0 ? styles.projectLead : ''}`}>
