@@ -15,8 +15,8 @@ videos:
     description: "The old experience, the evidence, and each fix in action, from smarter scrolling to density presets"
 caseStudy:
   headline:
-    title: Less scrolling.
-    emphasis: More of the work.
+    title: Less scrolling
+    emphasis: More of the work
   introduction: >-
     Turning repeated customer feedback into a working prototype. I redesigned
     density, scrolling and summaries in Dynamics 365 so the information people
@@ -33,44 +33,44 @@ caseStudy:
       note: Password protected
   overview:
     - label: The challenge
-      title: The header took the screen.
+      title: The header took the screen
       body: >-
         A fixed header and summary could consume up to 245 pixels before the
         first field. Enterprise customers kept asking to see more information on
         a single page.
     - label: My contribution
-      title: Make the problem measurable.
+      title: Make the problem measurable
       body: >-
         I diagnosed four structural issues, designed the fixes and built a React
         prototype on Fluent controls to compare current and proposed states.
     - label: The outcome
-      title: A concrete engineering conversation.
+      title: A concrete engineering conversation
       body: >-
         Feature flags made each change reviewable with the same screen and data.
         Enterprise customers could validate the fixes directly.
   decisions:
     title: Give the screen
-    emphasis: back to the work.
+    emphasis: back to the work
     description: >-
       The prototype connects each customer complaint to a specific change that
       can be switched on and off.
     items:
-      - title: Keep context. Reclaim space.
+      - title: Keep context. Reclaim space
         body: >-
           As the page scrolls, the record header and summary collapse into a
           compact context bar. People keep their bearings while more of the
           record becomes visible.
-      - title: Let people choose their density.
+      - title: Let people choose their density
         body: >-
           Comfortable, Cozy and Compact presets sit alongside granular spacing
           controls in Personalization. Information density becomes a choice that
           fits the task.
-      - title: Make summaries easier to read.
+      - title: Make summaries easier to read
         body: >-
           Two disclosure levels replace three. A clear title, status, agent
           identity and refresh indicators create a consistent hierarchy in both
           collapsed and expanded states.
-      - title: Build close to production.
+      - title: Build close to production
         body: >-
           I reproduced the current experience with React and Fluent controls,
           then added the changes behind feature flags. The same prototype
@@ -78,24 +78,24 @@ caseStudy:
           carry into the product.
   outcomes:
     title: From repeated feedback
-    emphasis: to validated changes.
+    emphasis: to validated changes
     description: >-
       This work is a customer-validated prototype and an implementation
       direction. The evidence comes from direct comparisons and customer
       conversations.
     items:
       - label: Customer validation
-        title: Review the actual change.
+        title: Review the actual change
         body: >-
           The enterprise customers who raised the feedback could compare the
           proposed fixes directly with the existing experience.
       - label: Engineering alignment
-        title: Sequence the work.
+        title: Sequence the work
         body: >-
           A measured layout study and feature flags turned broad feedback into
           specific, reviewable changes.
       - label: A repeatable practice
-        title: Prototype before committing.
+        title: Prototype before committing
         body: >-
           The approach established a way to validate experience changes before
           committing engineering investment.

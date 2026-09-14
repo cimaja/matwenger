@@ -88,7 +88,7 @@ export function LandingContact() {
     <div className={styles.story}>
       <section id="contact" className={styles.contact} aria-labelledby="contact-title">
         <div className={styles.sectionMeta}><span>05 / LET’S CONNECT</span></div>
-        <div className={styles.contactLayout}><h2 id="contact-title">Let’s make<br /><em>what’s next.</em></h2></div>
+        <div className={styles.contactLayout}><h2 id="contact-title">Let’s make<br /><em>what’s next</em></h2></div>
         <div className={`${styles.contactActions} ${styles.underlinedActions}`}>
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           <a href={resume} target="_blank" rel="noopener noreferrer">View resume</a>

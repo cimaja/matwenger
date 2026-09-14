@@ -55,8 +55,8 @@ videos:
     description: "Showcasing Your Groove across Windows, Mobile, and Xbox platforms"
 caseStudy:
   headline:
-    title: Your listening habits.
-    emphasis: Your next discovery.
+    title: Your listening habits
+    emphasis: Your next discovery
   introduction: >-
     Turning listening patterns into personal music discovery. I led the
     end-to-end design direction for Your Groove, connecting recommendation logic
@@ -67,43 +67,43 @@ caseStudy:
     caption: Your Groove · Personalized playlists and music discovery
   overview:
     - label: The challenge
-      title: Make recommendations feel personal.
+      title: Make recommendations feel personal
       body: >-
         A recommendation system needs an experience that helps people recognize
         something worth listening to.
     - label: My contribution
-      title: Connect the logic to the experience.
+      title: Connect the logic to the experience
       body: >-
         I shaped the discovery interface through research, competitive analysis,
         prototypes and final design, working with engineering across platforms.
     - label: The outcome
-      title: Playlists built around the listener.
+      title: Playlists built around the listener
       body: >-
         Your Groove used listening patterns to create personalized playlists
         across Windows 10, iOS, Android and Xbox.
   experience:
-    title: Something familiar.
-    emphasis: Something to discover.
+    title: Something familiar
+    emphasis: Something to discover
     description: >-
       Follow a personalized recommendation into the artists and tracks behind
       it.
     steps:
       - label: Discover
-        title: Give the recommendation an identity.
+        title: Give the recommendation an identity
         body: >-
           The recommended surface presents playlists with distinct artwork and
           names, giving the listener a way into the selection.
         image: 1
         caption: Personalized playlists are introduced on the recommended surface.
       - label: Explore
-        title: Meet the artists inside.
+        title: Meet the artists inside
         body: >-
           A playlist opens into its featured artists and tracks, connecting the
           recommendation to the music it contains.
         image: 2
         caption: The playlist detail view introduces its featured artists.
       - label: Play
-        title: Make the music easy to reach.
+        title: Make the music easy to reach
         body: >-
           A clear track list and persistent playback controls let the listener
           move from discovery into listening.
@@ -111,12 +111,12 @@ caseStudy:
         caption: The playlist continues into a browsable track list.
   decisions:
     title: 'Behind a playlist,'
-    emphasis: a design system of choices.
+    emphasis: a design system of choices
     description: >-
       The work connected recommendation behavior, content structure and the
       final listening experience.
     items:
-      - title: Make room for different kinds of discovery.
+      - title: Make room for different kinds of discovery
         body: >-
           I shaped an interface that could bring together editorial playlists,
           generated recommendations and selections based on a listener’s own
@@ -125,7 +125,7 @@ caseStudy:
         caption: >-
           An early structure explores weekly, daily and contextual playlist
           groups.
-      - title: Give recommendation logic a visible form.
+      - title: Give recommendation logic a visible form
         body: >-
           The design explorations mapped sources, context and freshness into a
           structure the product could present to listeners.
@@ -133,29 +133,29 @@ caseStudy:
         caption: >-
           A design exploration documents the structure and logic behind
           discovery playlists.
-      - title: Carry the experience across platforms.
+      - title: Carry the experience across platforms
         body: >-
           I worked with engineering to implement the design across Windows 10,
           mobile and Xbox, from prototypes through final deliverables.
         video: 3
         caption: Your Groove across the product’s platforms.
   outcomes:
-    title: Personal discovery.
-    emphasis: More playlists made.
+    title: Personal discovery
+    emphasis: More playlists made
     description: >-
       The project connected personalized recommendations to measurable
       engagement and a shared experience across platforms.
     items:
       - label: Playlist creation
-        title: +35%.
+        title: +35%
         body: >-
           AI-powered recommendations drove the increase in playlist creation
           reported for the project.
       - label: Platform reach
-        title: From desktop to console.
+        title: From desktop to console
         body: 'Your Groove launched across Windows 10, iOS, Android and Xbox.'
       - label: Continued listening
-        title: A reason to come back.
+        title: A reason to come back
         body: >-
           Personalized content recommendations supported listener retention and
           ongoing discovery.

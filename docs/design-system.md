@@ -95,6 +95,7 @@ Les utilitaires `accent-purple` et `accent-green` restent des alias de compatibi
 
 - Un `h1` par page ; des `h2` pour les sections et `h3` pour les cartes.
 - Les titres restent en sans-serif ; `<em>` ajoute une courte inflexion Fraunces, sans passer tout le texte en italique.
+- Aucun point final dans les titres, y compris avant un saut de ligne ou à la fin d’une expression en italique. Les paragraphes, citations, légendes et libellés conservent leur ponctuation.
 - Texte courant à 16 px minimum. 12 px réservé aux métadonnées secondaires.
 - Limiter la lecture longue à 720 px. Éviter les hauteurs fixes sur les textes et les descriptions tronquées du Lab.
 - Les valeurs sont exprimées en rem ou en `clamp()` pour conserver le zoom du navigateur.
@@ -264,7 +265,7 @@ Ajouter une propriété `caseStudy` au front matter du fichier `content/projects
 caseStudy:
   headline:
     title: "Une transformation concrète"
-    emphasis: "en quelques mots."
+    emphasis: "en quelques mots"
   introduction: "Le contexte et ma contribution en deux phrases."
   leadMedia:
     kind: image # image ou video
@@ -272,34 +273,34 @@ caseStudy:
     caption: "Ce que ce média permet de comprendre."
   overview:
     - label: "The challenge"
-      title: "Le problème à résoudre."
+      title: "Le problème à résoudre"
       body: "Une explication courte et factuelle."
   experience:
     title: "Un parcours"
-    emphasis: "à découvrir."
+    emphasis: "à découvrir"
     description: "La tâche suivie dans cet exemple."
     steps:
       - label: "Ask"
-        title: "Une intention."
+        title: "Une intention"
         body: "Ce que fait la personne à cette étape."
         image: 1
         caption: "Une légende qui explique la capture."
   decisions:
     title: "Les choix"
-    emphasis: "qui comptent."
+    emphasis: "qui comptent"
     description: "Mon rôle dans la direction du projet."
     items:
-      - title: "Une décision concrète."
+      - title: "Une décision concrète"
         body: "Pourquoi ce choix et ce qu’il change."
         # image: 2, ou video: 2 ; jamais les deux
         # caption facultative
   outcomes:
     title: "Ce que le travail"
-    emphasis: "a rendu possible."
+    emphasis: "a rendu possible"
     description: "Des résultats étayés par le contenu du projet."
     items:
       - label: "Un jalon"
-        title: "Un résultat."
+        title: "Un résultat"
         body: "Une preuve ou un apprentissage documenté."
 ```
 

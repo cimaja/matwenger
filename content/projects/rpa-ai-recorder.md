@@ -67,8 +67,8 @@ gallery:
     alt: "The generated automation in the flow designer with Copilot"
 caseStudy:
   headline:
-    title: Show the task.
-    emphasis: Build the flow.
+    title: Show the task
+    emphasis: Build the flow
   introduction: >-
     A more natural way to create desktop automations. I worked with a team
     across Paris, Athens and Seattle to bring screen interaction, cursor
@@ -79,36 +79,36 @@ caseStudy:
     caption: AI Recorder · An introduction to recording desktop work with AI
   overview:
     - label: The challenge
-      title: Automation starts with expertise.
+      title: Automation starts with expertise
       body: >-
         Desktop flow creation can ask people to understand the automation tool
         before they can describe the task they want it to perform.
     - label: My contribution
-      title: Connect the ways people explain.
+      title: Connect the ways people explain
       body: >-
         I reimagined the recorder and reconciled the classic recorder, element
         picker and task coach into a consistent interaction direction.
     - label: The outcome
-      title: A task becomes a starting point.
+      title: A task becomes a starting point
       body: >-
         The experience combines actions on screen and spoken instructions to
         make desktop flow creation more approachable.
   experience:
-    title: Do it once.
-    emphasis: Show what matters.
+    title: Do it once
+    emphasis: Show what matters
     description: >-
       Follow the recording concept from explaining a task to reviewing the
       generated automation.
     steps:
       - label: Prepare
-        title: Set up the recording.
+        title: Set up the recording
         body: >-
           A focused recorder guides the person into the session before the
           desktop task begins.
         image: 4
         caption: Recording settings bring the setup into a compact desktop panel.
       - label: Demonstrate
-        title: Work through the task.
+        title: Work through the task
         body: >-
           The person moves between applications and explains what they are
           doing. Voice and on-screen actions provide context together.
@@ -117,57 +117,57 @@ caseStudy:
           Working in a spreadsheet while the recorder captures the task and its
           explanation.
       - label: Review
-        title: Return to an editable flow.
+        title: Return to an editable flow
         body: >-
           The recording leads back into the automation designer, where the
           resulting actions can be reviewed and refined.
         image: 19
         caption: 'The recorded task becomes a flow in the designer, alongside Copilot.'
   decisions:
-    title: One recorder.
-    emphasis: Several ways to explain.
+    title: One recorder
+    emphasis: Several ways to explain
     description: >-
       The design work connected the interaction model, visual consistency and an
       end-to-end demonstration.
     items:
-      - title: Bring voice into the task.
+      - title: Bring voice into the task
         body: >-
           Voice instructions complement what is visible on screen and where the
           cursor moves. The recorder keeps that explanation beside the
           applications being used.
         image: 8
         caption: The recorder stays alongside the task as the person works in Outlook.
-      - title: Make the whole journey reviewable.
+      - title: Make the whole journey reviewable
         body: >-
           I created an end-to-end video demonstration for Ignite, working with
           data science, PM and development partners to make the concept
           concrete.
         video: 2
         caption: A walkthrough of AI recording for desktop flows.
-      - title: Unify the recording experiences.
+      - title: Unify the recording experiences
         body: >-
           The classic recorder, element picker and task coach had to feel like
           parts of one experience. I focused on consistency across the
           interaction and visual design.
   outcomes:
     title: A more approachable
-    emphasis: way into automation.
+    emphasis: way into automation
     description: >-
       The project explored how multiple input modes can lower the barrier to
       creating desktop flows.
     items:
       - label: Accessibility of creation
-        title: Start from the task.
+        title: Start from the task
         body: >-
           People can combine a demonstration with spoken instructions instead of
           defining every automation action upfront.
       - label: A connected experience
-        title: Voice meets the interface.
+        title: Voice meets the interface
         body: >-
           UI interaction, cursor movement and voice are brought together in the
           desktop recording experience.
       - label: Product storytelling
-        title: Make the concept tangible.
+        title: Make the concept tangible
         body: >-
           The work included an Ignite demonstration and was selected as a key
           feature for Microsoft Build.
