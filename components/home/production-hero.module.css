@@ -62,6 +62,12 @@
   border-top: 1px solid var(--line);
 }
 
+.currentProject { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; width: fit-content; margin-top: 22px; padding-block: 8px; min-height: 44px; font-size: 14px; }
+.currentProject > span:first-child { color: #b1b5a7; }
+.currentProject > strong { color: var(--acid); font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
+.currentProject > span:last-child { color: #b1b5a7; font-size: 12px; }
+.currentProject:hover > strong { color: #e4ffa2; }
+
 .metrics > div { display: flex; flex-direction: column; gap: 8px; }
 .metrics dt { color: #b1b5a7; font-size: 14px; line-height: 1.5; max-width: 135px; }
 .metrics dd { order: -1; margin: 0; font-family: var(--font-serif), Georgia, serif; font-size: 48px; line-height: 1; letter-spacing: -.06em; }

@@ -5,9 +5,11 @@ import Link from 'next/link';
 import { MotionConfig, motion, useScroll, useSpring } from 'framer-motion';
 import { OriginalLandingStory } from './original-landing-story';
 import { ProductionHero } from './production-hero';
+import { CurrentProject } from './current-project';
+import type { Video } from '@/lib/get-project-content';
 import styles from './immersive-landing.module.css';
 
-type LandingProject = { id: string; title: string; cover: string; year: string; description: string };
+type LandingProject = { id: string; title: string; cover: string; year: string; description: string; video?: Video };
 
 function SelectedWork({ projects }: { projects: LandingProject[] }) {
   const ids = ['power-apps-copilot', 'rpa-ai-recorder', 'rpa-self-healing'];
@@ -41,6 +43,7 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
 }
 
 export function ImmersiveLanding({ projects }: { projects: LandingProject[] }) {
+  const currentProject = projects.find(project => project.id === 'tainure');
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
@@ -50,6 +53,7 @@ export function ImmersiveLanding({ projects }: { projects: LandingProject[] }) {
         <a className={styles.skipLink} href="#work">Skip to selected work</a>
         <motion.div className={styles.readingProgress} style={{ scaleX: progress }} />
         <ProductionHero />
+        {currentProject && <CurrentProject project={currentProject} />}
         <SelectedWork projects={projects} />
         <OriginalLandingStory />
       </div>
