@@ -10,17 +10,12 @@ role: Senior Design Manager
 company: Microsoft
 videos:
   # Original: Dynamics 365 Fraud Protection — Microsoft Dynamics 365.
-  # Source: https://www.youtube.com/watch?v=DlkQ_7M9yeI (first 4:27).
-  - src: "/images/projects/fraud-protection/video/video_1_part1_with_audio.mp4"
+  # Source: https://www.youtube.com/watch?v=DlkQ_7M9yeI (complete 8:54 video).
+  - src: "/images/projects/fraud-protection/video/video_full_with_audio.mp4"
     thumbnail: "/images/projects/fraud-protection/video/thumbnail_part1.jpg"
     type: "local"
-    title: "Microsoft Fraud Protection Overview (Part 1)"
-    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud (Part 1/2)"
-  - src: "/images/projects/fraud-protection/video/video_1_part2.mp4"
-    thumbnail: "/images/projects/fraud-protection/video/thumbnail_part2.jpg"
-    type: "local"
-    title: "Microsoft Fraud Protection Overview (Part 2)"
-    description: "Learn how Microsoft Fraud Protection helps protect your business from fraud (Part 2/2)"
+    title: "Microsoft Fraud Protection Overview"
+    description: "The complete demo of how Microsoft Fraud Protection helps protect your business from fraud"
 gallery:
   - src: "/images/projects/fraud-protection/gallery/img_1.jpg"
     alt: "An onboarding introduction to evaluating Fraud Protection"
@@ -49,7 +44,7 @@ caseStudy:
   leadMedia:
     kind: video
     index: 1
-    caption: 'Fraud Protection · Product overview, part one'
+    caption: 'Fraud Protection · Complete product overview'
   overview:
     - label: The challenge
       title: Risk is hard to evaluate in the abstract
