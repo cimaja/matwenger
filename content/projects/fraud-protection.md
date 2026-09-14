@@ -11,7 +11,7 @@ company: Microsoft
 videos:
   # Original: Dynamics 365 Fraud Protection — Microsoft Dynamics 365.
   # Source: https://www.youtube.com/watch?v=DlkQ_7M9yeI (complete 8:54 video).
-  - src: "/images/projects/fraud-protection/video/video_full_with_audio.mp4"
+  - src: "/images/projects/fraud-protection/video/video_full_with_audio.mp4#t=235"
     thumbnail: "/images/projects/fraud-protection/video/thumbnail_part1.jpg"
     type: "local"
     title: "Microsoft Fraud Protection Overview"
