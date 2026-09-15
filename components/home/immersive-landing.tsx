@@ -7,28 +7,42 @@ import { OriginalLandingStory } from './original-landing-story';
 import { ProductionHero } from './production-hero';
 import styles from './immersive-landing.module.css';
 
-type LandingProject = { id: string; title: string; cover: string; year: string; description: string };
+type LandingProject = { id: string; title: string; cover: string; year: string; description: string; role: string };
+
+const selectedProjects = [
+  { id: 'tainure', category: 'A second brain for better working relationships', description: 'A second brain that turns everyday notes into context, preparation and coaching for better working relationships.' },
+  { id: 'power-apps-copilot', category: 'AI IN THE FLOW OF WORK', description: 'Your business apps. A conversation away.' },
+  { id: 'rpa-ai-recorder', category: 'SHOW. TELL. AUTOMATE.', description: 'From everyday actions to intelligent workflows.' },
+  { id: 'rpa-self-healing', category: 'AUTOMATION THAT ADAPTS', description: 'When interfaces change, your work keeps moving.' },
+];
 
 function SelectedWork({ projects }: { projects: LandingProject[] }) {
-  const ids = ['power-apps-copilot', 'rpa-ai-recorder', 'rpa-self-healing'];
-  const selection = ids.map(id => projects.find(project => project.id === id)).filter((project): project is LandingProject => Boolean(project));
+  const selection = selectedProjects.flatMap(feature => {
+    const project = projects.find(project => project.id === feature.id);
+    return project ? [{ project, feature }] : [];
+  });
 
   return (
     <section id="work" className={styles.work}>
       <div className={styles.sectionMeta}><span>01 / SELECTED WORK</span></div>
       <div className={styles.sectionTitle}><h2>Less friction<br /><em>More possibility</em></h2></div>
       <div className={styles.projectGrid}>
-        {selection.map((project, index) => (
-          <Link href={`/projects/${project.id}`} key={project.id} className={`${styles.projectCard} ${index === 0 ? styles.projectLead : ''}`}>
+        {selection.map(({ project, feature }, index) => (
+          <Link href={`/projects/${project.id}`} key={project.id} className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <Image src={project.cover} alt={project.title} fill sizes={index === 0 ? '(max-width: 700px) 100vw, 90vw' : '(max-width: 700px) 100vw, 45vw'} className={styles.coverImage} />
+              <Image src={project.cover} alt={project.title} fill sizes="(max-width: 760px) 100vw, 45vw" className={styles.coverImage} />
               <span className={styles.projectNumber}>0{index + 1}</span>
-              <span className={styles.projectCategory}>{index === 0 ? 'AI IN THE FLOW OF WORK' : index === 1 ? 'SHOW. TELL. AUTOMATE.' : 'AUTOMATION THAT ADAPTS'}</span>
+              <span className={styles.projectCategory}>
+                <span className={styles.projectValue}>{feature.category}</span>
+              </span>
             </div>
             <div className={styles.projectCaption}>
               <div>
-                <h3>{project.title}</h3>
-                <p>{index === 0 ? 'Your business apps. A conversation away.' : index === 1 ? 'From everyday actions to intelligent workflows.' : 'When interfaces change, your work keeps moving.'}</p>
+                <div className={styles.projectTitleRow}>
+                  <h3>{project.title}</h3>
+                  {project.id === 'tainure' && <span className={styles.projectRole}><span aria-hidden="true">·</span><span>In progress · {project.role}</span></span>}
+                </div>
+                <p>{feature.description}</p>
               </div>
               <span>{project.year}</span>
             </div>

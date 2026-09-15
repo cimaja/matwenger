@@ -35,6 +35,7 @@ export interface Video {
   type?: 'youtube' | 'local';
   src?: string;
   thumbnail?: string;
+  captions?: string;
   title?: string;
   description?: string;
 }
