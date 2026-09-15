@@ -1,7 +1,7 @@
 ---
 title: Tainure
 description: "A personal second brain for working relationships. Founded, designed and developed end to end, from meeting notes to useful context, preparation and coaching."
-cover: /images/projects/tainure/main/cover-monitor.png
+cover: /images/projects/tainure/main/cover-monitor-v3.png
 tags:
   - Founder
   - AI
@@ -11,11 +11,12 @@ order: 0
 role: Founder, Designer & Developer
 company: Tainure
 videos:
-  # Public product film from https://tainure.com, archived September 2026.
+  # Current public product film from https://tainure.com, archived 2026-09-15.
+  # Media sources and verification: docs/assets/tainure-film.md.
   # The people and notes in the film are fictional demonstration data.
-  - src: /images/projects/tainure/video/tainure-film.mp4
-    thumbnail: /images/projects/tainure/main/cover.jpg
-    captions: /images/projects/tainure/video/captions.en.vtt
+  - src: /images/projects/tainure/video/tainure-film-caption-sync.mp4
+    thumbnail: /images/projects/tainure/video/tainure-film-caption-sync-poster.jpg
+    captions: /images/projects/tainure/video/captions-caption-sync.en.vtt
     type: local
     title: A look inside Tainure
     description: How meeting notes become memory, preparation, coaching and evidence

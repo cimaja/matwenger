@@ -98,13 +98,13 @@
 .coverImage{object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s;filter:saturate(.65)}
 .projectCard:hover .coverImage{transform:scale(1.045);filter:saturate(1)}
 .projectImage:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 60%,#0008);pointer-events:none}
-.projectImage[data-current=true]:after{background:linear-gradient(transparent 35%,#141511f2 78%)}
 .projectNumber{position:absolute;left:22px;top:20px;font-family:var(--font-mono);font-size:12px;color:#fff;background:#14151150;backdrop-filter:blur(10px);padding:7px 10px;border:1px solid #ffffff30}
 .projectOpen{position:absolute;right:22px;top:20px;border-radius:50%;display:grid;place-items:center;width:48px;height:48px;background:var(--paper);color:var(--ink);transition:background .3s,transform .3s}
 .projectCard:hover .projectOpen{background:var(--acid);transform:rotate(45deg)}
-.projectCategory{position:absolute;left:22px;right:22px;bottom:22px;z-index:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;color:#fff;font-family:var(--font-mono);font-size:12px;line-height:1.6;letter-spacing:.055em}
+.projectCategory{position:absolute;left:22px;right:22px;bottom:22px;z-index:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;color:#fff;font:400 12px/1.6 var(--font-mono),monospace;letter-spacing:.055em;text-transform:uppercase}
 .projectValue{flex:1 1 200px}
-.projectCategory .projectRole{flex:1 1 240px;color:var(--acid);letter-spacing:0}
+.projectTitleRow{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.projectRole{display:inline-flex;align-items:baseline;gap:12px;max-width:100%;font:400 12px/1.6 var(--font-mono),monospace;color:var(--acid)}
 .projectCaption{display:flex;justify-content:space-between;gap:20px;padding-top:20px}.projectCaption h3{font-size:22px;letter-spacing:-.045em;font-weight:450}.projectCaption p{font-family:var(--font-sans),sans-serif;font-size:16px;font-weight:400;line-height:1.7;color:var(--muted);margin-top:4px}.projectCaption>span{display:flex;gap:15px;align-items:flex-start;padding-top:6px;font-family:var(--font-mono);font-size:12px;color:var(--muted)}
 .footer{display:flex;gap:35px;align-items:center;padding:28px 4.5%;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 .footer>span{margin-right:auto}.footer a{display:flex;align-items:center;gap:12px}
