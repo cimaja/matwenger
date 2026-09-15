@@ -10,10 +10,10 @@ import styles from './immersive-landing.module.css';
 type LandingProject = { id: string; title: string; cover: string; year: string; description: string; role: string };
 
 const selectedProjects = [
-  { id: 'tainure', category: 'INDEPENDENT PRODUCT', description: 'I’m building Tainure end to end: a second brain that turns everyday notes into context, preparation and coaching for better working relationships.', lead: true },
-  { id: 'power-apps-copilot', category: 'AI IN THE FLOW OF WORK', description: 'Your business apps. A conversation away.', lead: true },
-  { id: 'rpa-ai-recorder', category: 'SHOW. TELL. AUTOMATE.', description: 'From everyday actions to intelligent workflows.', lead: false },
-  { id: 'rpa-self-healing', category: 'AUTOMATION THAT ADAPTS', description: 'When interfaces change, your work keeps moving.', lead: false },
+  { id: 'tainure', category: 'A second brain for better working relationships', description: 'I’m building Tainure end to end: a second brain that turns everyday notes into context, preparation and coaching for better working relationships.' },
+  { id: 'power-apps-copilot', category: 'AI IN THE FLOW OF WORK', description: 'Your business apps. A conversation away.' },
+  { id: 'rpa-ai-recorder', category: 'SHOW. TELL. AUTOMATE.', description: 'From everyday actions to intelligent workflows.' },
+  { id: 'rpa-self-healing', category: 'AUTOMATION THAT ADAPTS', description: 'When interfaces change, your work keeps moving.' },
 ];
 
 function SelectedWork({ projects }: { projects: LandingProject[] }) {
@@ -28,16 +28,18 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
       <div className={styles.sectionTitle}><h2>Less friction<br /><em>More possibility</em></h2></div>
       <div className={styles.projectGrid}>
         {selection.map(({ project, feature }, index) => (
-          <Link href={`/projects/${project.id}`} key={project.id} className={`${styles.projectCard} ${feature.lead ? styles.projectLead : ''}`}>
-            <div className={styles.projectImage}>
-              <Image src={project.cover} alt={project.title} fill sizes={feature.lead ? '(max-width: 760px) 100vw, 90vw' : '(max-width: 760px) 100vw, 45vw'} className={styles.coverImage} />
+          <Link href={`/projects/${project.id}`} key={project.id} className={styles.projectCard}>
+            <div className={styles.projectImage} data-current={project.id === 'tainure' || undefined}>
+              <Image src={project.cover} alt={project.title} fill sizes="(max-width: 760px) 100vw, 45vw" className={styles.coverImage} />
               <span className={styles.projectNumber}>0{index + 1}</span>
-              <span className={styles.projectCategory}>{feature.category}</span>
+              <span className={styles.projectCategory}>
+                <span className={styles.projectValue}>{feature.category}</span>
+                {project.id === 'tainure' && <span className={styles.projectRole}>In progress · {project.role}</span>}
+              </span>
             </div>
             <div className={styles.projectCaption}>
               <div>
                 <h3>{project.title}</h3>
-                {project.id === 'tainure' && <p className={styles.projectRole}>In progress · {project.role}</p>}
                 <p>{feature.description}</p>
               </div>
               <span>{project.year}</span>

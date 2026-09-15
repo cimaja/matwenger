@@ -1,7 +1,7 @@
 ---
 title: Tainure
 description: "A personal second brain for working relationships. Founded, designed and developed end to end, from meeting notes to useful context, preparation and coaching."
-cover: /images/projects/tainure/main/cover.jpg
+cover: /images/projects/tainure/main/cover-monitor.png
 tags:
   - Founder
   - AI
