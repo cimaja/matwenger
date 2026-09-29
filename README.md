@@ -1,6 +1,6 @@
 # Mathias Wendlinger — Portfolio
 
-Source for [www.matwenger.design](https://www.matwenger.design): case studies, an about page, a lab of prototypes and a resume. It is a statically exported Next.js site published to GitHub Pages.
+Source for [matwenger.design](https://matwenger.design): case studies, an about page, a lab of prototypes and a resume. It is a statically exported Next.js site published to GitHub Pages.
 
 ## Development
 
