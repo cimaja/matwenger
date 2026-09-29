@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://matwenger.at/sitemap.xml
+Sitemap: https://matwenger.design/sitemap.xml

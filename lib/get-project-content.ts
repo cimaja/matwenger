@@ -64,15 +64,14 @@ export interface ProjectContent {
   caseStudy?: CaseStudy;
 }
 
+// Returns null only when the project does not exist. A project file that fails
+// to parse or validate throws, so the build fails instead of silently dropping it.
 export async function getProjectContent(id: string): Promise<ProjectContent | null> {
+  const fullPath = path.join(projectsDirectory, `${id}.md`);
+  if (!fs.existsSync(fullPath)) return null;
+
   try {
-    const fullPath = path.join(projectsDirectory, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    
-    // Parse the markdown file
-    const { data, content } = matter(fileContents);
-    
-    // Convert markdown to HTML
+    const { data, content } = matter(fs.readFileSync(fullPath, 'utf8'));
     const htmlContent = await marked(content);
 
     return {
@@ -92,8 +91,7 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
       content: htmlContent,
     };
   } catch (error) {
-    console.error(`Error reading project ${id}:`, error);
-    return null;
+    throw new Error(`Invalid project content in content/projects/${id}.md`, { cause: error });
   }
 }
 
