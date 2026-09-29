@@ -2,9 +2,9 @@
 
 Edited with the built-in ImageGen tool. The approved monitor photograph is the edit target; the user's new desktop screenshot is the replacement screen content.
 
-Saved image: `public/images/projects/tainure/main/cover-monitor-v2.png`.
+Saved image: `docs/assets/tainure/cover-monitor-v2.png` (kept out of `public/`; superseded by v3).
 
-The previous image remains available as `cover-monitor.png`.
+The previous image remains available as `docs/assets/tainure/cover-monitor.png`.
 
 ## Final prompt
 

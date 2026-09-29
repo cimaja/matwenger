@@ -4,7 +4,7 @@ Mode: built-in ImageGen, compositing edit.
 
 Saved image: `public/images/projects/tainure/main/cover-monitor-v3.png`.
 
-Inputs: the approved `cover-monitor-v2.png` photograph and the user-supplied Sarah Chen desktop screenshot (`codex-clipboard-84d1a146-75f5-4ab6-937e-c4da542c95f1.jpg`). Previous cover versions remain available.
+Inputs: the approved `docs/assets/tainure/cover-monitor-v2.png` photograph and the user-supplied Sarah Chen desktop screenshot (`codex-clipboard-84d1a146-75f5-4ab6-937e-c4da542c95f1.jpg`). Previous cover versions remain available in `docs/assets/tainure/`.
 
 ## Final prompt
 
