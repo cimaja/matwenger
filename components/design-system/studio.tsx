@@ -13,7 +13,11 @@ export function PageIntro({ eyebrow, title, description }: { eyebrow?: string; t
   return <div className={styles.intro}>{eyebrow && <SectionLabel>{eyebrow}</SectionLabel>}<h1>{title}</h1>{description && <p>{description}</p>}</div>;
 }
 export function SectionLabel({ children }: { children: ReactNode }) { return <div className={styles.eyebrow}>{children}</div>; }
-export function TextLink({ className, ...props }: ComponentProps<typeof Link>) { return <Link className={cn(styles.textLink, className)} {...props} />; }
+export function TextLink({ className, ...props }: ComponentProps<typeof Link>) {
+  // Static files are not routes: next/link would prefetch a payload for them that does not exist.
+  if (typeof props.href === 'string' && /^\/[^?#]*\.\w+$/.test(props.href)) return <a {...(props as ComponentProps<'a'>)} className={cn(styles.textLink, className)} />;
+  return <Link className={cn(styles.textLink, className)} {...props} />;
+}
 export function Tag({ children, tone = 'neutral' }: { children: ReactNode; tone?: 'neutral' | 'accent' | 'success' | 'warning' | 'danger' | 'info' }) {
   return <span className={styles.tag} data-tone={tone}>{children}</span>;
 }
