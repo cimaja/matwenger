@@ -28,12 +28,16 @@ export function DesignSystemShowcase({ project }: { project: { id: string; title
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
   useEffect(() => {
-    const next: Record<string, string> = {};
-    colorPanel.current?.querySelectorAll<HTMLElement>('[data-color]').forEach(chip => {
-      const rgb = getComputedStyle(chip).backgroundColor.match(/\d+/g);
-      next[chip.dataset.color!] = rgb ? '#' + rgb.slice(0, 3).map(value => Number(value).toString(16).padStart(2, '0')).join('') : '';
+    // Read the resolved colors once the new theme attribute has been painted.
+    const frame = requestAnimationFrame(() => {
+      const next: Record<string, string> = {};
+      colorPanel.current?.querySelectorAll<HTMLElement>('[data-color]').forEach(chip => {
+        const rgb = getComputedStyle(chip).backgroundColor.match(/\d+/g);
+        next[chip.dataset.color!] = rgb ? '#' + rgb.slice(0, 3).map(value => Number(value).toString(16).padStart(2, '0')).join('') : '';
+      });
+      setValues(next);
     });
-    setValues(next);
+    return () => cancelAnimationFrame(frame);
   }, [theme]);
   async function copy(token: string) {
     try { await navigator.clipboard.writeText(`hsl(var(--${token}))`); setMessage(`Token --${token} copié.`); }

@@ -1,231 +1,95 @@
-# Portfolio Website
+# Mathias Wendlinger — Portfolio
 
-A Next.js-based portfolio website showcasing design projects and case studies.
-
-## Project Structure
-
-```
-project/
-├── app/                  # Next.js app directory
-├── components/          # React components
-├── content/            # Markdown content
-│   └── projects/      # Project markdown files
-├── lib/               # Utility functions
-├── public/            # Static assets
-│   └── images/       # Image assets
-│       └── projects/ # Project-specific images
-└── types/             # TypeScript type definitions
-```
-
-## Adding Projects
-
-Projects are stored as markdown files in the `content/projects` directory. Each project should have its own `.md` file with the following structure:
-
-```markdown
----
-title: "Project Title"
-description: "A brief description of the project"
-image: "/images/projects/project-name/main/cover.jpg"  # Path to project image
-tags: ["Design", "UX", "Research"]
-year: "2023"
-role: "Product Designer"
-company: "Company Name"
-videoId: "dQw4w9WgXcQ"  # Optional: single YouTube video ID
-videos: # Optional: multiple YouTube video IDs
-  - id: "dQw4w9WgXcQ"
-    title: "Overview Video"  # Optional
-    description: "A brief overview of the project"  # Optional
-  - id: "xvFZjo5PgG0"
-    title: "Technical Demo"
-    description: "Detailed walkthrough of technical features"
-gallery:
-  - src: "/images/projects/project-name/gallery/image1.jpg"
-    alt: "Image Alt Text"
-    caption: "Optional caption describing the image"  # Optional
-  - src: "/images/projects/project-name/gallery/image2.jpg"
-    alt: "Second Image"
-    caption: "Another caption"
----
-
-## Overview
-
-Project overview content...
-
-## Key Responsibilities
-
-- Responsibility 1
-- Responsibility 2
-
-## Impact
-
-Impact content...
-```
-
-### Required Fields
-
-- `title`: Project title
-- `description`: Brief project description
-- `image`: Path to project cover image (see Image Guidelines below)
-- `tags`: Array of relevant tags
-- `year`: Year of project completion
-- `role`: Your role in the project
-- `company`: Company or organization
-
-### Optional Fields
-
-#### Adding Videos
-
-Projects can include multiple videos with titles and descriptions. Add them to your project's frontmatter like this:
-
-```markdown
----
-title: "Project Title"
-# ... other fields ...
-videos:
-  - id: "dQw4w9WgXcQ"
-    title: "Overview Video"  # Optional
-    description: "A brief overview of the project"  # Optional
-  - id: "xvFZjo5PgG0"
-    title: "Technical Demo"
-    description: "Detailed walkthrough of technical features"
----
-```
-
-To get a YouTube video ID:
-
-1. **From a standard YouTube URL:**
-   ```
-   https://www.youtube.com/watch?v=dQw4w9WgXcQ
-                                  └──────┬──────┘
-                                     video ID
-   ```
-
-2. **From a shortened YouTube URL:**
-   ```
-   https://youtu.be/dQw4w9WgXcQ
-                    └──────┬──────┘
-                       video ID
-   ```
-
-3. **From a YouTube embed URL:**
-   ```
-   https://www.youtube.com/embed/dQw4w9WgXcQ
-                                └──────┬──────┘
-                                   video ID
-   ```
-
-The video gallery will automatically:
-- Display a single video if only one is provided
-- Show navigation arrows and dots for multiple videos
-- Support keyboard navigation (left/right arrows)
-- Animate smoothly between videos
-- Display optional titles and descriptions
-
-#### Adding a Gallery
-
-Projects can include a gallery of images with captions. Add them to your project's frontmatter:
-
-```markdown
----
-title: "Project Title"
-# ... other fields ...
-gallery:
-  - src: "/images/projects/project-name/gallery/image1.jpg"
-    alt: "Image Alt Text"
-    caption: "Optional caption describing the image"  # Optional
-  - src: "/images/projects/project-name/gallery/image2.jpg"
-    alt: "Second Image"
-    caption: "Another caption"
----
-```
-
-The gallery will automatically:
-- Display images in a responsive grid
-- Support lightbox view on click
-- Show captions in lightbox view
-- Enable keyboard navigation (left/right arrows)
-- Animate smoothly between images
-
-#### Image Organization
-
-Each project should have its own directory for images, organized like this:
-```
-public/
-└── images/
-    └── projects/
-        └── project-name/    # Project folder
-            ├── main/        # Main project images
-            │   └── cover.jpg    # Main project image
-            └── gallery/     # Gallery images
-                ├── image1.jpg
-                ├── image2.jpg
-                └── image3.jpg
-```
-
-#### Main Project Image
-- Store the main project image in the `main` folder
-- Use `cover.jpg` as the filename
-- Reference it in your markdown as:
-  ```markdown
-  image: "/images/projects/project-name/main/cover.jpg"
-  ```
-
-#### Gallery Images
-- Store gallery images in the `gallery` folder
-- Use descriptive filenames
-- Reference them in your markdown as:
-  ```markdown
-  gallery:
-    - src: "/images/projects/project-name/gallery/image1.jpg"
-      alt: "Image Description"
-      caption: "Optional caption"
-  ```
-
-### Image Guidelines
-
-#### Image Formats
-- Use `.jpg` for photographs and general images
-- Use `.png` for screenshots or images with transparency
-- Use `.webp` for better compression (with .jpg/.png fallbacks)
-
-#### Best Practices
-- Keep main project images consistent in aspect ratio (16:9 recommended)
-- Optimize images for web before uploading
-- Use meaningful, descriptive filenames
-- Include alt text for accessibility
-- Add captions to provide context
+Source for [matwenger.design](https://matwenger.design): case studies, an about page, a lab of prototypes and a resume. It is a statically exported Next.js site published to GitHub Pages.
 
 ## Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
+npm run dev      # http://localhost:3001
+npm run lint
+npm run build    # type-checks and exports the site to out/
+npm start        # serves out/ locally
 ```
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which lints, builds and deploys `out/` to GitHub Pages.
+
+## Project structure
+
+```
+app/                  Routes (App Router), design tokens and global styles
+components/
+  design-system/      Shared page, gallery, media and navigation components
+  home/ about/ lab/   Page-specific components
+  projects/           Project cards and the case-study template
+  ui/                 shadcn/ui primitives in use
+content/projects/     One Markdown file per project
+lib/                  Content loading, case-study schema and page data
+public/               Static assets, served as-is
+docs/                 Design system reference, resume source, asset notes
+```
+
+## Adding a project
+
+Create `content/projects/<id>.md`. The file name becomes the URL, `/projects/<id>`.
+
+```markdown
+---
+title: "Project Title"
+description: "One or two sentences shown on cards and in search results"
+cover: "/images/projects/<id>/main/cover.jpg"
+tags: ["AI", "Enterprise"]
+year: "2026"
+order: 1                     # Optional: position among projects of the same year
+role: "Principal Design Manager"
+company: "Microsoft"
+videos:                      # Optional
+  - src: "/images/projects/<id>/video/video_1.mp4"
+    thumbnail: "/images/projects/<id>/video/thumbnail_1.jpg"
+    captions: "/images/projects/<id>/video/captions.en.vtt"   # Optional
+    type: "local"
+    title: "Overview"
+  - type: "youtube"
+    id: "dQw4w9WgXcQ"
+gallery:                     # Optional
+  - src: "/images/projects/<id>/gallery/img_1.jpg"
+    alt: "Describe what the image shows"
+    caption: "Optional context"
+    ratio: "portrait"        # Optional: landscape, wide, square or portrait
+caseStudy:                   # Optional, see below
+  ...
+---
+
+## Overview
+
+In a case study, the Markdown body appears under "Full project notes & responsibilities" at the end of the page.
+```
+
+Projects are listed newest first, then by `order`, then by file name.
+
+### Case studies
+
+A `caseStudy` block turns the page into the editorial case-study layout: headline, introduction, lead media, overview, a walkthrough of the experience, key decisions and outcomes. Its media fields are 1-based positions in `gallery` and `videos`. The schema lives in `lib/project-case-study.ts`, and a full example is in section 12 of [docs/design-system.md](docs/design-system.md). Without `caseStudy`, the project uses a simpler page.
+
+The build fails, naming the file, if a project's frontmatter is invalid or a case study points at media that does not exist.
+
+### Media
+
+```
+public/images/projects/<id>/
+├── main/       cover image
+├── gallery/    screenshots and photos
+└── video/      videos, posters and captions
+```
+
+- Images are not optimized at build time. Compress them before committing, and export at the size they are displayed (960, 1600 or 2400 px wide depending on use).
+- Use JPEG or WebP for photos and covers, and PNG or lossless WebP for detailed interface screenshots.
+- Keep covers at 16:9, and give every image descriptive alt text.
+- Provide captions or a transcript for videos with speech.
 
 ## Technologies
 
-- Next.js 13 (App Router)
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- gray-matter (Markdown parsing)
-- marked (Markdown to HTML conversion)
-
-## Running the Website
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
+Next.js 16 (App Router, static export), React 18, TypeScript, Tailwind CSS, CSS modules, Framer Motion, Radix UI via shadcn/ui, gray-matter, marked and zod.
 
 ## Charte graphique
 

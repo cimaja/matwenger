@@ -2,7 +2,7 @@
 
 Created with the built-in ImageGen tool from the user-provided Tainure screenshot and the existing Power Apps Copilot and RPA AI Recorder project covers as style references.
 
-Saved image: `public/images/projects/tainure/main/cover-monitor.png`.
+Saved image: `docs/assets/tainure/cover-monitor.png` (kept out of `public/`; superseded by v3).
 
 ## Final prompt
 

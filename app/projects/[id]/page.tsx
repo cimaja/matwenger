@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import type { ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ProjectContent } from '@/components/projects/project-content';
 import { getProjectContent, getAllProjects } from '@/lib/get-project-content';
@@ -9,10 +8,7 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const project = await getProjectContent(id);
 

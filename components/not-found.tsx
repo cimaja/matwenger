@@ -16,7 +16,7 @@ export function NotFound() {
         >
           <h1 className="text-4xl font-bold mb-4">Page Not Found</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Sorry, we couldn't find the page you're looking for.
+            Sorry, we couldn&apos;t find the page you&apos;re looking for.
           </p>
           <Button asChild>
             <Link href="/" className="flex items-center gap-2">

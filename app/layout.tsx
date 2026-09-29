@@ -33,11 +33,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mathias Wendlinger' }],
   creator: 'Mathias Wendlinger',
-  icons: {
-    icon: '/images/Applogo/logo.png',
-    shortcut: '/images/Applogo/logo.png',
-    apple: '/images/Applogo/logo.png',
-  },
   openGraph: {
     title: 'Mathias Wendlinger - Principal Design Manager',
     description: 'Principal Design Manager at Microsoft Power Platform, leading design across Power Apps, Power Automate, and Power Pages.',
@@ -48,8 +43,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://matwenger.design/images/Applogo/profil.jpeg',
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 1024,
         alt: 'Mathias Wendlinger - Principal Design Manager at Microsoft',
       },
     ],

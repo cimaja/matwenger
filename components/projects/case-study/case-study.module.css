@@ -89,13 +89,6 @@
 .prose li { padding-left: 8px; margin-bottom: 16px; }
 .prose a { color: hsl(var(--link)); text-decoration: underline; text-underline-offset: 5px; }
 .prose a:hover { color: hsl(var(--link-hover)); }
-.additionalVideo { margin: 0 0 48px; }
-.videoCollection { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 32px; margin-bottom: 48px; }
-.videoList[role=tablist] { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; height: auto; padding: 0; border-radius: 0; background: transparent; }
-.videoTab[role=tab] { display: flex; justify-content: flex-start; gap: 16px; text-align: left; white-space: normal; min-height: 64px; padding: 16px 0; border-bottom: 1px solid hsl(var(--border)); border-radius: 0; font-size: var(--ds-text-label); font-weight: 400; line-height: 1.6; }
-.videoTab[role=tab][data-state=active] { color: hsl(var(--accent-foreground)); background: transparent; box-shadow: none; text-decoration: underline; text-underline-offset: 6px; }
-.videoTab>span { font: var(--ds-text-meta)/1.6 var(--font-mono), monospace; }
-.videoPanel[role=tabpanel] { margin: 0; }
 .nextProject { background: hsl(var(--card)); padding-block: 48px var(--ds-section); }
 .nextHeading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
 .nextHeading>div { margin: 0; }
@@ -146,7 +139,6 @@
   .decision[data-has-image=false] .decisionCopy { display: block; }
   .decision[data-has-image=false] h3 { margin-bottom: 20px; }
   .nextCard { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .videoCollection { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .nextCard h2 { max-width: 550px; margin-bottom: 24px; }
 }
 

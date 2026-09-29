@@ -25,20 +25,19 @@ function ImpactMetric({ metric, index }: { metric: typeof metrics[number]; index
     }
 
     count.set(0);
-    if (!inView || !ref.current) return;
+    const node = ref.current;
+    if (!inView || !node) return;
 
     const delay = index * 0.16;
     const counter = animate(count, metric.value, { duration: 0.9, delay, ease: [0.2, 0.7, 0.2, 1] });
-    const entrance = animate(ref.current, { opacity: [0, 1], x: [-14, 0] }, { duration: 0.5, delay, ease: [0.2, 0.7, 0.2, 1] });
+    const entrance = animate(node, { opacity: [0, 1], x: [-14, 0] }, { duration: 0.5, delay, ease: [0.2, 0.7, 0.2, 1] });
 
     return () => {
       counter.stop();
       entrance.stop();
       // A preference change during the entrance must not leave a faded or shifted column.
-      if (ref.current) {
-        ref.current.style.opacity = '1';
-        ref.current.style.transform = 'none';
-      }
+      node.style.opacity = '1';
+      node.style.transform = 'none';
     };
   }, [count, inView, index, metric.value, reduceMotion]);
 

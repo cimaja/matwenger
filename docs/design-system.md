@@ -77,7 +77,7 @@ Les thèmes sont des contextes de section, pas une préférence globale clair / 
 .panel { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); }
 ```
 
-Les utilitaires `accent-purple` et `accent-green` restent des alias de compatibilité pour les anciens composants. Leur valeur suit les nouveaux rôles. Ne pas utiliser ces noms pour du nouveau code.
+L’utilitaire `accent-purple` reste un alias de compatibilité pour la vue projet sans étude de cas. Sa valeur suit les nouveaux rôles. Ne pas utiliser ce nom pour du nouveau code.
 
 ## 4. Typographie
 
@@ -213,15 +213,15 @@ L’inventaire est fondé sur les composants actifs des routes du dépôt corres
 | `components/about/journey.tsx` | 7 étapes de parcours | JourneyTimeline, lieux / résultats conservés |
 | `app/lab/page.tsx` | 8 prototypes et expériences | Grille 3 / 2 / 1, cartes sans image, textes complets |
 | `components/lab/lab-project-card.tsx` | Titre, description, date, tags, lien externe, verrou | GalleryCard, Tags, statut d’accès explicite |
-| `app/projects/page.tsx` | Collection de 12 projets | Grille 2 / 1, PageIntro, cartes et skeletons partagés |
+| `app/projects/page.tsx` | Collection de 13 projets | Grille 2 / 1, PageIntro, cartes et skeletons partagés |
 | `components/projects/project-card.tsx` | Couverture, rôle, année, description, catégories | GalleryCard et MediaFrame, aucune flèche décorative |
 | `components/projects/image-gallery.tsx` | Carrousel, zoom, navigation | MediaGallery partagé et Dialog accessible |
 | `components/projects/video-gallery.tsx` | Vidéo locale ou YouTube, précédent / suivant | Lecteurs conservés, boutons communs et noms accessibles |
-| `components/projects/case-study/` | 12 études de cas, image ou vidéo, parcours, décisions, résultats | CaseStudyTemplate commun, médias intégrés au récit, captures portrait et paysage |
+| `components/projects/case-study/` | 13 études de cas, image ou vidéo, parcours, décisions, résultats | CaseStudyTemplate commun, médias intégrés au récit, captures portrait et paysage |
 | Navigation et footer | Versions différentes entre landing et pages internes | SiteHeader / SiteFooter partagés, logo mw, liens soulignés |
 | Landing | Hero, galerie, méthode, expérience, témoignages, contact | Palette partagée, header / footer communs ; composition validée conservée |
 
-Les 12 pages de détails utilisent le template éditorial décrit ci-dessous. Chaque fiche fournit son propre récit, avec des médias associés aux explications. Les notes Markdown d’origine, les liens et tous les fichiers médias sont conservés. Les descriptions des captures ont été ajustées d’après les assets, notamment pour distinguer les écrans produits des explorations et spécifications de design. Les anciens composants non montés restent dans le dépôt.
+Les 13 pages de détails utilisent le template éditorial décrit ci-dessous. Chaque fiche fournit son propre récit, avec des médias associés aux explications. Les notes Markdown d’origine, les liens et tous les fichiers médias sont conservés. Les descriptions des captures ont été ajustées d’après les assets, notamment pour distinguer les écrans produits des explorations et spécifications de design. Les anciens composants non montés ont été supprimés ; ils restent consultables dans l’historique Git.
 
 ## 11. Ajouter une page
 
@@ -233,7 +233,7 @@ Les 12 pages de détails utilisent le template éditorial décrit ci-dessous. Ch
 6. Ajouter toute variante réutilisable à `/design-system` et à cette documentation.
 7. Vérifier les types, la compilation, les contrastes concernés et les routes modifiées.
 
-## 12. Template d’étude de cas — les 12 projets
+## 12. Template d’étude de cas — les 13 projets
 
 Exemple local : `/projects/power-apps-copilot`. Le composant `components/projects/case-study/case-study-template.tsx` est commun : aucune condition liée au nom du projet ni texte Copilot dans le template.
 
@@ -250,6 +250,7 @@ Les parties parcours, décisions, résultats et média d’ouverture sont facult
 
 Exemples de variantes :
 
+- **Tainure** : film produit sous-titré en ouverture, lien externe vers le produit et quatre étapes illustrées. Données de démonstration fictives, signalées dans les légendes.
 - **Power Apps Copilot, AI Recorder, Self-healing, NL2flow, AI Builder, Fraud Protection** : démonstration en ouverture et trois étapes illustrées.
 - **Dynamics 365** : vidéo avant / après, décisions textuelles et lien visible vers le prototype protégé. Aucun parcours fictif n’est ajouté en l’absence de captures.
 - **Microsoft Books** : vidéos associées aux décisions sur la typographie et les annotations.
@@ -259,7 +260,7 @@ Exemples de variantes :
 
 ### Réutiliser le template
 
-Ajouter une propriété `caseStudy` au front matter du fichier `content/projects/<slug>.md`. Sans cette propriété, le projet conserve son rendu actuel. Les galeries, vidéos et notes Markdown existantes restent la source du contenu.
+Ajouter une propriété `caseStudy` au front matter du fichier `content/projects/<slug>.md`. Sans cette propriété, le projet utilise l’ancienne vue projet. Une propriété invalide fait échouer la compilation en nommant la fiche concernée. Les galeries, vidéos et notes Markdown existantes restent la source du contenu.
 
 ```yaml
 caseStudy:
@@ -313,5 +314,5 @@ Une propriété facultative `links` dans `caseStudy` contient des liens d’acti
 - `MediaFigure` : capture `contain`, légende, agrandissement via Radix Dialog, Échap et retour du focus. Aucune flèche décorative ni recadrage des interfaces.
 - Chaque entrée de `gallery` peut préciser `ratio: portrait`, `square`, `landscape` ou `wide`. Les captures verticales gardent leur format, avec une largeur limitée dans le parcours fixe et la galerie pour rester lisibles sans déborder de l’écran.
 - `CaseStudyVideo` : lecteur local avec bouton de lecture nommé, affiche et contrôles natifs ; reprend également le lecteur YouTube existant. Pas de lecture automatique avec son. Fournir une transcription ou des sous-titres pour les futures vidéos parlées.
-- Les pages présentent les médias associés à l’ouverture, au parcours et aux décisions. Les autres fichiers et leurs références restent conservés dans les fiches sources pour un usage ultérieur. `MediaGallery` et `CaseStudyVideoGallery` restent disponibles comme composants, mais ne sont pas montés dans le template d’étude de cas.
+- Les pages présentent les médias associés à l’ouverture, au parcours et aux décisions. Les autres fichiers et leurs références restent conservés dans les fiches sources pour un usage ultérieur. `MediaGallery` reste disponible (vue projet sans étude de cas et page `/design-system`), mais n’est pas monté dans le template d’étude de cas.
 - Les transitions du parcours durent 360 ms et sont désactivées en mouvement réduit. La couleur et le soulignement identifient ensemble l’étape sélectionnée.
