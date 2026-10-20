@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import { parseFrontMatter } from './front-matter';
 import { marked } from 'marked';
 import type { Renderer, Tokens } from 'marked';
 import { parseCaseStudy, type CaseStudy } from './project-case-study';
@@ -71,7 +71,7 @@ export async function getProjectContent(id: string): Promise<ProjectContent | nu
   if (!fs.existsSync(fullPath)) return null;
 
   try {
-    const { data, content } = matter(fs.readFileSync(fullPath, 'utf8'));
+    const { data, content } = parseFrontMatter(fs.readFileSync(fullPath, 'utf8'));
     const htmlContent = await marked(content);
 
     return {
