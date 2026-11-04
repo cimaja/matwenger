@@ -43,11 +43,10 @@ export function LandingRecommendations() {
 
   return (
     <div className={styles.story}>
-      <section id="testimonials" className={`${styles.recommendations} ${styles.centeredRecommendations}`} aria-labelledby="recommendations-title">
-        <div className={styles.sectionMeta}><span>03 / WHAT PEOPLE SAY</span></div>
+      <section id="testimonials" data-studio-theme="paper" className={`${styles.recommendations} ${styles.centeredRecommendations}`} aria-labelledby="recommendations-title">
         <div className={styles.recommendationLayout}>
           <div className={styles.recommendationIntro}>
-            <h2 id="recommendations-title">What<br /><em>people say</em></h2>
+            <h2 id="recommendations-title">What people say</h2>
             <span className={styles.recommendationCount}>{testimonials.length} perspectives.<br />Design, research, and product.</span>
             <div className={styles.quoteNavigation}>
               <button type="button" aria-label="Previous testimonial" onClick={() => selectPerson(-1)}><ArrowLeft size={20} /></button>
@@ -86,9 +85,8 @@ export function LandingRecommendations() {
 export function LandingContact() {
   return (
     <div className={styles.story}>
-      <section id="contact" className={styles.contact} aria-labelledby="contact-title">
-        <div className={styles.sectionMeta}><span>05 / LET’S CONNECT</span></div>
-        <div className={styles.contactLayout}><h2 id="contact-title">Let’s make<br /><em>what’s next</em></h2></div>
+      <section id="contact" data-studio-theme="acid" className={styles.contact} aria-labelledby="contact-title">
+        <div className={styles.contactLayout}><h2 id="contact-title">Let’s make<br />what’s next</h2></div>
         <div className={`${styles.contactActions} ${styles.underlinedActions}`}>
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           <a href={resume} target="_blank" rel="noopener noreferrer">View resume</a>

@@ -1,0 +1,15 @@
+{
+  "scanned": "2026-11-04",
+  "findings": {
+    "brand": "mw charter, docs/design-system.md (13 Sept 2026) + app/design-tokens.css:1-126; no root design.md, so not locked",
+    "fonts": "Inter (sans and display), Fraunces (italic accent in heads), JetBrains Mono (labels, dates, tags) via next/font, app/layout.tsx:11-13",
+    "palette": "ink #141511, paper #f1f2eb, acid #d4fc79 + surface/elevated/secondary/muted/line primitives; three section contexts via data-studio-theme (app/design-tokens.css:2-9, 42, 72, 99)",
+    "motion": "framer-motion 11 (package.json:21); duration tokens 180/360ms, reduced-motion zeroes them (app/design-tokens.css:26-28, 126)",
+    "spacing": "4px scale --ds-space-1..16 (app/design-tokens.css:14-21); list container 1440px, reading 720px, gutter 4.5%/6%",
+    "framework": "Next.js 16 app router, static export; Tailwind 3.4.19 + shadcn/ui",
+    "pages": "/ (home), /projects, /projects/[id] (13, case-study template), /about, /lab are public pages; /design-system and /v1 (home alias) are noindex"
+  },
+  "preserve": ["ink / paper / acid palette", "mw wordmark", "content and wiring", "4px spacing scale"],
+  "introduce": ["Floor fixes: roman heads, body-face labels, overflow clip, tokens only", "shape and composition per page", "capped container at 1920", "hero discipline", "slots"],
+  "conflicts": ["charter's Fraunces italic accent inside heads vs Floor 3 (38i)", "charter's mono tracked section labels vs Floor 9 (54, 64, 67)", "Inter as display face (Reflex 1)"]
+}

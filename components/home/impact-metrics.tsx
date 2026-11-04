@@ -8,6 +8,7 @@ const metrics = [
   { value: 50, prefix: '', suffix: 'M+', label: 'monthly active users', note: 'Across the Power Platform experiences my team supports.' },
   { value: 81, prefix: '+', suffix: '%', label: 'more apps published', note: 'From A/B experiments in the Power Apps maker funnel.' },
   { value: 12, prefix: '', suffix: '', label: 'designers. one team.', note: 'Across India, Greece, and the United States.' },
+  { value: 8, prefix: '', suffix: '', label: 'years managing teams', note: 'Since 2018, when I became a design manager.' },
 ];
 
 function ImpactMetric({ metric, index }: { metric: typeof metrics[number]; index: number }) {
@@ -45,7 +46,7 @@ function ImpactMetric({ metric, index }: { metric: typeof metrics[number]; index
     <motion.strong aria-hidden="true" className={styles.impactNumber}>{display}</motion.strong>
     <span className="sr-only">{finalValue}</span>
     <span>{metric.label}</span>
-    <p>{metric.note}</p>
+    {metric.note && <p>{metric.note}</p>}
   </div>;
 }
 

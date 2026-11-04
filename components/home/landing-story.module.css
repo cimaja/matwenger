@@ -1,63 +1,50 @@
-.story {
-  --quiet: #aab09e;
-  --rule: #373d2e;
-  font-size: 1rem;
-}
+/* Hallmark · checked: 2026-11-04 · genre: editorial (inferred) · the stamp of record is app/globals.css
+ * built: the project · redesign: polish · v2.0.0 */
+.story { font-size: 1rem; }
 
 .story h2 { font-weight: 450; letter-spacing: -.065em; line-height: 1.04; }
-.story h2 em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .story section[id] { scroll-margin-top: 32px; }
-.story a:focus-visible, .story button:focus-visible { outline-offset: 5px; }
+.story a:focus-visible, .story button:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 5px; }
 
-.sectionMeta {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  color: var(--quiet);
-  font: .75rem/1.6 var(--font-mono), monospace;
-  letter-spacing: .06em;
-}
-
-.recommendations { padding: 58px 4.5% 35px; background: var(--paper); color: var(--ink); }
-.recommendations .sectionMeta { color: #666f5b; }
-.recommendations button:focus-visible { outline-color: #405d20; }
-.recommendationLayout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 8%; padding: 58px 0 48px; }
+/* What people say: the paper context of the charter */
+.recommendations { padding: 104px var(--ds-inset) 72px; background: hsl(var(--background)); color: hsl(var(--foreground)); }
+.recommendationLayout { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 8%; padding: 0 0 48px; }
 .recommendationIntro h2 { font-size: clamp(45px, 4.6vw, 70px); }
-.recommendationCount { display: block; font-size: .875rem; color: #626e52; line-height: 1.8; margin-top: 25px; }
-.quoteNavigation { display: flex; align-items: center; gap: 9px; margin-top: 30px; }
-.quoteNavigation button { width: 44px; height: 44px; border: 1px solid #a8b397; border-radius: 50%; display: grid; place-items: center; transition: background .2s; }
-.quoteNavigation button:hover { background: var(--acid); }
-.quoteNavigation > span { font: .75rem var(--font-mono), monospace; margin-left: 14px; }
-.quoteNavigation > span > span { color: #76816a; }
+.recommendationCount { display: block; font-size: .875rem; color: hsl(var(--muted-foreground)); line-height: 1.8; margin-top: 24px; }
+.quoteNavigation { display: flex; align-items: center; gap: 8px; margin-top: 28px; }
+.quoteNavigation button { width: 44px; height: 44px; border: 1px solid hsl(var(--input)); border-radius: 50%; display: grid; place-items: center; transition: background-color var(--ds-duration-fast); }
+.quoteNavigation button:hover { background: var(--studio-acid); }
+.quoteNavigation button:active { background: hsl(var(--card)); }
+.quoteNavigation > span { font-size: .875rem; font-variant-numeric: tabular-nums; margin-left: 16px; }
+.quoteNavigation > span > span { color: hsl(var(--tertiary)); }
 .quotePanel { position: relative; min-height: 320px; padding-top: 24px; }
-.quote { margin: 0; font: 400 clamp(25px, 2.65vw, 40px)/1.4 var(--font-serif), Georgia, serif; letter-spacing: -.04em; text-wrap: pretty; }
-.quoteAuthor { display: flex; align-items: center; gap: 15px; margin-top: 32px; }
+.quote { margin: 0; font: 400 clamp(25px, 2.65vw, 40px)/1.4 var(--font-serif); letter-spacing: -.04em; text-wrap: pretty; }
+.quoteAuthor { display: flex; align-items: center; gap: 16px; margin-top: 32px; }
 .quoteAuthor img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; filter: grayscale(1); }
 .quoteAuthor strong { display: block; font-size: .875rem; font-weight: 550; }
-.quoteAuthor span { display: block; font-size: .8125rem; color: #6a765c; margin-top: 3px; }
+.quoteAuthor span { display: block; font-size: .8125rem; color: hsl(var(--tertiary)); margin-top: 4px; }
 
-.centeredRecommendations { padding-bottom: 70px; }
-.centeredRecommendations .recommendationLayout { display: flex; flex-direction: column; align-items: center; gap: 48px; padding: 48px 0 0; }
+.centeredRecommendations .recommendationLayout { display: flex; flex-direction: column; align-items: center; gap: 48px; padding: 0; }
 .centeredRecommendations .recommendationIntro { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 32px; align-items: end; width: 100%; }
 .centeredRecommendations .recommendationIntro h2 { grid-row: 1 / 3; }
 .centeredRecommendations .recommendationCount { margin-top: 0; text-align: right; }
-.centeredRecommendations .quoteNavigation { justify-content: flex-end; margin-top: 18px; }
+.centeredRecommendations .quoteNavigation { justify-content: flex-end; margin-top: 16px; }
 .centeredRecommendations .quotePanel { display: flex; flex-direction: column; justify-content: center; width: min(100%, 1120px); min-height: 420px; padding: 32px 0; text-align: center; }
 .centeredRecommendations .quote { font-size: clamp(32px, 3.4vw, 54px); line-height: 1.45; }
-.centeredRecommendations .quoteAuthor { justify-content: center; align-items: center; margin-top: 38px; text-align: left; }
+.centeredRecommendations .quoteAuthor { justify-content: center; align-items: center; margin-top: 40px; text-align: left; }
 
-.contact { background: var(--acid); color: var(--ink); padding: 38px 4.5% 34px; }
-.contact .sectionMeta { color: #556b34; }
-.contact a:focus-visible { outline-color: var(--ink); }
-.contactLayout { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 55px 0 50px; }
+/* Let's make what's next: the acid context of the charter */
+.contact { background: hsl(var(--background)); color: hsl(var(--foreground)); padding: 64px var(--ds-inset) 36px; }
+.contactLayout { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 0 0 48px; }
 .contactLayout h2 { font-size: clamp(70px, 9.8vw, 155px); }
-.contactActions { display: flex; gap: 42px; border-top: 1px solid #9fbd63; padding-top: 20px; }
-.contactActions a { display: flex; align-items: center; gap: 22px; font-size: .875rem; min-height: 44px; }
-.contactActions a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.contactActions { display: flex; gap: 40px; border-top: 1px solid hsl(var(--border)); padding-top: 20px; }
+.contactActions a { display: flex; align-items: center; gap: 20px; font-size: .875rem; min-height: 44px; }
+.contactActions a:hover { color: hsl(var(--link-hover)); }
+.contactActions a:active { color: hsl(var(--tertiary)); }
 .underlinedActions a { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
 @media (max-width: 1100px) {
-  .recommendationLayout { grid-template-columns: .7fr 1.3fr; gap: 9%; }
+  .recommendationLayout { gap: 9%; }
 }
 
 @media (max-width: 900px) {
@@ -65,33 +52,31 @@
 }
 
 @media (max-width: 650px) {
-  .sectionMeta { font-size: .75rem; }
-  .sectionMeta > span + span { display: none; }
-  .recommendations { padding: 42px 6% 27px; }
-  .recommendationLayout { grid-template-columns: 1fr; gap: 35px; padding: 32px 0; }
+  .recommendations { padding-block: 64px 28px; }
+  .recommendationLayout { grid-template-columns: minmax(0, 1fr); gap: 36px; padding: 0 0 32px; }
   .recommendationIntro h2 { font-size: 13vw; }
-  .recommendationCount { margin-top: 18px; }
-  .quoteNavigation { margin-top: 22px; }
+  .recommendationCount { margin-top: 16px; }
+  .quoteNavigation { margin-top: 20px; }
   .quotePanel { padding-top: 12px; min-height: 0; }
   .quote { font-size: 27px; line-height: 1.45; }
-  .quoteAuthor { margin-top: 26px; gap: 12px; align-items: flex-start; }
+  .quoteAuthor { margin-top: 28px; gap: 12px; align-items: flex-start; }
   .quoteAuthor span { line-height: 1.6; }
-  .centeredRecommendations { padding-bottom: 45px; }
-  .centeredRecommendations .recommendationLayout { gap: 26px; padding-top: 32px; }
+  .centeredRecommendations { padding-bottom: 44px; }
+  .centeredRecommendations .recommendationLayout { gap: 28px; padding-top: 0; }
   .centeredRecommendations .recommendationIntro { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .centeredRecommendations .recommendationIntro h2 { grid-row: auto; }
   .centeredRecommendations .recommendationCount { text-align: left; }
   .centeredRecommendations .quoteNavigation { justify-content: flex-start; margin-top: 0; }
-  .centeredRecommendations .quotePanel { min-height: 360px; padding: 15px 0; }
+  .centeredRecommendations .quotePanel { min-height: 360px; padding: 16px 0; }
   .centeredRecommendations .quote { font-size: clamp(28px, 7.5vw, 36px); }
-  .centeredRecommendations .quoteAuthor { margin-top: 30px; }
-  .contact { padding: 30px 6%; }
-  .contactLayout { padding: 40px 0; gap: 15px; }
+  .centeredRecommendations .quoteAuthor { margin-top: 28px; }
+  .contact { padding-block: 44px 32px; }
+  .contactLayout { padding: 0 0 40px; gap: 16px; }
   .contactLayout h2 { font-size: 13.5vw; }
-  .contactActions { gap: 12px 25px; flex-wrap: wrap; padding-top: 16px; }
+  .contactActions { gap: 12px 24px; flex-wrap: wrap; padding-top: 16px; }
   .contactActions a { font-size: .8125rem; gap: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .story *, .story *:before, .story *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .story *, .story *::before, .story *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

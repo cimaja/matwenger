@@ -8,8 +8,14 @@
   --studio-secondary: #bccf98;
   --studio-muted: #9b9f92;
   --studio-line: #34362f;
+  --studio-edge: #424738;
+  --studio-acid-soft: #e4ffa2;
+  --studio-scrim: rgb(20 21 17 / .62);
+  --studio-shadow: rgb(20 21 17 / .6);
   --ds-gutter: 4.5%;
   --ds-content: 1440px;
+  /* Section padding that keeps content inside --ds-content and lets the gutters grow past it. */
+  --ds-inset: max(var(--ds-gutter), calc((100% - var(--ds-content)) / 2));
   --ds-reading: 720px;
   --ds-section: clamp(56px, 7vw, 104px);
   --ds-space-1: 4px;

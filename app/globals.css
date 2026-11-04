@@ -1,3 +1,19 @@
+/* Hallmark · checked: 2026-11-04 · genre: editorial (inferred)
+ * floor: 0 FAIL · fixed: 21 (3, 7a, 10a, 19, 20, 24b, 34, 38i, 40, 44b, 44d, 47a, 48, 49a, 54, 63, 64, 66, 67, 71, F3) · structural: 3 printed (44c, 58, 77)
+ * finish-review: subagent · 5 findings · 5 resolved · gap: no prototype pictures on Lab (structural)
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · waive 1 · Inter stays the display on every head · the mw charter in docs/design-system.md sets Inter for the portfolio heads, and this polish keeps that system */
+/* Hallmark · waive 39b · disclosure rows and one film poster · the How I work steps and the career list are full-width rows whose padding sets the rhythm of the list, and the case-study film's whole poster is its play target */
+/* Hallmark · waive 83 · a portfolio of the owner's own work · the projects grid shows one product cover per case study, all from Mathias's own work */
+/* Hallmark · dismissed 41 · ink and surface are paired grounds a step apart by design; no text is set on one over the other */
+/* Hallmark · reworded "Less friction More possibility" to "Selected work" · 54 folds the eyebrow into its heading */
+/* Hallmark · reworded "Curious by nature Human by design" to "About me" · 54 folds the eyebrow into its heading */
+/* Hallmark · reworded "Ideas, made real" to "Projects" · 54 folds the eyebrow into its heading */
+/* Hallmark · reworded "Always exploring" to "Lab" · 54 folds the eyebrow into its heading */
+/* Hallmark · reworded "Full project notes & responsibilities" to "Full project notes" · 49a, the label wrapped at 320px */
+/* Hallmark · answered F15 · each grid holds a different object (cards, a timeline, three-up facts), so its gap follows the object */
+/* Hallmark · answered F20 · thirteen projects in two columns leave Tainure's neighbour alone; the count is the owner's portfolio */
+/* Hallmark · dropped 12years, the hero figure row · the impact band below states 50M, 12 and 8 once, which 69 asks for */
 @import './design-tokens.css';
 
 @tailwind base;
@@ -9,8 +25,11 @@
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: 'Fraunces', Georgia, serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
 
-
+  html,
+  body {
+    overflow-x: clip;
   }
 
   * {
@@ -21,10 +40,20 @@
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
     font-family: var(--font-sans);
+    caret-color: hsl(var(--primary));
+    scrollbar-color: hsl(var(--input)) hsl(var(--background));
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
+    overflow-wrap: break-word;
+    min-width: 0;
+    text-wrap: balance;
     @apply tracking-tight;
   }
 }

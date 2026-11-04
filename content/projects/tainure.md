@@ -45,7 +45,7 @@ caseStudy:
   leadMedia:
     kind: video
     index: 1
-    caption: 'Tainure · 89-second product film · Fictional demonstration data'
+    caption: 'Tainure product film, 89 seconds. Fictional demonstration data.'
   overview:
     - label: The problem
       title: Too much context to keep in your head

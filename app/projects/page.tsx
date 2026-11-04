@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default async function ProjectsPage() {
   const projects = await getAllProjects();
   return <PageShell>
-    <PageIntro eyebrow="PROJECTS" title={<>Ideas, <em>made real</em></>} description="Independent products and work at Microsoft, from founding Tainure to designing experiences used by millions" />
+    <PageIntro title="Projects" description="Independent products and work at Microsoft, from founding Tainure to designing experiences used by millions" />
     <GalleryGrid>{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</GalleryGrid>
   </PageShell>;
 }
