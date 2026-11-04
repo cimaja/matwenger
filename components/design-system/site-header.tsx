@@ -11,7 +11,7 @@ export function SiteHeader() {
     <nav className={styles.nav} aria-label="Main navigation">
       <Link href="/projects" aria-current={pathname.startsWith('/projects') ? 'page' : undefined}>Projects</Link>
       <Link href="/about" aria-current={pathname === '/about' ? 'page' : undefined}>About</Link>
-      <Link href="/lab" aria-current={pathname === '/lab' ? 'page' : undefined}>Lab <span className={styles.navDot} aria-hidden="true" /></Link>
+      <Link href="/lab" aria-current={pathname === '/lab' ? 'page' : undefined}>Lab</Link>
     </nav>
     <Link href="/#contact" className={`${styles.textLink} ${styles.headerContact}`}>Let’s talk</Link>
   </header>;

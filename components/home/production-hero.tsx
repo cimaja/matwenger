@@ -12,7 +12,6 @@ function CareerTerminal() {
   return (
     <div className={styles.terminal} role="region" aria-label="Career highlights">
       <div className={styles.terminalBar}>
-        <span className={styles.windowDots} aria-hidden="true"><i /><i /><i /></span>
         <span>mathias / career</span>
         <button
           type="button"
@@ -53,26 +52,18 @@ export function ProductionHero() {
 
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
-      <div className={styles.topline}>
-        <span className={styles.role}><span aria-hidden="true" />Product Builder &amp; Design Manager</span>
-      </div>
       <div className={styles.grid}>
         <div className={styles.copy}>
-          <h1 id="hero-title" className={styles.name}><span>{firstName}</span><em>{lastName}</em></h1>
+          <h1 id="hero-title" className={styles.name}><span>{firstName}</span><span className={styles.surname}>{lastName}</span></h1>
+          <p className={styles.role}>Product builder &amp; design manager</p>
           <p className={styles.intro}>{heroData.subtitle}</p>
           <Link href="#work" className={styles.currentProject}><span>Currently building</span><strong>Tainure</strong><span>Founder &amp; builder</span></Link>
-          <dl className={styles.metrics}>
-            {heroData.metrics.map(metric => (
-              <div key={metric.label}><dt>{metric.label}</dt><dd>{metric.value}</dd></div>
-            ))}
-          </dl>
           <div className={styles.actions}>
             <a href="/Mathias-Wendlinger-Resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.resume}>View resume</a>
             <a href="https://www.linkedin.com/in/mathias-wendlinger/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}>Connect on LinkedIn</a>
           </div>
         </div>
         <div className={styles.stage}>
-          <div className={styles.stageLabel}><span>Behind the work</span></div>
           <CareerTerminal />
         </div>
       </div>

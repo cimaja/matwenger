@@ -51,7 +51,6 @@ export function ExperienceWalkthrough({ steps, images }: { steps: Step[]; images
     <ol className={styles.steps}>
       {steps.map((step, index) => <li key={step.label} ref={node => { items.current[index] = node; }} className={styles.step} data-active={index === active}>
         <div className={styles.stepCopy}>
-          <span className={styles.stepNumber}>{String(index + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')} <span>{step.label}</span></span>
           <h3>{step.title}</h3>
           <p>{step.body}</p>
         </div>

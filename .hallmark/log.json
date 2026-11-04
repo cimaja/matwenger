@@ -1,0 +1,27 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "polish",
+  "scope": "site",
+  "prompt": "personal portfolio of a principal design manager; hiring managers and design leaders; contact, resume, LinkedIn",
+  "genre": "editorial",
+  "theme": "brand (mw charter)",
+  "hero": "kept (name + career terminal)",
+  "nav": "kept",
+  "footer": "kept",
+  "waived": [
+   "1",
+   "39b",
+   "47b",
+   "83"
+  ],
+  "pages": [
+   "/",
+   "/projects",
+   "/projects/[id]",
+   "/about",
+   "/lab"
+  ],
+  "date": "2026-11-04"
+ }
+]

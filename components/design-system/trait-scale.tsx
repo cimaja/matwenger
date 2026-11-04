@@ -15,7 +15,7 @@ export function TraitScale({ left, right, value, delay = 0 }: { left: string; ri
     aria-label={`${left} to ${right}: ${position} out of 100`}
     className={styles.traitScale}
     data-entered={inView}
-    style={{ '--trait-position': `${position}%`, '--trait-delay': `${delay}s` } as CSSProperties}
+    style={{ '--trait-value': position, '--trait-delay': `${delay}s` } as CSSProperties}
   >
     <div className={styles.traitLabels}><span>{left}</span><span>{right}</span></div>
     <div className={styles.traitTrack}><span className={styles.traitPoint} /></div>

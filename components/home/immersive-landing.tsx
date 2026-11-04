@@ -11,9 +11,9 @@ type LandingProject = { id: string; title: string; cover: string; year: string; 
 
 const selectedProjects = [
   { id: 'tainure', category: 'A second brain for better working relationships', description: 'A second brain that turns everyday notes into context, preparation and coaching for better working relationships.' },
-  { id: 'power-apps-copilot', category: 'AI IN THE FLOW OF WORK', description: 'Your business apps. A conversation away.' },
-  { id: 'rpa-ai-recorder', category: 'SHOW. TELL. AUTOMATE.', description: 'From everyday actions to intelligent workflows.' },
-  { id: 'rpa-self-healing', category: 'AUTOMATION THAT ADAPTS', description: 'When interfaces change, your work keeps moving.' },
+  { id: 'power-apps-copilot', category: 'AI in the flow of work', description: 'Your business apps. A conversation away.' },
+  { id: 'rpa-ai-recorder', category: 'Show. Tell. Automate.', description: 'From everyday actions to intelligent workflows.' },
+  { id: 'rpa-self-healing', category: 'Automation that adapts', description: 'When interfaces change, your work keeps moving.' },
 ];
 
 function SelectedWork({ projects }: { projects: LandingProject[] }) {
@@ -24,14 +24,12 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
 
   return (
     <section id="work" className={styles.work}>
-      <div className={styles.sectionMeta}><span>01 / SELECTED WORK</span></div>
-      <div className={styles.sectionTitle}><h2>Less friction<br /><em>More possibility</em></h2></div>
+      <div className={styles.sectionTitle}><h2>Selected work</h2></div>
       <div className={styles.projectGrid}>
-        {selection.map(({ project, feature }, index) => (
+        {selection.map(({ project, feature }) => (
           <Link href={`/projects/${project.id}`} key={project.id} className={styles.projectCard}>
             <div className={styles.projectImage}>
               <Image src={project.cover} alt={project.title} fill sizes="(max-width: 760px) 100vw, 45vw" className={styles.coverImage} />
-              <span className={styles.projectNumber}>0{index + 1}</span>
               <span className={styles.projectCategory}>
                 <span className={styles.projectValue}>{feature.category}</span>
               </span>
@@ -40,7 +38,7 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
               <div>
                 <div className={styles.projectTitleRow}>
                   <h3>{project.title}</h3>
-                  {project.id === 'tainure' && <span className={styles.projectRole}><span aria-hidden="true">·</span><span>In progress · {project.role}</span></span>}
+                  {project.id === 'tainure' && <span className={styles.projectRole}><span>In progress</span><span>{project.role}</span></span>}
                 </div>
                 <p>{feature.description}</p>
               </div>

@@ -1,6 +1,6 @@
 # mw — Charte graphique et design system
 
-Version du 13 septembre 2026. Cette charte remplace l’ancienne direction violet / émeraude. Elle formalise la landing validée et sert de référence aux pages About, Lab, Projects et aux prochains composants.
+Version du 13 septembre 2026, mise à jour le 4 novembre 2026 (passe Hallmark : titres en romain, libellés en Inter). Cette charte remplace l’ancienne direction violet / émeraude. Elle formalise la landing validée et sert de référence aux pages About, Lab, Projects et aux prochains composants.
 
 Référence interactive locale : [Design system](http://127.0.0.1:3001/design-system).
 
@@ -19,7 +19,8 @@ Changer un token avant d’ajouter une valeur locale. Une variante doit répondr
 Une composition éditoriale, des titres généreux, des images lisibles et peu de décor. Le fond encre porte le récit. Le fond papier met les témoignages en valeur. Le citron signale l’action. La typographie apporte le caractère ; les interactions restent discrètes.
 
 - Header : logo **mw**, navigation alignée, sans nom développé ni compteur. Un seul header est rendu par le layout global : « Projects » ouvre `/projects`, « About » ouvre `/about`, « Lab » ouvre `/lab` et « Let’s talk » ouvre `/#contact`, quelle que soit la page.
-- Libellés de section : un repère à gauche ; pas d’accroche opposée à droite. Numérotation seulement pour une suite de sections, jamais dans le menu.
+- Pas de libellé au-dessus d’un titre (« 01 / SELECTED WORK ») : le titre annonce lui-même la section. Quand un titre est figuratif, le libellé devient le titre. Les étiquettes propres à un élément (« The problem », « Role ») restent, en Inter, en casse de phrase, sans espacement.
+- Pas de point décoratif devant un libellé ni de chaîne de métadonnées reliée par des points médians.
 - Pas de flèche décorative sur les liens, les cartes ou les images.
 - Les chevrons d’accordéon et les commandes précédent / suivant restent présents : ils décrivent une action.
 - Aucun changement des textes sources d’About, des fiches du Lab ou des contenus de projets n’est nécessaire pour adopter la charte.
@@ -83,18 +84,20 @@ L’utilitaire `accent-purple` reste un alias de compatibilité pour la vue proj
 
 | Usage | Famille | Taille | Poids / interligne |
 | --- | --- | --- | --- |
-| Hero | Inter + accent Fraunces | 48–108 px, fluide | 450 / 1,04 |
-| Titre de page | Inter + accent Fraunces | 40–80 px, fluide | 450 / 1,06 |
-| Titre de section | Inter + accent Fraunces | 32–56 px, fluide | 450 / 1,15 |
+| Hero | Inter, seconde ligne en citron | 48–108 px, fluide | 450 / 1,04 |
+| Titre de page | Inter | 40–80 px, fluide | 450 / 1,06 |
+| Titre de section | Inter | 32–56 px, fluide | 450 / 1,15 |
 | Titre de carte | Inter | 22 px | 500 / 1,35 |
 | Introduction, récit | Inter | 17–20 px, fluide | 400 / 1,8–1,85 |
 | Texte courant | Inter | 16 px | 400 / 1,75 |
 | Liens, navigation, légendes | Inter | 14 px | 400–500 / 1,6 |
-| Repères, dates, tags | JetBrains Mono | 12 px | 400 / 1,6 |
+| Repères, dates, tags | Inter, chiffres tabulaires | 13–14 px | 400 / 1,6 |
+| Code (terminal du hero) | JetBrains Mono | 12–14 px | 400 / 1,8 |
 | Citations | Fraunces | 32–54 px, 28–36 px sur mobile | 400 / 1,45 |
 
 - Un `h1` par page ; des `h2` pour les sections et `h3` pour les cartes.
-- Les titres restent en sans-serif ; `<em>` ajoute une courte inflexion Fraunces, sans passer tout le texte en italique.
+- Les titres restent en sans-serif, un seul style par titre : pas de mot en italique ni de mot isolé dans une autre couleur. Seule la seconde ligne du hero (le nom sur l’accueil, la promesse d’une étude de cas) passe en citron, une fois par page.
+- Libellés, légendes, tags et navigation : Inter, une taille en dessous du texte, en casse de phrase, sans capitales espacées. JetBrains Mono est réservé au code.
 - Aucun point final dans les titres, y compris avant un saut de ligne ou à la fin d’une expression en italique. Les paragraphes, citations, légendes et libellés conservent leur ponctuation.
 - Texte courant à 16 px minimum. 12 px réservé aux métadonnées secondaires.
 - Limiter la lecture longue à 720 px. Éviter les hauteurs fixes sur les textes et les descriptions tronquées du Lab.
@@ -127,7 +130,7 @@ Les cibles ont au moins 44 px de haut (48 px par défaut, 64 px pour une action 
 - Sections : 56–104 px verticalement. Gouttières : 4,5 % sur ordinateur ; 6 % sous 760 px.
 - Conteneur de liste : 1440 px maximum. Conteneur éditorial : 720 px.
 - Projet : image puis légende, sans boîte décorative autour du tout.
-- Prototype sans image : panneau de 12 px de rayon et 28 px de padding.
+- Prototype sans image (Lab) : pas de boîte ; un filet en haut, 24 px au-dessus du titre, et le titre se souligne au survol.
 - Terminal, modal et panneau : rayon 12 px. Contrôles principaux : pilule. Tags : 4 px.
 - La structure change à 760 px et 1100 px. Ne pas résoudre un débordement en réduisant le texte à 10–11 px.
 
@@ -239,7 +242,7 @@ Exemple local : `/projects/power-apps-copilot`. Le composant `components/project
 
 ### Rythme éditorial
 
-1. **Ouverture** : titre Inter / Fraunces, introduction, rôle / entreprise / année, puis grand média. La couverture peut présenter une vidéo, déclenchée volontairement au clic. Commandes natives ensuite, y compris pendant la pause. Les projets sans vidéo utilisent une capture ou leur couverture.
+1. **Ouverture** : titre Inter sur deux lignes, la seconde en citron, introduction, rôle / entreprise / année, puis grand média. La couverture peut présenter une vidéo, déclenchée volontairement au clic. Commandes natives ensuite, y compris pendant la pause. Les projets sans vidéo utilisent une capture ou leur couverture.
 2. **Résumé** : problème, contribution, résultat. Trois colonnes sur ordinateur, empilées sur mobile.
 3. **Parcours** : étapes courtes associées à des captures complètes. Sur un écran d’au moins 1 024 × 650 px, avec animations autorisées, le média reste visible pendant le défilement. Les boutons permettent aussi d’aller à une étape. Le défilement de la page reste natif.
 4. **Décisions** : texte + image, texte + vidéo, ou texte seul. Le rôle du designer et du manager est expliqué sans attribuer le travail de toute l’équipe à une seule personne.
