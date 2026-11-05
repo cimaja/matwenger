@@ -10,10 +10,10 @@ import styles from './immersive-landing.module.css';
 type LandingProject = { id: string; title: string; cover: string; year: string; description: string; role: string };
 
 const selectedProjects = [
-  { id: 'tainure', category: 'A second brain for better working relationships', description: 'A second brain that turns everyday notes into context, preparation and coaching for better working relationships.' },
-  { id: 'power-apps-copilot', category: 'AI in the flow of work', description: 'Your business apps. A conversation away.' },
-  { id: 'rpa-ai-recorder', category: 'Show. Tell. Automate.', description: 'From everyday actions to intelligent workflows.' },
-  { id: 'rpa-self-healing', category: 'Automation that adapts', description: 'When interfaces change, your work keeps moving.' },
+  { id: 'tainure', description: 'A second brain that turns everyday notes into context, preparation and coaching for better working relationships.' },
+  { id: 'power-apps-copilot', description: 'Your business apps. A conversation away.' },
+  { id: 'rpa-ai-recorder', description: 'From everyday actions to intelligent workflows.' },
+  { id: 'rpa-self-healing', description: 'When interfaces change, your work keeps moving.' },
 ];
 
 function SelectedWork({ projects }: { projects: LandingProject[] }) {
@@ -30,9 +30,6 @@ function SelectedWork({ projects }: { projects: LandingProject[] }) {
           <Link href={`/projects/${project.id}`} key={project.id} className={styles.projectCard}>
             <div className={styles.projectImage}>
               <Image src={project.cover} alt={project.title} fill sizes="(max-width: 760px) 100vw, 45vw" className={styles.coverImage} />
-              <span className={styles.projectCategory}>
-                <span className={styles.projectValue}>{feature.category}</span>
-              </span>
             </div>
             <div className={styles.projectCaption}>
               <div>

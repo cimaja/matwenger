@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { Code2, RotateCcw } from 'lucide-react';
 import { heroData } from '@/lib/data/hero';
 import styles from './production-hero.module.css';
@@ -57,7 +56,6 @@ export function ProductionHero() {
           <h1 id="hero-title" className={styles.name}><span>{firstName}</span><span className={styles.surname}>{lastName}</span></h1>
           <p className={styles.role}>Product builder &amp; design manager</p>
           <p className={styles.intro}>{heroData.subtitle}</p>
-          <Link href="#work" className={styles.currentProject}><span>Currently building</span><strong>Tainure</strong><span>Founder &amp; builder</span></Link>
           <div className={styles.actions}>
             <a href="/Mathias-Wendlinger-Resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.resume}>View resume</a>
             <a href="https://www.linkedin.com/in/mathias-wendlinger/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}>Connect on LinkedIn</a>

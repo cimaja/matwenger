@@ -1,17 +1,27 @@
 # Tainure product film
 
-Updated on 2026-09-15 from the current public film at https://tainure.com. The video filename was confirmed in the live site's JavaScript; the poster and caption sources were confirmed in its HTML.
+Updated on 2026-11-05 to the 59-second film that tainure.com has served since 2026-11-02. It replaces the 89-second film archived on 2026-09-15, which Tainure no longer serves; that film, its captions and its four gallery stills remain in Git history.
 
-The portfolio serves its own copy of all three files. Versioned filenames prevent an older cached video from being paired with the updated subtitles.
+The portfolio serves its own copy of the film, its poster and its captions. The files were copied from the published render in the Tainure repository (`out/v4/publish/`), whose sources are listed in its `lib/landing-media.ts`. Versioned filenames prevent an older cached video from being paired with newer subtitles.
 
 | Asset | Local file | Public source |
 | --- | --- | --- |
-| 1080p film | `public/images/projects/tainure/video/tainure-film-caption-sync.mp4` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-caption-sync-PQvggArqiB5h4KcI6xnmid1BJd0dVm.mp4 |
-| Film poster | `public/images/projects/tainure/video/tainure-film-caption-sync-poster.jpg` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-caption-sync-poster-4y0q3N0iRJnh5rvFlrAkeCtQK26ygS.jpg |
-| English captions | `public/images/projects/tainure/video/captions-caption-sync.en.vtt` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-film-sync-oxkWBRSy7ycN7llNLDpjuOP4O2I1F1.vtt |
+| 1080p film | `public/images/projects/tainure/video/tainure-film-v4.mp4` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-film-v4-U2TAhgCQ9ScXt9eXQhFq57CMnkddTw.mp4 |
+| Film poster | `public/images/projects/tainure/video/tainure-film-v4-poster.jpg` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-film-v4-poster-5OWWLplOSWcUs1ShIGLSx3Bz6gwUit.jpg |
+| English captions | `public/images/projects/tainure/video/tainure-film-v4.vtt` | https://ywbxsr5fgr9ukyxy.public.blob.vercel-storage.com/landing/tainure-film-v4-f6AnCWADcnP5HBP3RE2YbEICGE5B7a.vtt |
 
-Verified with ffprobe and a full ffmpeg decode: 1920 × 1080 H.264, stereo AAC, 89.258667 seconds, 10,811,323 bytes. Audio is present (peak −2.8 dB). The WebVTT file contains 24 cues, ending at 86.483 seconds.
+Checked on 2026-11-05: 1920 × 1080, 58.98 seconds, 12,170,383 bytes, the same size as the public film. The WebVTT file holds 15 cues, ending at 56.66 seconds.
 
-Film SHA-256: `ab4137f530e7c751869c8bd061aebf93406d4e78c9648a91f50b0dca4ae1c314`.
+Film SHA-256: `0cefe327e3585053e92ed2e91016a80af6666d8a67e00a0a80fd98dd28f96f77`.
 
-The previous film and captions are retained in Git history. The approved monitor cover and existing gallery images remain separate assets. People and notes in the film are fictional demonstration data.
+The five gallery stills in `public/images/projects/tainure/gallery/` are frames from this film, exported at 1920 × 1080:
+
+| Still | Time |
+| --- | --- |
+| `remember.jpg` | 20.0 s (the poster frame) |
+| `prepare.jpg` | 25.2 s |
+| `coach.jpg` | 34.6 s |
+| `feedback.jpg` | 40.9 s |
+| `both-sides.jpg` | 50.4 s |
+
+The cover (`main/cover-monitor-v3.png`) predates this film and still shows the earlier product brand. People and notes in the film are fictional demonstration data.

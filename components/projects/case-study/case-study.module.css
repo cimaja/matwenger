@@ -54,6 +54,18 @@
 .sectionIntro h2 { font-size: var(--ds-text-section); font-weight: 450; letter-spacing: -.05em; line-height: 1.12; margin: 0; text-wrap: balance; }
 .sectionIntro>p { max-width: 480px; color: hsl(var(--muted-foreground)); font-size: var(--ds-text-lead); line-height: 1.75; margin: 0; text-wrap: pretty; }
 
+/* Sourced figures, set like the home page's impact band */
+.figures { padding-bottom: var(--ds-section); }
+.figureGrid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4%; padding-top: 48px; border-top: 1px solid hsl(var(--border)); }
+.figure:not(:first-child) { border-left: 1px solid hsl(var(--border)); padding-left: 8%; }
+.figureNumber { display: block; font-size: clamp(56px, 5.6vw, 92px); line-height: 1.1; font-weight: 400; letter-spacing: -.075em; color: hsl(var(--accent-foreground)); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.figureLabel { display: block; margin-top: 12px; font-size: 17px; line-height: 1.45; letter-spacing: -.03em; text-wrap: pretty; }
+.figure p { max-width: 260px; margin: 12px 0 0; font-size: 14px; line-height: 1.7; color: hsl(var(--muted-foreground)); text-wrap: pretty; }
+.figureSource { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-size: var(--ds-text-label); color: hsl(var(--tertiary)); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: color var(--ds-duration-fast); }
+.figureSource:hover { color: hsl(var(--link-hover)); }
+.figureSource:active { color: hsl(var(--foreground)); }
+.figureSource:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 4px; }
+
 .experience { padding-block: var(--ds-section); background: hsl(var(--card)); }
 .steps { list-style: none; padding: 0; margin: 0; }
 .step { margin: 0 0 64px; }
@@ -124,6 +136,8 @@
   .overviewGrid, .outcomesGrid { gap: 28px; }
   .decision { gap: 32px; }
   .decision[data-has-image=false] .decisionCopy { gap: 0 32px; }
+  .figureGrid { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
+  .figure:nth-child(odd) { border-left: 0; padding-left: 0; }
 }
 
 @media (max-width: 760px) {
@@ -139,6 +153,11 @@
   .overviewGrid, .outcomesGrid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .sectionIntro { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-bottom: 40px; }
   .sectionIntro>p { max-width: none; }
+  .figureGrid { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 16px; }
+  .figure, .figure:not(:first-child) { border-left: 0; padding: 24px 0; border-bottom: 1px solid hsl(var(--border)); }
+  .figure:last-child { border-bottom: 0; padding-bottom: 0; }
+  .figureNumber { font-size: 64px; }
+  .figureLabel { font-size: 16px; }
   .decisionList { gap: 40px; }
   .decision { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 28px; }
   .decision[data-has-image=false] .decisionCopy { display: block; }
@@ -149,7 +168,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .stageImage { animation: none; }
-  .stepCopy, .stepNavigation button { transition: none; }
+  .stepCopy, .stepNavigation button, .figureSource { transition: none; }
   .videoPlay>span { transition: none; }
   .videoPlay:hover>span { transform: none; }
   .notes [data-state] { animation: none; transition: none; }

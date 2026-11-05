@@ -26,9 +26,6 @@
 .projectImage { position: relative; aspect-ratio: 1.42; overflow: hidden; background: var(--studio-elevated); }
 .coverImage { object-fit: cover; filter: saturate(.65); transition: filter .6s var(--ds-ease); }
 .projectCard:hover .coverImage, .projectCard:focus-visible .coverImage { filter: saturate(1); }
-.projectImage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 55%, var(--studio-scrim)); pointer-events: none; }
-.projectCategory { position: absolute; left: 24px; right: 24px; bottom: 20px; z-index: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; color: var(--paper); font: 400 var(--ds-text-label)/1.6 var(--font-sans); }
-.projectValue { flex: 1 1 200px; }
 .projectCaption { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; }
 .projectCaption h3 { font-size: 22px; letter-spacing: -.045em; font-weight: 450; }
 .projectCaption p { font-size: 16px; font-weight: 400; line-height: 1.7; color: hsl(var(--muted-foreground)); margin-top: 4px; }
@@ -121,7 +118,6 @@
   .sectionTitle h2 { font-size: 11.5vw; }
   .projectGrid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .projectCaption h3 { font-size: 20px; }
-  .projectCategory { left: 16px; bottom: 16px; }
   .approach { padding-block: 64px; }
   .approachGrid { padding: 0 0 44px; }
   .approachGrid h2 { font-size: 10vw; }
