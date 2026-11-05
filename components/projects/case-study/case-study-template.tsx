@@ -7,6 +7,7 @@ import type { CaseStudy } from '@/lib/project-case-study';
 import { ExperienceWalkthrough } from './experience-walkthrough';
 import { CaseStudyVideo } from './case-study-video';
 import { CaseStudyNotes } from './case-study-notes';
+import { CaseStudyFigures } from './case-study-figures';
 import styles from './case-study.module.css';
 
 function Heading({ title, emphasis }: { title: string; emphasis?: string }) {
@@ -47,7 +48,12 @@ export function CaseStudyTemplate({ project, study, nextProject }: { project: Pr
       <div className={styles.overviewGrid}>{study.overview.map(item => <div key={item.label}><p className={styles.metaLabel}>{item.label}</p><h2>{item.title}</h2><p>{item.body}</p></div>)}</div>
     </section>
 
-    {study.experience && <section className={styles.experience} id="experience" aria-labelledby="experience-title">
+    {study.figures && <section className={`${styles.container} ${styles.figures}`} aria-labelledby="figures-title">
+      <div className={styles.sectionIntro}><h2 id="figures-title"><Heading {...study.figures} /></h2><p>{study.figures.description}</p></div>
+      <CaseStudyFigures items={study.figures.items} />
+    </section>}
+
+    {study.experience &&<section className={styles.experience} id="experience" aria-labelledby="experience-title">
       <div className={styles.container}>
         <div className={styles.sectionIntro}><h2 id="experience-title"><Heading {...study.experience} /></h2><p>{study.experience.description}</p></div>
         <ExperienceWalkthrough key={project.id} steps={study.experience.steps} images={images} />

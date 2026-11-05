@@ -14,6 +14,19 @@ export const caseStudySchema = z.object({
     z.object({ kind: z.literal('image'), index: imageIndex, caption: z.string().optional() }),
   ]).optional(),
   overview: z.array(summary).min(1),
+  // Published figures always name their source: a number without one fails the build.
+  figures: heading.extend({
+    description: z.string(),
+    items: z.array(z.object({
+      value: z.number(),
+      decimals: z.number().int().min(0).max(2).optional(),
+      prefix: z.string().optional(),
+      suffix: z.string().optional(),
+      label: z.string(),
+      note: z.string().optional(),
+      source: z.object({ label: z.string(), href: z.string().regex(/^https:\/\//) }),
+    })).min(1).max(4),
+  }).optional(),
   experience: heading.extend({
     description: z.string(),
     steps: z.array(z.object({
