@@ -43,13 +43,6 @@
   text-wrap: pretty;
 }
 
-.currentProject { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; width: fit-content; margin-top: 16px; padding-block: 8px; min-height: 44px; font-size: 14px; }
-.currentProject > span:first-child { color: hsl(var(--muted-foreground)); }
-.currentProject > strong { color: var(--acid); font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
-.currentProject > span:last-child { color: hsl(var(--muted-foreground)); font-size: 12px; }
-.currentProject:hover > strong { color: var(--studio-acid-soft); }
-.currentProject:active > strong { color: var(--studio-secondary); }
-
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: 32px; font-size: 14px; }
 .actions a { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; transition: background-color var(--ds-duration-fast), color var(--ds-duration-fast); }
 .resume { padding: 12px 24px; border-radius: var(--ds-radius-control); background: var(--acid); color: var(--ink); }
