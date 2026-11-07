@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono, Fraunces } from 'next/font/google';
 import { Providers } from '@/components/providers';
 import { Navigation } from '@/components/navigation';
@@ -11,6 +11,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-serif' });
+
+export const viewport: Viewport = {
+  themeColor: '#141511',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://matwenger.design'),

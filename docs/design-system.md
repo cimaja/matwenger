@@ -18,7 +18,8 @@ Changer un token avant d’ajouter une valeur locale. Une variante doit répondr
 
 Une composition éditoriale, des titres généreux, des images lisibles et peu de décor. Le fond encre porte le récit. Le fond papier met les témoignages en valeur. Le citron signale l’action. La typographie apporte le caractère ; les interactions restent discrètes.
 
-- Header : logo **mw**, navigation alignée, sans nom développé ni compteur. Un seul header est rendu par le layout global : « Projects » ouvre `/projects`, « About » ouvre `/about`, « Lab » ouvre `/lab` et « Let’s talk » ouvre `/#contact`, quelle que soit la page.
+- Header : signature **mw** en citron (composant `BrandMark`, tracé en `currentColor`), navigation alignée, sans nom développé ni compteur. Un seul header est rendu par le layout global : « Projects » ouvre `/projects`, « About » ouvre `/about`, « Lab » ouvre `/lab` et « Let’s talk » ouvre `/#contact`, quelle que soit la page.
+- Logo et icônes : la source est `brand/matwenger-brand/logo/matwenger-icon-color.svg` (signature citron sur encre). Elle donne `app/favicon.ico` (16, 32, 48 px), `app/icon.svg`, `app/apple-icon.png` (180 px, pleine page) et les icônes du manifeste dans `public/icons/`.
 - Pas de libellé au-dessus d’un titre (« 01 / SELECTED WORK ») : le titre annonce lui-même la section. Quand un titre est figuratif, le libellé devient le titre. Les étiquettes propres à un élément (« The problem », « Role ») restent, en Inter, en casse de phrase, sans espacement.
 - Pas de point décoratif devant un libellé ni de chaîne de métadonnées reliée par des points médians.
 - Pas de flèche décorative sur les liens, les cartes ou les images.
