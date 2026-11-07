@@ -34,3 +34,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .gstack/
+
+# brand kit: only the logo files are tracked, the board, book and mockups stay local
+/brand/matwenger-brand/*
+!/brand/matwenger-brand/logo/
